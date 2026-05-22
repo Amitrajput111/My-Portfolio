@@ -20,7 +20,7 @@ export default function Contact() {
 
     setStatus('sending');
 
-    fetch("https://formsubmit.co/ajax/amitrajput98267313@gmail.com", {
+    fetch("https://formsubmit.co/ajax/9e60dfbc3c63aa15cf43066d30eaa47b", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
