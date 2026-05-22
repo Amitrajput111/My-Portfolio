@@ -25,38 +25,79 @@ export default function EducationCertifications() {
 
   const certificationsList = [
     {
-      title: 'Full Stack Web Development',
-      provider: 'Upgrad & IIIT Bangalore',
-      id: 'FS-9826-7313',
-      color: '#f59e0b', // Gold/Amber theme
-      cardClass: 'cert-fs',
-      skills: ['MERN Stack', 'RESTful APIs', 'Database Design']
+      title: 'AWS Certified Developer - Associate',
+      provider: 'Infosys Springboard & AWS',
+      id: 'verify.onwingspan.com',
+      color: '#ff9900',
+      cardClass: 'cert-aws-dev',
+      skills: ['AWS Services', 'Serverless', 'Cloud Security'],
+      pdfUrl: '/infosys-aws-developer.pdf'
     },
     {
-      title: 'MERN Stack Development',
-      provider: 'GeeksforGeeks Academy',
-      id: 'MERN-Gfg-4829',
-      color: '#10b981', // Green theme
-      cardClass: 'cert-mern',
-      skills: ['React.js', 'Node.js', 'Express.js', 'MongoDB']
+      title: 'Advanced MERN Development',
+      provider: 'Infosys Springboard',
+      id: 'MERN-Infosys-2026',
+      color: '#10b981',
+      cardClass: 'cert-adv-mern',
+      skills: ['React.js', 'Node.js', 'Express.js', 'MongoDB'],
+      pdfUrl: '/infosys-advanced-mern.pdf'
+    },
+    {
+      title: 'React JS Completion Certificate',
+      provider: 'ExcelR EdTech',
+      id: 'No. 36791',
+      color: '#06b6d4',
+      cardClass: 'cert-react',
+      skills: ['React Hooks', 'State Management', 'Vite & ES6'],
+      pdfUrl: '/excelr-reactjs.pdf'
+    },
+    {
+      title: 'AWS Database Offerings',
+      provider: 'AWS Training & Certification',
+      id: 'Completed March 13, 2026',
+      color: '#6366f1',
+      cardClass: 'cert-aws-db',
+      skills: ['RDS & DynamoDB', 'Database Management', 'AWS Cloud'],
+      pdfUrl: '/aws-database-offerings.pdf'
+    },
+    {
+      title: 'Web Development Internship',
+      provider: 'CodSoft',
+      id: 'ID: f670a61',
+      color: '#ec4899',
+      cardClass: 'cert-web-intern',
+      skills: ['Web Apps', 'Responsive Design', 'HTML/CSS/JS'],
+      pdfUrl: '/codsoft-web-development-internship.pdf'
     },
     {
       title: 'JavaScript Programming',
       provider: 'Infosys Springboard',
-      id: 'JS-SPB-2026',
-      color: '#06b6d4', // Cyan theme
-      cardClass: 'cert-js',
-      skills: ['ES6+', 'Asynchronous JS', 'DOM Manipulation']
+      id: 'verify.onwingspan.com',
+      color: '#facc15',
+      cardClass: 'cert-js-course',
+      skills: ['ES6+', 'Asynchronous JS', 'DOM APIs'],
+      pdfUrl: '/infosys-javascript.pdf'
     },
     {
-      title: 'Data Structures & Algorithms',
-      provider: 'Coding Ninjas',
-      id: 'DSA-CN-8812',
-      color: '#a855f7', // Purple theme
-      cardClass: 'cert-dsa',
-      skills: ['Arrays & Lists', 'Trees & Graphs', 'Complexity Analysis']
+      title: 'Google Generative AI Leader Path',
+      provider: 'Google Cloud',
+      id: 'Course 1 & 2',
+      color: '#4285f4',
+      cardClass: 'cert-gen-ai',
+      skills: ['Generative AI', 'Gemini & LLMs', 'Vertex AI', 'Responsible AI'],
+      pdfUrl: '/google-gen-ai-leader-1.pdf'
+    },
+    {
+      title: 'Web Development Certificate',
+      provider: 'Web Development Academy',
+      id: 'Completed Dec 30, 2025',
+      color: '#0ea5e9',
+      cardClass: 'cert-web-dev',
+      skills: ['Frontend Engineering', 'Modern CSS Layouts', 'UI/UX Basics'],
+      pdfUrl: '/web-development-cert.pdf'
     }
   ];
+
 
   return (
     <section id="education-certifications" style={{ scrollMarginTop: '80px' }}>
@@ -222,23 +263,58 @@ export default function EducationCertifications() {
                     {cert.provider} • ID: {cert.id}
                   </p>
 
-                  {/* Skills Tagged */}
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
-                    {cert.skills.map((s) => (
-                      <span
-                        key={s}
+                  {/* Skills & Verification Link Row */}
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px', marginTop: '8px' }}>
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                      {cert.skills.map((s) => (
+                        <span
+                          key={s}
+                          style={{
+                            fontSize: '10px',
+                            color: 'var(--text-muted)',
+                            background: 'rgba(255, 255, 255, 0.02)',
+                            padding: '1px 6px',
+                            borderRadius: '3px',
+                            border: '1px solid rgba(255,255,255,0.04)',
+                          }}
+                        >
+                          {s}
+                        </span>
+                      ))}
+                    </div>
+                    {cert.pdfUrl && (
+                      <a
+                        href={cert.pdfUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{
-                          fontSize: '10px',
-                          color: 'var(--text-muted)',
-                          background: 'rgba(255, 255, 255, 0.02)',
-                          padding: '1px 6px',
-                          borderRadius: '3px',
-                          border: '1px solid rgba(255,255,255,0.04)',
+                          fontSize: '11px',
+                          color: '#ffffff',
+                          background: 'rgba(255, 255, 255, 0.03)',
+                          border: '1px solid rgba(255, 255, 255, 0.08)',
+                          padding: '4px 10px',
+                          borderRadius: '6px',
+                          textDecoration: 'none',
+                          fontWeight: 500,
+                          transition: 'all 0.2s ease',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                          e.currentTarget.style.borderColor = cert.color;
+                          e.currentTarget.style.color = cert.color;
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+                          e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                          e.currentTarget.style.color = '#ffffff';
                         }}
                       >
-                        {s}
-                      </span>
-                    ))}
+                        View Certificate →
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

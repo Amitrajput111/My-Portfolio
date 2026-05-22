@@ -564,4 +564,61 @@ p {
   border-color: #a855f7;
 }
 
+.glass-card.cert-aws-dev {
+  border-left: 3px solid #ff9900; /* AWS Orange */
+}
+.glass-card.cert-aws-dev:hover {
+  border-color: #ff9900;
+}
+
+.glass-card.cert-adv-mern {
+  border-left: 3px solid #10b981; /* Emerald */
+}
+.glass-card.cert-adv-mern:hover {
+  border-color: #10b981;
+}
+
+.glass-card.cert-react {
+  border-left: 3px solid #06b6d4; /* Cyan */
+}
+.glass-card.cert-react:hover {
+  border-color: #06b6d4;
+}
+
+.glass-card.cert-aws-db {
+  border-left: 3px solid #6366f1; /* Indigo */
+}
+.glass-card.cert-aws-db:hover {
+  border-color: #6366f1;
+}
+
+.glass-card.cert-web-intern {
+  border-left: 3px solid #ec4899; /* Magenta */
+}
+.glass-card.cert-web-intern:hover {
+  border-color: #ec4899;
+}
+
+.glass-card.cert-js-course {
+  border-left: 3px solid #facc15; /* Yellow */
+}
+.glass-card.cert-js-course:hover {
+  border-color: #facc15;
+}
+
+.glass-card.cert-gen-ai {
+  border-left: 3px solid #4285f4; /* Google Blue */
+}
+.glass-card.cert-gen-ai:hover {
+  border-color: #4285f4;
+}
+
+.glass-card.cert-web-dev {
+  border-left: 3px solid #0ea5e9; /* Sky Blue */
+}
+.glass-card.cert-web-dev:hover {
+  border-color: #0ea5e9;
+}
+
+
 
