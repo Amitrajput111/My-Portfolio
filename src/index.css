@@ -620,5 +620,108 @@ p {
   border-color: #0ea5e9;
 }
 
+/* Compact & Structured Certificate Card Styles */
+.cert-card-compact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px !important;
+  border-radius: 10px !important;
+}
+
+.cert-left-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cert-details-block {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cert-header-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cert-compact-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cert-meta-info {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.cert-skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.cert-skill-tag {
+  font-size: 9px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1px 5px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.cert-action-btn-compact {
+  font-size: 11px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+/* Responsiveness for compact cards */
+@media (max-width: 550px) {
+  .cert-card-compact {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 14px 16px !important;
+  }
+  .cert-left-area {
+    width: 100%;
+  }
+  .cert-compact-title {
+    white-space: normal;
+  }
+  .cert-action-btn-compact {
+    align-self: flex-start;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
 
 

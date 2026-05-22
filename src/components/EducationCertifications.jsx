@@ -68,33 +68,6 @@ export default function EducationCertifications() {
       cardClass: 'cert-web-intern',
       skills: ['Web Apps', 'Responsive Design', 'HTML/CSS/JS'],
       pdfUrl: '/codsoft-web-development-internship.pdf'
-    },
-    {
-      title: 'JavaScript Programming',
-      provider: 'Infosys Springboard',
-      id: 'verify.onwingspan.com',
-      color: '#facc15',
-      cardClass: 'cert-js-course',
-      skills: ['ES6+', 'Asynchronous JS', 'DOM APIs'],
-      pdfUrl: '/infosys-javascript.pdf'
-    },
-    {
-      title: 'Google Generative AI Leader Path',
-      provider: 'Google Cloud',
-      id: 'Course 1 & 2',
-      color: '#4285f4',
-      cardClass: 'cert-gen-ai',
-      skills: ['Generative AI', 'Gemini & LLMs', 'Vertex AI', 'Responsible AI'],
-      pdfUrl: '/google-gen-ai-leader-1.pdf'
-    },
-    {
-      title: 'Web Development Certificate',
-      provider: 'Web Development Academy',
-      id: 'Completed Dec 30, 2025',
-      color: '#0ea5e9',
-      cardClass: 'cert-web-dev',
-      skills: ['Frontend Engineering', 'Modern CSS Layouts', 'UI/UX Basics'],
-      pdfUrl: '/web-development-cert.pdf'
     }
   ];
 
@@ -204,119 +177,93 @@ export default function EducationCertifications() {
             <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#ffffff' }}>Professional Certifications</h3>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '16px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
             {certificationsList.map((cert) => (
               <div
                 key={cert.title}
-                className={`glass-card ${cert.cardClass}`}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '20px',
-                  padding: '20px',
-                }}
+                className={`glass-card cert-card-compact ${cert.cardClass}`}
               >
-                {/* Visual Icon Badge */}
-                <div
-                  style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '10px',
-                    background: `rgba(${parseInt(cert.color.slice(1,3), 16) || 255}, ${parseInt(cert.color.slice(3,5), 16) || 255}, ${parseInt(cert.color.slice(5,7), 16) || 255}, 0.06)`,
-                    border: `1px solid rgba(${parseInt(cert.color.slice(1,3), 16) || 255}, ${parseInt(cert.color.slice(3,5), 16) || 255}, ${parseInt(cert.color.slice(5,7), 16) || 255}, 0.2)`,
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    color: cert.color,
-                    flexShrink: 0,
-                  }}
-                >
-                  <Award size={22} />
-                </div>
-
-                {/* Details */}
-                <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '4px' }}>
-                    <h4 style={{ fontSize: '15px', fontWeight: 700, color: '#ffffff' }}>
-                      {cert.title}
-                    </h4>
-                    <span
-                      style={{
-                        fontSize: '10px',
-                        fontWeight: 600,
-                        color: cert.color,
-                        background: 'rgba(255,255,255,0.02)',
-                        border: `1px solid rgba(${parseInt(cert.color.slice(1,3), 16) || 255}, ${parseInt(cert.color.slice(3,5), 16) || 255}, ${parseInt(cert.color.slice(5,7), 16) || 255}, 0.15)`,
-                        padding: '2px 6px',
-                        borderRadius: '4px',
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        gap: '3px',
-                      }}
-                    >
-                      <CheckCircle size={9} />
-                      Verified
-                    </span>
+                <div className="cert-left-area">
+                  {/* Visual Icon Badge */}
+                  <div
+                    style={{
+                      width: '36px',
+                      height: '36px',
+                      borderRadius: '8px',
+                      background: `rgba(${parseInt(cert.color.slice(1,3), 16) || 255}, ${parseInt(cert.color.slice(3,5), 16) || 255}, ${parseInt(cert.color.slice(5,7), 16) || 255}, 0.06)`,
+                      border: `1px solid rgba(${parseInt(cert.color.slice(1,3), 16) || 255}, ${parseInt(cert.color.slice(3,5), 16) || 255}, ${parseInt(cert.color.slice(5,7), 16) || 255}, 0.25)`,
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      color: cert.color,
+                      flexShrink: 0,
+                    }}
+                  >
+                    <Award size={18} />
                   </div>
-                  
-                  <p style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-                    {cert.provider} • ID: {cert.id}
-                  </p>
 
-                  {/* Skills & Verification Link Row */}
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px', marginTop: '8px' }}>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
+                  {/* Details */}
+                  <div className="cert-details-block">
+                    <div className="cert-header-line">
+                      <h4 className="cert-compact-title" title={cert.title}>
+                        {cert.title}
+                      </h4>
+                      <span
+                        style={{
+                          fontSize: '9px',
+                          fontWeight: 600,
+                          color: cert.color,
+                          background: 'rgba(255,255,255,0.02)',
+                          border: `1px solid rgba(${parseInt(cert.color.slice(1,3), 16) || 255}, ${parseInt(cert.color.slice(3,5), 16) || 255}, ${parseInt(cert.color.slice(5,7), 16) || 255}, 0.15)`,
+                          padding: '1px 5px',
+                          borderRadius: '4px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '2px',
+                          flexShrink: 0,
+                        }}
+                      >
+                        <CheckCircle size={8} />
+                        Verified
+                      </span>
+                    </div>
+                    
+                    <p className="cert-meta-info">
+                      {cert.provider} • ID: {cert.id}
+                    </p>
+
+                    {/* Skills Row */}
+                    <div className="cert-skills-row">
                       {cert.skills.map((s) => (
-                        <span
-                          key={s}
-                          style={{
-                            fontSize: '10px',
-                            color: 'var(--text-muted)',
-                            background: 'rgba(255, 255, 255, 0.02)',
-                            padding: '1px 6px',
-                            borderRadius: '3px',
-                            border: '1px solid rgba(255,255,255,0.04)',
-                          }}
-                        >
+                        <span key={s} className="cert-skill-tag">
                           {s}
                         </span>
                       ))}
                     </div>
-                    {cert.pdfUrl && (
-                      <a
-                        href={cert.pdfUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                          fontSize: '11px',
-                          color: '#ffffff',
-                          background: 'rgba(255, 255, 255, 0.03)',
-                          border: '1px solid rgba(255, 255, 255, 0.08)',
-                          padding: '4px 10px',
-                          borderRadius: '6px',
-                          textDecoration: 'none',
-                          fontWeight: 500,
-                          transition: 'all 0.2s ease',
-                          display: 'inline-flex',
-                          alignItems: 'center',
-                          gap: '4px',
-                        }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
-                          e.currentTarget.style.borderColor = cert.color;
-                          e.currentTarget.style.color = cert.color;
-                        }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                          e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-                          e.currentTarget.style.color = '#ffffff';
-                        }}
-                      >
-                        View Certificate →
-                      </a>
-                    )}
                   </div>
                 </div>
+
+                {/* Action Link */}
+                {cert.pdfUrl && (
+                  <a
+                    href={cert.pdfUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cert-action-btn-compact"
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)';
+                      e.currentTarget.style.borderColor = cert.color;
+                      e.currentTarget.style.color = cert.color;
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+                      e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                      e.currentTarget.style.color = '#ffffff';
+                    }}
+                  >
+                    View PDF →
+                  </a>
+                )}
               </div>
             ))}
           </div>
