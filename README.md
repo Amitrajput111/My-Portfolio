@@ -4,7 +4,7 @@ Welcome to my professional developer portfolio. This project showcases my experi
 
 ## 🔗 Live Links
 * **GitHub Repository**: [https://github.com/Amitrajput111/My-Portfolio](https://github.com/Amitrajput111/My-Portfolio)
-* **Vercel Deployments**: [https://vercel.com/amitrajput111s-projects]([https://vercel.com/amitrajput111s-projects](https://amit-portfolio-jet.vercel.app/))
+* **Vercel Deployments**: [https://vercel.com/amitrajput111s-projects]((https://amit-portfolio-jet.vercel.app/))
 
 ---
 
