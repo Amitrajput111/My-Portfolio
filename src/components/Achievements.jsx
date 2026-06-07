@@ -4,14 +4,14 @@ import { Award, Code2, Globe, Users } from 'lucide-react';
 const achievements = [
   {
     icon: <Code2 size={22} />,
-    value: '200+',
+    value: '300+',
     title: 'LeetCode Problems',
     description: 'Solved standard algorithms and data structure tasks. Specializing in optimized dynamic programming and search arrays.',
     color: '#FFA116' // LeetCode orange
   },
   {
     icon: <Award size={22} />,
-    value: '160+',
+    value: '200+',
     title: 'GeeksforGeeks Problems',
     description: 'Solved challenging questions focusing on recursive systems, binary trees, graph algorithms, and space optimizations.',
     color: '#2F8D46' // GFG green
@@ -21,14 +21,14 @@ const achievements = [
     value: '3+ Live',
     title: 'Production Projects',
     description: 'Successfully deployed responsive, fully functional applications that integrate client side layouts with AWS servers.',
-    color: '#ffffff'
+    color: 'var(--text-primary)'
   },
   {
     icon: <Users size={22} />,
     value: 'Team Leader',
     title: 'Hackathon Leadership',
     description: 'Led development sprints during regional hackathons, orchestrating API development and coordinating frontend interfaces.',
-    color: '#ffffff'
+    color: 'var(--text-primary)'
   }
 ];
 
@@ -43,7 +43,7 @@ export default function Achievements() {
             fontFamily: 'var(--font-sans)',
             fontWeight: 700,
             marginBottom: '16px',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
           }}
         >
           Key Milestones
@@ -101,7 +101,7 @@ function AchievementCard({ ach }) {
             fontWeight: 800,
             fontFamily: 'var(--font-sans)',
             lineHeight: 1,
-            color: '#fff',
+            color: 'var(--text-primary)',
           }}
         >
           {ach.value}

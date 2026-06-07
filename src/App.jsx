@@ -32,7 +32,7 @@ export default function App() {
             <p style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--accent-primary)', marginBottom: '8px', fontWeight: 600 }}>
               &lt;/&gt; Developer Shell
             </p>
-            <h3 style={{ fontSize: '20px', fontWeight: 700, marginBottom: '24px', color: '#ffffff' }}>
+            <h3 style={{ fontSize: '20px', fontWeight: 700, marginBottom: '24px', color: 'var(--text-primary)' }}>
               Interact with my resume using commands
             </h3>
             <Terminal />

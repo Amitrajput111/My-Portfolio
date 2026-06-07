@@ -1,21 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Download, MessageSquare, Mail, Phone, MapPin, ZoomIn, X } from 'lucide-react';
+import { ArrowRight, Download, MessageSquare, Mail, Phone, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon, LeetcodeIcon } from './Icons';
 
 export default function Hero() {
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-
-  // Close lightbox on Escape key press
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        setIsLightboxOpen(false);
-      }
-    };
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
   const scrollToSection = (e, href) => {
     e.preventDefault();
     const target = document.querySelector(href);
@@ -95,7 +82,7 @@ export default function Hero() {
               fontFamily: 'var(--font-sans)',
               fontWeight: 800,
               letterSpacing: '-0.03em',
-              color: '#ffffff',
+              color: 'var(--text-primary)',
             }}
           >
             AMIT <span className="text-gradient-accent">RAJPUT</span>
@@ -159,7 +146,7 @@ export default function Hero() {
               <span style={{ color: 'var(--text-primary)' }}>Indore, India</span>
             </div>
 
-            <div style={{ height: '14px', width: '1px', background: 'rgba(255,255,255,0.1)' }} />
+            <div style={{ height: '14px', width: '1px', background: 'rgba(255, 255, 255, 0.1)' }} />
 
             <div style={{ display: 'flex', gap: '10px' }}>
               <a href="https://linkedin.com/in/amitrajput111" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', display: 'flex' }}>
@@ -226,8 +213,8 @@ export default function Hero() {
             }}
           >
             {[
-              '200+ Solved on LeetCode',
-              '160+ Solved on GeeksforGeeks',
+              '300+ Solved on LeetCode',
+              '200+ Solved on GeeksforGeeks',
               'Innothon Hackathon Leader',
               'Strong DSA & OOPs Core'
             ].map((text, idx) => (
@@ -289,9 +276,9 @@ export default function Hero() {
             />
 
             {/* Corner Tech Brackets */}
-            <div style={{ position: 'absolute', top: '16px', left: '16px', width: '12px', height: '12px', borderLeft: '2px solid var(--accent-primary)', borderTop: '2px solid var(--accent-primary)' }} />
+            <div style={{ position: 'absolute', top: '16px', left: '16px', width: '12px', height: '12px', borderLeft: '2px solid #ffffff', borderTop: '2px solid var(--accent-primary)' }} />
             <div style={{ position: 'absolute', top: '16px', right: '16px', width: '12px', height: '12px', borderRight: '2px solid var(--accent-primary)', borderTop: '2px solid var(--accent-primary)' }} />
-            <div style={{ position: 'absolute', bottom: '16px', left: '16px', width: '12px', height: '12px', borderLeft: '2px solid var(--accent-primary)', borderBottom: '2px solid var(--accent-primary)' }} />
+            <div style={{ position: 'absolute', bottom: '16px', left: '16px', width: '12px', height: '12px', borderLeft: '2px solid #ffffff', borderBottom: '2px solid var(--accent-primary)' }} />
             <div style={{ position: 'absolute', bottom: '16px', right: '16px', width: '12px', height: '12px', borderRight: '2px solid var(--accent-primary)', borderBottom: '2px solid var(--accent-primary)' }} />
 
             {/* Floating Badges */}
@@ -313,187 +300,6 @@ export default function Hero() {
 
       </div>
 
-      {/* Full-width Technical Blueprint Section */}
-      <div style={{ marginTop: '64px', width: '100%', position: 'relative', zIndex: 10 }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '18px' }}>
-          <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--accent-primary)', boxShadow: '0 0 10px var(--accent-primary)' }} />
-          <h3 style={{ fontSize: '13px', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--accent-primary)' }}>
-            System Architecture Blueprint
-          </h3>
-        </div>
-
-        <div
-          onClick={() => setIsLightboxOpen(true)}
-          className="glass-card"
-          style={{
-            padding: 0,
-            overflow: 'hidden',
-            cursor: 'zoom-in',
-            border: '1px solid var(--border-color)',
-            background: 'rgba(10, 15, 30, 0.3)',
-            boxShadow: '0 20px 40px -15px rgba(0, 0, 0, 0.6)',
-            borderRadius: '12px',
-            position: 'relative'
-          }}
-        >
-          {/* Mock Browser/OS Title Bar */}
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              padding: '12px 18px',
-              background: 'rgba(255, 255, 255, 0.02)',
-              borderBottom: '1px solid rgba(255, 255, 255, 0.04)',
-            }}
-          >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ff5f56' }} />
-              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#ffbd2e' }} />
-              <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: '#27c93f' }} />
-              <span style={{ marginLeft: '8px', fontSize: '11px', fontFamily: 'monospace', color: 'var(--text-muted)' }}>
-                amit-developer-blueprint.sys
-              </span>
-            </div>
-            
-            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '11px', color: 'var(--accent-primary)', fontWeight: 500, fontFamily: 'monospace' }}>
-              <ZoomIn size={12} />
-              <span>Click to analyze blueprint</span>
-            </div>
-          </div>
-
-          {/* Banner Graphic Frame */}
-          <div style={{ width: '100%', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <img
-              src="/amit-banner.png"
-              alt="Amit Rajput Tech Stack Banner"
-              className="blueprint-hover-zoom"
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-              }}
-            />
-            {/* Interactive Cover Overlay */}
-            <div
-              className="blueprint-overlay"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(to top, rgba(7, 9, 14, 0.85) 0%, rgba(7, 9, 14, 0.15) 100%)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'flex-end',
-                padding: '24px',
-                pointerEvents: 'none',
-              }}
-            >
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
-                <div>
-                  <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#ffffff', marginBottom: '2px' }}>
-                    Full Stack & AI Developer Blueprint
-                  </h4>
-                  <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: 0 }}>
-                    Overview of core technologies, project integrations, and community highlights.
-                  </p>
-                </div>
-                
-                <span
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.05)',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    borderRadius: '6px',
-                    padding: '6px 14px',
-                    fontSize: '11px',
-                    color: '#ffffff',
-                    fontWeight: 600,
-                  }}
-                >
-                  Examine Blueprint
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* High-Fidelity Lightbox Modal */}
-      {isLightboxOpen && (
-        <div
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            backgroundColor: 'rgba(5, 7, 12, 0.95)',
-            backdropFilter: 'blur(16px)',
-            zIndex: 10000,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '20px',
-          }}
-          onClick={() => setIsLightboxOpen(false)}
-        >
-          {/* Close trigger button */}
-          <button
-            onClick={() => setIsLightboxOpen(false)}
-            style={{
-              position: 'absolute',
-              top: '20px',
-              right: '20px',
-              background: 'rgba(255, 255, 255, 0.04)',
-              border: '1px solid rgba(255, 255, 255, 0.08)',
-              color: '#ffffff',
-              padding: '10px',
-              borderRadius: '50%',
-              cursor: 'pointer',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              zIndex: 10001,
-              transition: 'var(--transition-smooth)'
-            }}
-            onMouseEnter={(e) => e.target.style.background = 'rgba(255, 255, 255, 0.1)'}
-            onMouseLeave={(e) => e.target.style.background = 'rgba(255, 255, 255, 0.04)'}
-          >
-            <X size={18} />
-          </button>
-
-          {/* Expanded Image */}
-          <div
-            style={{
-              maxWidth: '1280px',
-              width: '100%',
-              maxHeight: '82vh',
-              position: 'relative',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <img
-              src="/amit-banner.png"
-              alt="Amit Rajput Complete System Blueprint"
-              style={{
-                maxWidth: '100%',
-                maxHeight: '82vh',
-                objectFit: 'contain',
-                borderRadius: '12px',
-                boxShadow: '0 30px 60px -15px rgba(0, 0, 0, 0.8), 0 0 50px -10px rgba(99, 102, 241, 0.25)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-              }}
-            />
-          </div>
-
-          <p style={{ color: 'var(--text-muted)', fontSize: '12px', marginTop: '16px', fontFamily: 'monospace', opacity: 0.8 }}>
-            Press ESC or click anywhere to exit view
-          </p>
-        </div>
-      )}
     </section>
   );
 }

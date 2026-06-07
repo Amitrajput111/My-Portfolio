@@ -4,31 +4,31 @@ import { Target, Code, Briefcase, Award } from 'lucide-react';
 const stats = [
   {
     icon: <Target size={22} />,
-    value: '360+',
+    value: '500+',
     label: 'Problems Solved',
     description: 'Across LeetCode, GFG & other platforms',
-    color: '#ffffff',
+    color: 'var(--text-primary)',
   },
   {
     icon: <Code size={22} />,
     value: '3+',
     label: 'Live Projects',
     description: 'Active production-ready web platforms',
-    color: '#ffffff',
+    color: 'var(--text-primary)',
   },
   {
     icon: <Briefcase size={22} />,
     value: '2',
     label: 'Internships Completed',
     description: 'Hands-on Full Stack Developer roles',
-    color: '#ffffff',
+    color: 'var(--text-primary)',
   },
   {
     icon: <Award size={22} />,
     value: '4',
     label: 'Certifications',
     description: 'Specializations in MERN, JS, DSA, & Full-Stack',
-    color: '#ffffff',
+    color: 'var(--text-primary)',
   },
 ];
 
@@ -46,7 +46,7 @@ export default function About() {
               marginBottom: '24px',
               fontFamily: 'var(--font-sans)',
               fontWeight: 700,
-              color: '#ffffff',
+              color: 'var(--text-primary)',
             }}
           >
             Crafting scalable systems at the intersection of architecture and logic.
@@ -111,7 +111,7 @@ function StatCard({ stat }) {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          color: '#ffffff',
+          color: 'var(--text-primary)',
         }}
       >
         {stat.icon}
@@ -125,7 +125,7 @@ function StatCard({ stat }) {
             fontFamily: 'var(--font-sans)',
             lineHeight: 1,
             marginBottom: '6px',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
           }}
         >
           {stat.value}

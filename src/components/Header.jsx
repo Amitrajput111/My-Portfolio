@@ -112,7 +112,7 @@ export default function Header() {
           left: 0,
           width: '100%',
           zIndex: 1000,
-          background: scrolled ? 'rgba(9, 9, 11, 0.8)' : 'transparent',
+          background: scrolled ? 'rgba(255, 255, 255, 0.85)' : 'transparent',
           backdropFilter: scrolled ? 'blur(16px)' : 'none',
           WebkitBackdropFilter: scrolled ? 'blur(16px)' : 'none',
           borderBottom: scrolled ? '1px solid rgba(255, 255, 255, 0.08)' : '1px solid transparent',
@@ -182,7 +182,7 @@ export default function Header() {
           <div className="desktop-nav-cta" style={{ display: 'none', alignItems: 'center', gap: '16px' }}>
             
             {/* Direct Social Icon Links in Header */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', borderRight: '1px solid rgba(255,255,255,0.08)', paddingRight: '16px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', borderRight: '1px solid rgba(255, 255, 255, 0.08)', paddingRight: '16px' }}>
               <a 
                 href="https://linkedin.com/in/amitrajput111" 
                 target="_blank" 
@@ -237,7 +237,7 @@ export default function Header() {
                 fontFamily: 'var(--font-sans)',
                 fontWeight: 600,
                 fontSize: '13px',
-                color: '#ffffff',
+                color: 'var(--text-primary)',
                 background: 'rgba(255, 255, 255, 0.03)',
                 border: '1px solid rgba(255, 255, 255, 0.1)',
                 padding: '6px 14px',
@@ -287,7 +287,7 @@ export default function Header() {
           right: mobileMenuOpen ? 0 : '-100%',
           width: '100%',
           height: '100vh',
-          background: 'rgba(9, 9, 11, 0.98)',
+          background: 'rgba(255, 255, 255, 0.98)',
           backdropFilter: 'blur(20px)',
           WebkitBackdropFilter: 'blur(20px)',
           zIndex: 999,
@@ -347,7 +347,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Direct Social Links */}
-        <div style={{ display: 'flex', gap: '20px', marginTop: '16px', borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '16px', width: '60%', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', gap: '20px', marginTop: '16px', borderTop: '1px solid rgba(255, 255, 255, 0.06)', paddingTop: '16px', width: '60%', justifyContent: 'center' }}>
           <a href="https://linkedin.com/in/amitrajput111" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--text-muted)', display: 'flex' }}>
             <LinkedinIcon size={18} />
           </a>

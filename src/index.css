@@ -1,14 +1,14 @@
 :root {
-  --bg-primary: #0a0e1a; /* premium obsidian midnight space blue */
+  --bg-primary: #030712; /* Premium deep charcoal midnight space blue */
   --bg-secondary: #0b0f19; 
-  --bg-card: rgba(15, 20, 32, 0.4); /* frosted glass card */
+  --bg-card: #090e1a; /* solid dark slate-900 card background */
   --border-color: rgba(255, 255, 255, 0.06);
   --border-hover: rgba(99, 102, 241, 0.25);
   --accent-primary: #6366f1; /* Indigo default */
   --accent-secondary: #06b6d4; 
   --accent-success: #10b981;
-  --text-primary: #f1f5f9; 
-  --text-muted: #94a3b8; 
+  --text-primary: #f8fafc; /* slate-50 */
+  --text-muted: #94a3b8; /* slate-400 */
   
   --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -23,7 +23,7 @@
 }
 
 body {
-  background: #0b1120; /* Solid deep midnight-blue color */
+  background: var(--bg-primary); 
   color: var(--text-primary);
   font-family: var(--font-sans);
   overflow-x: hidden;
@@ -37,7 +37,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -77,8 +77,8 @@ p {
 
 /* Premium Card (Clean border-card with solid professional background) */
 .glass-card {
-  background: #131b2e; /* Solid dark blue-gray card background */
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--bg-card); /* White card */
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 32px;
   transition: var(--transition-smooth);
@@ -89,7 +89,7 @@ p {
 
 .glass-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(99, 102, 241, 0.25);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
@@ -721,7 +721,22 @@ p {
     justify-content: center;
   }
 }
+/* Skills custom grid configuration */
+.skills-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
 
+@media (min-width: 969px) {
+  .skills-grid-container > div:last-child {
+    grid-column: span 2;
+  }
+}
 
-
-
+@media (max-width: 968px) {
+  .skills-grid-container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

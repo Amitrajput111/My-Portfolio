@@ -16,8 +16,8 @@ const projects = [
     ],
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'AI Search', 'CSS Modules'],
     github: 'https://github.com/Amitrajput111/stayora',
-    live: 'https://stayora-ochre.vercel.app/',
-    color: '#ffffff',
+    live: 'https://stayora-olhwqqsp8-amitrajput111s-projects.vercel.app/',
+    color: 'var(--text-primary)',
     featured: true,
     mockType: 'stayora',
     cardClass: 'stayora-card'
@@ -28,14 +28,14 @@ const projects = [
     period: 'January 2026 – February 2026',
     description: 'A full stack recruiting portal mapping job vacancies and applicant statuses with drag-and-drop pipeline controls.',
     features: [
-      'Designed and developed HireFlow job portal mapping job vacancies and applicant statuses.',
+      'Design and developed HireFlow job portal mapping job vacancies and applicant statuses.',
       'Implemented drag-and-drop Kanban Board to transition applicants through recruitment cycles (Applied, Screen, Offer).',
       'Secured all API endpoints with custom middleware gates using JWT authentication and Role-Based Access Control (RBAC).'
     ],
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT Auth', 'REST APIs'],
     github: 'https://github.com/Amitrajput111/job_portal',
     live: 'https://hireflow-alpha.vercel.app/',
-    color: '#ffffff',
+    color: 'var(--text-primary)',
     featured: false,
     mockType: 'hireflow',
     cardClass: 'hireflow-card'
@@ -51,9 +51,9 @@ const projects = [
       'Analytics dashboard tracking daily metrics and topic milestones.'
     ],
     tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind', 'AI Core'],
-    github: 'https://github.com/Amitrajput111',
-    live: '#',
-    color: '#ffffff',
+    github: 'https://github.com/Amitrajput111/A1Engineers',
+    live: 'https://frontend-livid-six-59.vercel.app/',
+    color: 'var(--text-primary)',
     featured: false,
     mockType: 'learner',
     cardClass: 'learner-card'
@@ -88,7 +88,7 @@ export default function Projects() {
             fontFamily: 'var(--font-sans)',
             fontWeight: 700,
             marginBottom: '16px',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
           }}
         >
           Featured Work
@@ -122,7 +122,7 @@ export default function Projects() {
               background: 'rgba(255, 255, 255, 0.02)',
               border: '1px solid rgba(255, 255, 255, 0.08)',
               borderRadius: '8px',
-              color: '#ffffff',
+              color: 'var(--text-primary)',
               fontSize: '14px',
               outline: 'none',
               fontFamily: 'var(--font-sans)',
@@ -155,7 +155,7 @@ export default function Projects() {
                   fontWeight: 600,
                   cursor: 'pointer',
                   background: active ? 'var(--accent-primary)' : 'rgba(255, 255, 255, 0.02)',
-                  color: active ? '#ffffff' : 'var(--text-muted)',
+                  color: active ? 'var(--accent-primary)' : 'var(--text-muted)',
                   border: `1px solid ${active ? 'var(--accent-primary)' : 'rgba(255, 255, 255, 0.08)'}`,
                   transition: 'all 0.15s ease',
                 }}
@@ -174,7 +174,7 @@ export default function Projects() {
             <ProjectCard key={project.title} project={project} idx={idx} />
           ))
         ) : (
-          <div style={{ textAlign: 'center', padding: '40px', background: 'rgba(255,255,255,0.01)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.04)' }}>
+          <div style={{ textAlign: 'center', padding: '40px', background: 'rgba(255, 255, 255, 0.01)', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.04)' }}>
             <p style={{ color: 'var(--text-muted)' }}>No projects found matching the filters.</p>
           </div>
         )}
@@ -217,7 +217,7 @@ function ProjectCard({ project, idx }) {
                 style={{
                   fontSize: '11px',
                   fontWeight: 600,
-                  color: '#ffffff',
+                  color: 'var(--text-primary)',
                   background: 'rgba(255, 255, 255, 0.06)',
                   border: '1px solid rgba(255, 255, 255, 0.12)',
                   padding: '4px 10px',
@@ -265,7 +265,7 @@ function ProjectCard({ project, idx }) {
               style={{
                 fontSize: '24px',
                 fontWeight: 700,
-                color: '#fff',
+                color: 'var(--text-primary)',
                 fontFamily: 'var(--font-sans)',
                 marginBottom: '8px',
               }}
@@ -306,7 +306,7 @@ function ProjectCard({ project, idx }) {
                   gap: '8px',
                 }}
               >
-                <span style={{ color: '#ffffff' }}>✓</span>
+                <span style={{ color: 'var(--text-primary)' }}>✓</span>
                 <span>{feat}</span>
               </li>
             ))}
@@ -320,7 +320,7 @@ function ProjectCard({ project, idx }) {
                 style={{
                   fontSize: '11px',
                   fontWeight: 500,
-                  color: '#fff',
+                  color: 'var(--text-primary)',
                   background: 'rgba(255, 255, 255, 0.03)',
                   border: '1px solid rgba(255, 255, 255, 0.06)',
                   padding: '3px 8px',
@@ -363,12 +363,13 @@ function ProjectCard({ project, idx }) {
           style={{
             flex: '1.2',
             minWidth: '320px',
-            background: 'rgba(255, 255, 255, 0.01)',
+            background: '#090e1a',
             borderRadius: '8px',
-            border: '1px solid rgba(255, 255, 255, 0.04)',
+            border: '1px solid rgba(255, 255, 255, 0.06)',
             height: '280px',
             overflow: 'hidden',
             position: 'relative',
+            boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
           }}
           className="project-visual"
         >
@@ -385,15 +386,15 @@ function ProjectCard({ project, idx }) {
           >
             {/* Browser Dots */}
             <div style={{ display: 'flex', gap: '6px' }}>
-              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)' }} />
-              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)' }} />
-              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)' }} />
+              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ff5f56' }} />
+              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#ffbd2e' }} />
+              <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#27c93f' }} />
             </div>
             
             {/* Fake URL Bar */}
             <div
               style={{
-                background: 'rgba(255, 255, 255, 0.03)',
+                background: 'rgba(0, 0, 0, 0.4)',
                 padding: '3px 32px',
                 borderRadius: '4px',
                 fontSize: '10px',
@@ -410,8 +411,14 @@ function ProjectCard({ project, idx }) {
           </div>
 
           {/* Visual Screen Dashboard Rendering */}
-          <div style={{ padding: project.mockType === 'hireflow' ? '0' : '16px', height: 'calc(100% - 37px)', overflow: 'hidden' }}>
-            {project.mockType === 'stayora' && <StayoraMock color={project.color} />}
+          <div style={{ padding: (project.mockType === 'hireflow' || project.mockType === 'stayora' || project.mockType === 'learner') ? '0' : '16px', height: 'calc(100% - 37px)', overflow: 'hidden' }}>
+            {project.mockType === 'stayora' && (
+              <img
+                src="/stayora-screenshot.png"
+                alt="Stayora Platform Screenshot"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+              />
+            )}
             {project.mockType === 'hireflow' && (
               <img
                 src="/hireflow-screenshot.png"
@@ -419,7 +426,13 @@ function ProjectCard({ project, idx }) {
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
               />
             )}
-            {project.mockType === 'learner' && <LearnerMock color={project.color} />}
+            {project.mockType === 'learner' && (
+              <img
+                src="/a1-learner-screenshot.png"
+                alt="A1 Learner Platform Screenshot"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -445,26 +458,26 @@ function StayoraMock({ color }) {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', height: '100%' }}>
       {/* Search Header */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ width: '60px', height: '8px', background: 'rgba(255,255,255,0.15)', borderRadius: '3px' }} />
+        <div style={{ width: '60px', height: '8px', background: 'rgba(255, 255, 255, 0.15)', borderRadius: '3px' }} />
         <div style={{ display: 'flex', gap: '6px' }}>
-          <div style={{ width: '30px', height: '14px', background: 'rgba(255,255,255,0.03)', borderRadius: '3px' }} />
-          <div style={{ width: '30px', height: '14px', background: 'rgba(255,255,255,0.03)', borderRadius: '3px' }} />
+          <div style={{ width: '30px', height: '14px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '3px' }} />
+          <div style={{ width: '30px', height: '14px', background: 'rgba(255, 255, 255, 0.03)', borderRadius: '3px' }} />
         </div>
       </div>
       
       {/* Search Bar */}
       <div
         style={{
-          background: 'rgba(255,255,255,0.02)',
-          border: '1px solid rgba(255,255,255,0.04)',
+          background: 'rgba(255, 255, 255, 0.02)',
+          border: '1px solid rgba(255, 255, 255, 0.04)',
           padding: '6px 12px',
           borderRadius: '4px',
           display: 'flex',
           justifyContent: 'space-between',
         }}
       >
-        <div style={{ width: '100px', height: '6px', background: 'rgba(255,255,255,0.08)', borderRadius: '3px' }} />
-        <div style={{ width: '12px', height: '6px', background: 'rgba(255,255,255,0.2)', borderRadius: '3px' }} />
+        <div style={{ width: '100px', height: '6px', background: 'rgba(255, 255, 255, 0.08)', borderRadius: '3px' }} />
+        <div style={{ width: '12px', height: '6px', background: 'rgba(255, 255, 255, 0.2)', borderRadius: '3px' }} />
       </div>
 
       {/* Hotel Cards Grid */}
@@ -473,8 +486,8 @@ function StayoraMock({ color }) {
           <div
             key={i}
             style={{
-              background: 'rgba(255,255,255,0.02)',
-              border: '1px solid rgba(255,255,255,0.03)',
+              background: 'rgba(255, 255, 255, 0.02)',
+              border: '1px solid rgba(255, 255, 255, 0.03)',
               borderRadius: '4px',
               padding: '6px',
               display: 'flex',
@@ -486,7 +499,7 @@ function StayoraMock({ color }) {
             <div
               style={{
                 height: '50px',
-                background: 'rgba(255,255,255,0.03)',
+                background: 'rgba(255, 255, 255, 0.03)',
                 borderRadius: '4px',
                 position: 'relative',
               }}
@@ -498,22 +511,22 @@ function StayoraMock({ color }) {
                   right: '4px',
                   width: '18px',
                   height: '8px',
-                  background: 'rgba(0,0,0,0.5)',
+                  background: 'rgba(255, 255, 255, 0.5)',
                   borderRadius: '2px',
                   fontSize: '5px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#fff',
+                  color: 'var(--text-primary)',
                 }}
               >
                 ★ 4.9
               </div>
             </div>
             {/* Card Content */}
-            <div style={{ width: '80%', height: '5px', background: 'rgba(255,255,255,0.12)', borderRadius: '2px' }} />
-            <div style={{ width: '40%', height: '4px', background: 'rgba(255,255,255,0.06)', borderRadius: '2px' }} />
-            <div style={{ width: '60%', height: '5px', background: 'rgba(255,255,255,0.15)', borderRadius: '2px', marginTop: '2px' }} />
+            <div style={{ width: '80%', height: '5px', background: 'rgba(255, 255, 255, 0.12)', borderRadius: '2px' }} />
+            <div style={{ width: '40%', height: '4px', background: 'rgba(255, 255, 255, 0.06)', borderRadius: '2px' }} />
+            <div style={{ width: '60%', height: '5px', background: 'rgba(255, 255, 255, 0.15)', borderRadius: '2px', marginTop: '2px' }} />
           </div>
         ))}
       </div>
@@ -527,10 +540,10 @@ function HireFlowMock({ color }) {
       {/* Dashboard Top bar */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: '8px' }}>
-          <div style={{ width: '40px', height: '14px', background: 'rgba(255,255,255,0.15)', borderRadius: '3px' }} />
-          <div style={{ width: '40px', height: '14px', background: 'rgba(255,255,255,0.02)', borderRadius: '3px' }} />
+          <div style={{ width: '40px', height: '14px', background: 'rgba(255, 255, 255, 0.15)', borderRadius: '3px' }} />
+          <div style={{ width: '40px', height: '14px', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '3px' }} />
         </div>
-        <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(255,255,255,0.06)' }} />
+        <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.06)' }} />
       </div>
 
       {/* Kanban Board Columns */}
@@ -539,8 +552,8 @@ function HireFlowMock({ color }) {
           <div
             key={index}
             style={{
-              background: 'rgba(255,255,255,0.01)',
-              border: '1px solid rgba(255,255,255,0.02)',
+              background: 'rgba(255, 255, 255, 0.01)',
+              border: '1px solid rgba(255, 255, 255, 0.02)',
               borderRadius: '4px',
               padding: '8px',
               display: 'flex',
@@ -556,8 +569,8 @@ function HireFlowMock({ color }) {
               <div
                 key={j}
                 style={{
-                  background: 'rgba(255,255,255,0.02)',
-                  borderLeft: '2px solid rgba(255,255,255,0.2)',
+                  background: 'rgba(255, 255, 255, 0.02)',
+                  borderLeft: '2px solid rgba(255, 255, 255, 0.2)',
                   borderRadius: '2px',
                   padding: '6px',
                   display: 'flex',
@@ -566,7 +579,7 @@ function HireFlowMock({ color }) {
                 }}
               >
                 <div style={{ width: '60%', height: '5px', background: '#fff', borderRadius: '1.5px' }} />
-                <div style={{ width: '40%', height: '4px', background: 'rgba(255,255,255,0.05)', borderRadius: '1.5px' }} />
+                <div style={{ width: '40%', height: '4px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '1.5px' }} />
               </div>
             ))}
           </div>
@@ -583,8 +596,8 @@ function LearnerMock({ color }) {
       <div
         style={{
           width: '45px',
-          background: 'rgba(255,255,255,0.01)',
-          borderRight: '1px solid rgba(255,255,255,0.03)',
+          background: 'rgba(255, 255, 255, 0.01)',
+          borderRight: '1px solid rgba(255, 255, 255, 0.03)',
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
@@ -593,9 +606,9 @@ function LearnerMock({ color }) {
           gap: '12px',
         }}
       >
-        <div style={{ width: '16px', height: '16px', borderRadius: '3px', background: 'rgba(255,255,255,0.15)' }} />
+        <div style={{ width: '16px', height: '16px', borderRadius: '3px', background: 'rgba(255, 255, 255, 0.15)' }} />
         {[1, 2, 3].map((i) => (
-          <div key={i} style={{ width: '12px', height: '12px', borderRadius: '3px', background: 'rgba(255,255,255,0.02)' }} />
+          <div key={i} style={{ width: '12px', height: '12px', borderRadius: '3px', background: 'rgba(255, 255, 255, 0.02)' }} />
         ))}
       </div>
 
@@ -603,14 +616,14 @@ function LearnerMock({ color }) {
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '10px' }}>
         {/* Welcome message */}
         <div style={{ width: '120px', height: '8px', background: '#fff', borderRadius: '3px' }} />
-        <div style={{ width: '80px', height: '5px', background: 'rgba(255,255,255,0.08)', borderRadius: '2px' }} />
+        <div style={{ width: '80px', height: '5px', background: 'rgba(255, 255, 255, 0.08)', borderRadius: '2px' }} />
 
         {/* Analytics Graph mockup */}
         <div
           style={{
             height: '60px',
-            background: 'rgba(255,255,255,0.01)',
-            border: '1px solid rgba(255,255,255,0.02)',
+            background: 'rgba(255, 255, 255, 0.01)',
+            border: '1px solid rgba(255, 255, 255, 0.02)',
             borderRadius: '4px',
             padding: '10px',
             position: 'relative',
@@ -647,10 +660,10 @@ function LearnerMock({ color }) {
                 gap: '6px',
               }}
             >
-              <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: 'rgba(255,255,255,0.04)' }} />
+              <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: 'rgba(255, 255, 255, 0.04)' }} />
               <div style={{ flex: 1 }}>
                 <div style={{ width: '80%', height: '4px', background: '#fff', borderRadius: '1.5px' }} />
-                <div style={{ width: '40%', height: '3px', background: 'rgba(255,255,255,0.05)', borderRadius: '1px', marginTop: '3px' }} />
+                <div style={{ width: '40%', height: '3px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '1px', marginTop: '3px' }} />
               </div>
             </div>
           ))}

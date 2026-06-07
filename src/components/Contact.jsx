@@ -29,8 +29,9 @@ export default function Contact() {
       body: JSON.stringify({
         name: formState.name,
         email: formState.email,
-        subject: formState.subject || `New message from ${formState.name}`,
-        message: formState.message
+        _subject: formState.subject || `New message from ${formState.name}`,
+        message: formState.message,
+        _captcha: "false"
       })
     })
       .then((res) => {
@@ -77,7 +78,7 @@ export default function Contact() {
                   fontFamily: 'var(--font-sans)',
                   fontSize: '12px',
                   fontWeight: 600,
-                  color: '#ffffff',
+                  color: 'var(--text-primary)',
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em',
                 }}
@@ -92,7 +93,7 @@ export default function Contact() {
                 fontFamily: 'var(--font-sans)',
                 fontWeight: 700,
                 marginBottom: '16px',
-                color: '#ffffff',
+                color: 'var(--text-primary)',
               }}
             >
               Open to Opportunities
@@ -111,10 +112,10 @@ export default function Contact() {
             >
               {/* Direct Mail Connector */}
               <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                <div style={{ color: '#ffffff', display: 'flex' }}><Mail size={18} /></div>
+                <div style={{ color: 'var(--text-primary)', display: 'flex' }}><Mail size={18} /></div>
                 <div>
                   <div style={{ fontSize: '10px', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Email</div>
-                  <a href="mailto:amitrajput98267313@gmail.com" style={{ color: '#fff', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>
+                  <a href="mailto:amitrajput98267313@gmail.com" style={{ color: 'var(--text-primary)', textDecoration: 'none', fontSize: '14px', fontWeight: 600 }}>
                     amitrajput98267313@gmail.com
                   </a>
                 </div>
@@ -162,7 +163,7 @@ export default function Contact() {
                 style={getInputStyle(activeInput === 'name', !!formState.name)}
               />
               <label style={getLabelStyle(activeInput === 'name', !!formState.name)}>
-                Full Name <span style={{ color: '#ffffff' }}>*</span>
+                Full Name <span style={{ color: 'var(--text-primary)' }}>*</span>
               </label>
             </div>
 
@@ -179,7 +180,7 @@ export default function Contact() {
                 style={getInputStyle(activeInput === 'email', !!formState.email)}
               />
               <label style={getLabelStyle(activeInput === 'email', !!formState.email)}>
-                Email Address <span style={{ color: '#ffffff' }}>*</span>
+                Email Address <span style={{ color: 'var(--text-primary)' }}>*</span>
               </label>
             </div>
 
@@ -216,7 +217,7 @@ export default function Contact() {
                 }}
               />
               <label style={getLabelStyle(activeInput === 'message', !!formState.message)}>
-                Your Message <span style={{ color: '#ffffff' }}>*</span>
+                Your Message <span style={{ color: 'var(--text-primary)' }}>*</span>
               </label>
             </div>
 
@@ -289,9 +290,9 @@ function getInputStyle(isFocused, hasValue) {
     width: '100%',
     padding: '16px 14px',
     background: '#09090b',
-    border: `1px solid ${isFocused ? 'rgba(255, 255, 255, 0.3)' : 'rgba(255, 255, 255, 0.08)'}`,
+    border: `1px solid ${isFocused ? 'var(--accent-primary)' : 'var(--border-color)'}`,
     borderRadius: '6px',
-    color: '#fff',
+    color: 'var(--text-primary)',
     outline: 'none',
     fontSize: '14px',
     fontFamily: 'var(--font-sans)',

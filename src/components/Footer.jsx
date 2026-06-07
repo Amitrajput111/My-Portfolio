@@ -53,7 +53,7 @@ export default function Footer() {
                 fontFamily: 'var(--font-sans)',
                 fontWeight: 700,
                 fontSize: '18px',
-                color: '#fff',
+                color: 'var(--text-primary)',
                 textDecoration: 'none',
                 letterSpacing: '-0.02em',
               }}
@@ -67,7 +67,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <h4 style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: '#fff', letterSpacing: '0.05em' }}>
+            <h4 style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--text-primary)', letterSpacing: '0.05em' }}>
               Quick Links
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px' }}>
@@ -80,7 +80,7 @@ export default function Footer() {
 
           {/* Column 3: Utilities */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <h4 style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: '#fff', letterSpacing: '0.05em' }}>
+            <h4 style={{ fontSize: '12px', fontWeight: 600, textTransform: 'uppercase', color: 'var(--text-primary)', letterSpacing: '0.05em' }}>
               Utilities
             </h4>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '13px' }}>
@@ -101,7 +101,7 @@ export default function Footer() {
                 borderRadius: '6px',
                 background: 'rgba(255, 255, 255, 0.02)',
                 border: '1px solid rgba(255, 255, 255, 0.06)',
-                color: '#ffffff',
+                color: 'var(--text-primary)',
                 cursor: 'pointer',
                 display: 'flex',
                 justifyContent: 'center',
@@ -138,7 +138,7 @@ export default function Footer() {
         >
           <span>© {new Date().getFullYear()} Amit Rajput. All rights reserved.</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
-            Designed & Engineered by <span style={{ color: '#ffffff', fontWeight: 600 }}>Amit Rajput</span>
+            Designed & Engineered by <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>Amit Rajput</span>
           </span>
         </div>
       </div>

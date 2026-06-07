@@ -20,6 +20,7 @@ const skillGroups = [
       { name: 'HTML5', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg' },
       { name: 'CSS3', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg' },
       { name: 'Tailwind CSS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+      { name: 'Bootstrap', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
       { name: 'Responsive UI', isConcept: true, label: 'RESPONSIVE' }
     ]
   },
@@ -35,14 +36,26 @@ const skillGroups = [
     ]
   },
   {
-    title: 'Databases & Tools',
-    description: 'Data management solutions, developer software, and engineering principles.',
+    title: 'Databases & Cloud',
+    description: 'Data management solutions, cloud infrastructure, and configuration tools.',
     skills: [
       { name: 'MongoDB', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
       { name: 'MySQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
+      { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg' },
       { name: 'Git & GitHub', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
       { name: 'Postman', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg' },
-      { name: 'VS Code', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+      { name: 'VS Code', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' }
+    ]
+  },
+  {
+    title: 'AI/ML & Data Science',
+    description: 'Intelligent systems, data analytics libraries, and prediction algorithms.',
+    skills: [
+      { name: 'AIML', isConcept: true, label: 'AI/ML' },
+      { name: 'Pandas', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg' },
+      { name: 'NumPy', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg' },
+      { name: 'Scikit-Learn', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg' },
+      { name: 'ML Algorithms', isConcept: true, label: 'ML ALGO' },
       { name: 'DSA / OOPs', isConcept: true, label: 'DSA/OOPS' }
     ]
   }
@@ -62,7 +75,7 @@ export default function Skills() {
             fontFamily: 'var(--font-sans)',
             fontWeight: 700,
             marginBottom: '16px',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
           }}
         >
           Technical Capabilities
@@ -73,7 +86,7 @@ export default function Skills() {
       </div>
 
       {/* Categories Grid */}
-      <div className="grid-cols-2" style={{ gap: '32px' }}>
+      <div className="skills-grid-container">
         {skillGroups.map((group) => (
           <div
             key={group.title}
@@ -91,7 +104,7 @@ export default function Skills() {
                 style={{
                   fontSize: '20px',
                   fontWeight: 700,
-                  color: '#ffffff',
+                  color: 'var(--text-primary)',
                   marginBottom: '8px',
                   fontFamily: 'var(--font-sans)',
                 }}

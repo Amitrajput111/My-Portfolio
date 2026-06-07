@@ -3,21 +3,21 @@ import { Calendar, Briefcase, ChevronRight } from 'lucide-react';
 
 const experiences = [
   {
-    role: 'Software Development Intern',
+    role: 'AI Engineer Intern',
     company: 'KodBud, Indore (Remote)',
     period: 'March 2026 – April 2026',
-    description: 'Developed and optimized key modules for the Stayora booking platform using React.js, Tailwind CSS, and Node.js.',
+    description: 'Developed Stayora (a premium travel accommodation platform) and integrated intelligent AIML home recommendation systems.',
     highlights: [
-      'Integrated Map features, location search filters, and interactive booking flow dashboards, improving platform usability.',
-      'Collaborated with backend engineers to optimize schema structures in MongoDB, reducing query load times.',
-      'Refactored frontend pages for modular state handling and seamless transition animations.'
+      'Architected and integrated a personalized home recommendation system utilizing AIML models for Stayora listing optimization.',
+      'Constructed location search pipelines, interactive guest dashboards, and responsive map visualizations.',
+      'Collaborated on database schema design in MongoDB to store recommendation weight vectors and user preferences.'
     ],
-    skills: ['React.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs', 'UI Optimization'],
-    color: '#ffffff',
+    skills: ['React', 'Node', 'Python', 'Pandas', 'AIML', 'Responsive Design', 'Home Recommendation'],
+    color: 'var(--text-primary)',
     cardClass: 'exp-kodbud'
   },
   {
-    role: 'Web Development Intern',
+    role: 'Full Stack Developer Intern',
     company: 'CodSoft, Indore (Remote)',
     period: 'January 2026 – February 2026',
     description: 'Designed responsive front-end layouts and portfolio sections using React.js and CSS modules.',
@@ -26,8 +26,8 @@ const experiences = [
       'Integrated API endpoints with local states, improving loading metrics and client-side rendering speeds.',
       'Engineered responsive web designs utilizing custom CSS media queries for high cross-browser compatibility.'
     ],
-    skills: ['React.js', 'CSS Modules', 'API Integration', 'Responsive Design', 'Git'],
-    color: '#ffffff',
+    skills: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'Backend Development'],
+    color: 'var(--text-primary)',
     cardClass: 'exp-codsoft'
   }
 ];
@@ -43,7 +43,7 @@ export default function Experience() {
             fontFamily: 'var(--font-sans)',
             fontWeight: 700,
             marginBottom: '16px',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
           }}
         >
           Professional Journey
@@ -129,7 +129,7 @@ function TimelineItem({ exp, idx }) {
               style={{
                 fontSize: '18px',
                 fontWeight: 700,
-                color: '#fff',
+                color: 'var(--text-primary)',
                 fontFamily: 'var(--font-sans)',
                 marginBottom: '6px',
               }}
@@ -145,7 +145,7 @@ function TimelineItem({ exp, idx }) {
                 fontFamily: 'var(--font-sans)',
                 fontWeight: 600,
                 fontSize: '14px',
-                color: '#ffffff',
+                color: 'var(--text-primary)',
               }}
             >
               <Briefcase size={14} />

@@ -85,7 +85,7 @@ export default function EducationCertifications() {
             fontFamily: 'var(--font-sans)',
             fontWeight: 700,
             marginBottom: '16px',
-            color: '#ffffff',
+            color: 'var(--text-primary)',
           }}
         >
           Education & Certifications
@@ -102,7 +102,7 @@ export default function EducationCertifications() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
             <GraduationCap style={{ color: 'var(--accent-primary)' }} size={24} />
-            <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#ffffff' }}>Education</h3>
+            <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)' }}>Education</h3>
           </div>
 
           {educationList.map((edu) => (
@@ -118,7 +118,7 @@ export default function EducationCertifications() {
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '8px' }}>
                 <div>
-                  <h4 style={{ fontSize: '16px', fontWeight: 700, color: '#ffffff', marginBottom: '4px' }}>
+                  <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-primary)', marginBottom: '4px' }}>
                     {edu.degree}
                   </h4>
                   <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
@@ -164,7 +164,7 @@ export default function EducationCertifications() {
               >
                 <Trophy size={13} style={{ color: 'var(--accent-primary)' }} />
                 <span style={{ color: 'var(--text-muted)' }}>{edu.metricLabel}:</span>
-                <span style={{ color: '#ffffff' }}>{edu.metricValue}</span>
+                <span style={{ color: 'var(--text-primary)' }}>{edu.metricValue}</span>
               </div>
             </div>
           ))}
@@ -174,7 +174,7 @@ export default function EducationCertifications() {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
             <Award style={{ color: 'var(--accent-primary)' }} size={24} />
-            <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#ffffff' }}>Professional Certifications</h3>
+            <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-primary)' }}>Professional Certifications</h3>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '12px' }}>
@@ -213,7 +213,7 @@ export default function EducationCertifications() {
                           fontSize: '9px',
                           fontWeight: 600,
                           color: cert.color,
-                          background: 'rgba(255,255,255,0.02)',
+                          background: 'rgba(255, 255, 255, 0.02)',
                           border: `1px solid rgba(${parseInt(cert.color.slice(1,3), 16) || 255}, ${parseInt(cert.color.slice(3,5), 16) || 255}, ${parseInt(cert.color.slice(5,7), 16) || 255}, 0.15)`,
                           padding: '1px 5px',
                           borderRadius: '4px',

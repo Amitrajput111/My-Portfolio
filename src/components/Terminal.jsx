@@ -6,18 +6,18 @@ export default function Terminal() {
     { type: 'output', text: 'Type "help" to view a list of available commands.' },
   ]);
   const [input, setInput] = useState('');
-  const terminalEndRef = useRef(null);
+  const bodyRef = useRef(null);
   const inputRef = useRef(null);
 
   const commands = {
     help: 'List of commands: about, skills, experience, projects, education, certifications, leetcode, contact, clear',
     about: 'AMIT RAJPUT - MERN Stack Developer | Full-Stack Developer | AI-Powered Application Developer. Results-driven developer with experience building scalable web applications, designing secure REST APIs, and implementing JWT/RBAC security protocols.',
-    skills: 'TECHNICAL SKILLS:\n- Languages: C++, JavaScript (ES6+), Python, SQL\n- Frontend: React.js, Redux, HTML5, CSS3, Responsive Design\n- Backend: Node.js, Express.js, REST APIs, JWT, Role-Based Access Control\n- Database/Cloud: MongoDB, Mongoose, SQL, AWS Fundamentals\n- Tools: Git, GitHub, Postman, VS Code, Vercel\n- Concepts: DSA, OOPs, DBMS, OS, Computer Networks',
-    experience: 'PROFESSIONAL EXPERIENCE:\n1. Software Development Intern @ KodBud (March 2026 – April 2026)\n   - Developed Stayora booking platform using MERN Stack with real-time property searching and maps functionality.\n   - Implemented Guest, Host, and Admin dashboards and optimized database schemas in MongoDB.\n2. Web Development Intern @ CodSoft (January 2026 – February 2026)\n   - Designed responsive front-end layouts and portfolio sections using React.js and CSS modules.\n   - Created reusable components, integrated API endpoints, and optimized loading metrics.',
-    projects: 'PROJECTS:\n1. Stayora: hotel booking platform with interactive map search and Guests/Hosts/Admins control panels. (React, Node, Express, MongoDB) [Feb 2026 – Apr 2026] -> live: https://stayora-ochre.vercel.app/\n2. HireFlow: Candidate tracking job portal with Kanban applicants pipeline. (React, Node, Express, MongoDB, JWT, RBAC) [Jan 2026 – Feb 2026] -> live: https://hireflow-alpha.vercel.app/\n3. A1 Learner: Personalized learning dashboard with adaptive study paths and quiz engine. (React, Node, Express, MongoDB, Python) [Aug 2025 – Dec 2025]',
+    skills: 'TECHNICAL SKILLS:\n- Languages: C++, JavaScript (ES6+), Python, SQL\n- Frontend: React.js, Redux, HTML5, CSS3, Tailwind CSS, Bootstrap, Responsive UI\n- Backend: Node.js, Express.js, RESTful APIs, JWT Auth, RBAC Access\n- Databases & Cloud: MongoDB, MySQL, AWS, Git & GitHub\n- AI/ML & Data Science: AIML, Pandas, NumPy, Scikit-Learn, ML Algorithms\n- Tools & Concepts: Postman, VS Code, DSA, OOPs, DBMS',
+    experience: 'PROFESSIONAL EXPERIENCE:\n1. AI Engineer Intern @ KodBud (March 2026 – April 2026) [React, Node, Python, Pandas, AIML, Responsive Design, Home Recommendation]\n   - Developed Stayora booking platform and integrated intelligent AIML home recommendation systems.\n   - Architected a personalized home recommendation system using AIML models for listing optimization.\n2. Full Stack Developer Intern @ CodSoft (January 2026 – February 2026) [React.js, Node.js, Express.js, MongoDB, Backend Development]\n   - Designed responsive front-end layouts and portfolio sections using React.js and CSS modules.\n   - Created reusable components, integrated API endpoints, and optimized loading metrics.',
+    projects: 'PROJECTS:\n1. Stayora: hotel booking platform with interactive map search and Guests/Hosts/Admins control panels. (React, Node, Express, MongoDB) [Feb 2026 – Apr 2026] -> live: https://stayora-olhwqqsp8-amitrajput111s-projects.vercel.app/\n2. HireFlow: Candidate tracking job portal with Kanban applicants pipeline. (React, Node, Express, MongoDB, JWT, RBAC) [Jan 2026 – Feb 2026] -> live: https://hireflow-alpha.vercel.app/\n3. A1 Learner: Personalized learning dashboard with adaptive study paths and quiz engine. (React, Node, Express, MongoDB, Python) [Aug 2025 – Dec 2025] -> live: https://frontend-livid-six-59.vercel.app/ | code: https://github.com/Amitrajput111/A1Engineers',
     education: 'EDUCATION:\n1. B.Tech in Computer Science & Engineering (August 2022 – June 2026)\n   Shivajirao Kadam Institute of Technology & Management, Indore | CGPA: 7.0/10\n2. Higher Secondary Education (Class XII) (2021 – 2022)\n   Vidhya Sagar Academy, Nasrullaganj | Percentage: 90%',
     certifications: 'VERIFIED CERTIFICATIONS:\n1. Full Stack Web Development (Upgrad & IIIT Bangalore) | ID: FS-9826-7313\n2. MERN Stack Development (GeeksforGeeks Academy) | ID: MERN-Gfg-4829\n3. JavaScript Programming (Infosys Springboard) | ID: JS-SPB-2026\n4. Data Structures & Algorithms (Coding Ninjas) | ID: DSA-CN-8812',
-    leetcode: 'COMPETITIVE PROGRAMMING STATS:\n- Total Solved: 360+ coding questions\n- LeetCode: 200+ problems solved\n- GeeksforGeeks: 160+ problems solved\n- Core foundation in Data Structures and Algorithms.',
+    leetcode: 'COMPETITIVE PROGRAMMING STATS:\n- Total Solved: 500+ coding questions\n- LeetCode: 300+ problems solved\n- GeeksforGeeks: 200+ problems solved\n- Core foundation in Data Structures and Algorithms.',
     contact: 'CONTACT INFORMATION:\n- Email: amitrajput98267313@gmail.com\n- Phone: +91-9109265673\n- Location: Indore, Madhya Pradesh, India\n- LinkedIn: linkedin.com/in/amitrajput111\n- GitHub: github.com/Amitrajput111\n- LeetCode: leetcode.com/u/amit_rajput111',
   };
 
@@ -50,7 +50,9 @@ export default function Terminal() {
   };
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (bodyRef.current) {
+      bodyRef.current.scrollTop = bodyRef.current.scrollHeight;
+    }
   }, [history]);
 
   const focusInput = () => {
@@ -83,7 +85,7 @@ export default function Terminal() {
       </div>
 
       {/* Output Console area */}
-      <div className="terminal-body">
+      <div ref={bodyRef} className="terminal-body">
         {history.map((line, idx) => (
           <div key={idx} style={{ marginBottom: '6px', whiteSpace: 'pre-wrap' }}>
             {line.type === 'input' ? (
@@ -96,7 +98,6 @@ export default function Terminal() {
             )}
           </div>
         ))}
-        <div ref={terminalEndRef} />
       </div>
 
       {/* Input bar */}

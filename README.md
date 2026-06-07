@@ -1,34 +1,111 @@
-# Amit Rajput | Full-Stack Developer Portfolio
+# Amit Rajput | AI Engineer & Full-Stack Developer
 
-Welcome to my professional developer portfolio. This project showcases my experience, skills, achievements, and verified certifications in a clean, modern, and high-performance single-page application.
+<div align="center">
 
-## 🔗 Live Links
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://amit-portfolio-jet.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/amitrajput111)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/u/amit_rajput111)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:amitrajput98267313@gmail.com)
+
+</div>
+
+Welcome to my professional developer portfolio. This single-page application is designed as a high-performance, responsive showcase of my engineering experience, key showcase projects, verified certifications, and coding achievements.
+
+---
+
+## 🔗 Live Deployments
+
+* **Live Portfolio Website**: [https://amit-portfolio-jet.vercel.app](https://amit-portfolio-jet.vercel.app)
 * **GitHub Repository**: [https://github.com/Amitrajput111/My-Portfolio](https://github.com/Amitrajput111/My-Portfolio)
-* **Vercel Deployments**: [https://vercel.com/amitrajput111s-projects]((https://amit-portfolio-jet.vercel.app/))
 
 ---
 
-## 🚀 Features
+## 🚀 Key Showcase Projects (Case Studies)
 
-* **Premium Obsidian Midnight Theme**: A solid, professional deep-midnight background layout (`#0b1120`) using custom-coded, category-specific borders (Amber, Emerald, Cyan, Purple, Indigo) on hover.
-* **Interactive CLI Developer Terminal**: A custom, interactive terminal simulation allowing users to type standard CLI commands (e.g., `help`, `experience`, `projects`, `education`, `certifications`, `clear`) to interact with my resume data in a gamified terminal interface.
-* **Verified Certifications System**: A detailed timeline tracking certifications with verification credentials (UpGrad & IIIT Bangalore, GeeksforGeeks Academy, Infosys Springboard, Coding Ninjas).
-* **Real Email Submission Form**: A secure, AJAX-connected contact form that transmits user messages directly to my primary email (`amitrajput98267313@gmail.com`) using FormSubmit integration.
-* **Responsive Layouts**: Fully responsive grid setups with modern typography presets (Plus Jakarta Sans & Inter) optimized for mobile, tablet, and desktop viewports.
+### 1. Stayora — *Premium Travel Accommodation & Booking Platform*
+* **Tagline**: Full-featured lodging platform featuring real-time property searches, map visualizations, and advanced filtering.
+* **Period**: February 2026 – April 2026
+* **Key Features**:
+  * Integrated interactive maps allowing users to search properties visually.
+  * Architected separate control dashboards for Guests, Hosts, and Platform Admins.
+  * Optimized MongoDB database schemas to store preference weights, reducing load latencies.
+* **Tech Stack**: React.js, Node.js, Express.js, MongoDB, AI Search, Custom CSS Modules
+* **Links**: [Live Demo](https://stayora-olhwqqsp8-amitrajput111s-projects.vercel.app/) | [Code Repository](https://github.com/Amitrajput111/stayora)
+
+### 2. HireFlow — *Candidate & Recruitment Tracking Portal*
+* **Tagline**: A recruiting application mapping job vacancies and applicant stages using custom Kanban pipeline controls.
+* **Period**: January 2026 – February 2026
+* **Key Features**:
+  * Built an interactive drag-and-drop Kanban Board to transition applicants through hiring pipelines (Applied, Screen, Offer).
+  * Secured REST API endpoints with middleware gates utilizing JSON Web Tokens (JWT) and Role-Based Access Control (RBAC).
+* **Tech Stack**: React.js, Node.js, Express.js, MongoDB, JWT Auth, RESTful APIs
+* **Links**: [Live Demo](https://hireflow-alpha.vercel.app/) | [Code Repository](https://github.com/Amitrajput111/job_portal)
+
+### 3. A1 Learner — *Adaptive AI-Driven Personalized Learning Platform*
+* **Tagline**: An adaptive learning dashboard providing personalized learning paths, timelines, and dynamic assessment engines.
+* **Period**: August 2025 – December 2025
+* **Key Features**:
+  * Implemented an adaptive learning timeline that customizes courses based on student activity.
+  * Built a dynamic assessment and quiz scoring engine to evaluate concept retention in real time.
+  * Developed analytics panels displaying progress graphs and daily milestones.
+* **Tech Stack**: React.js, Node.js, Express.js, MongoDB, Tailwind CSS, AI Core
+* **Links**: [Live Demo](https://frontend-livid-six-59.vercel.app/) | [Code Repository](https://github.com/Amitrajput111/A1Engineers)
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Core Technology Stack
 
-* **Frontend**: React.js (v19)
-* **Build Tool**: Vite (v8) for fast Hot Module Replacement (HMR) and optimized assets bundling
-* **Icons**: Lucide React
-* **Styling**: Vanilla CSS3 custom properties & flex/grid layout systems
-* **Contact Integration**: FormSubmit REST API
+* **Frontend**: React.js (v19), Redux Toolkit, Custom CSS3 Custom Properties (Variables), Flexbox & CSS Grid, Tailwind CSS, Bootstrap
+* **Backend**: Node.js, Express.js, RESTful API Design, JWT Authentication & Role-Based Authorization
+* **Databases & Cloud**: MongoDB (Mongoose ODM), MySQL, Amazon Web Services (AWS), Git & GitHub
+* **AI/ML & Data Science**: AIML, Pandas, NumPy, Scikit-Learn, Machine Learning Algorithms (Regression, Classification, Recommendations)
+* **Build Tools & Environment**: Vite (v8) for fast Hot Module Replacement, ESLint, Postman
 
 ---
 
-## 📦 Getting Started
+## 🖥️ Interactive CLI Terminal Simulation
+
+The portfolio features a custom-built, fully responsive browser-based Command Line Interface (CLI) simulator. Visitors can type terminal commands to interact with my credentials in a gamified environment:
+* `help` - Lists all available commands.
+* `about` - Displays a summary of my background.
+* `skills` - Outputs an organized breakdown of my technical stack.
+* `experience` - Displays details on internships and engineering roles.
+* `projects` - Prints summaries of Stayora, HireFlow, and A1 Learner with active links.
+* `education` - Outputs educational qualifications.
+* `certifications` - Lists verified credentials.
+* `leetcode` - Displays my competitive programming statistics.
+* `contact` - Displays social profile links and email details.
+* `clear` - Clears the terminal screen history.
+
+---
+
+## 💼 Verified Professional Experience
+
+### 1. AI Engineer Intern @ KodBud (Remote)
+* **Period**: March 2026 – April 2026
+* **Key Highlights**:
+  * Co-developed the Stayora booking platform and integrated intelligent AIML home recommendation systems.
+  * Built location search pipelines, guest/host dashboards, and visual map overlays.
+  * Engineered MongoDB database schema weight vectors to align suggestions with user preferences.
+
+### 2. Full Stack Developer Intern @ CodSoft (Remote)
+* **Period**: January 2026 – February 2026
+* **Key Highlights**:
+  * Designed modular and reusable React.js frontend structures with custom CSS media queries.
+  * Integrated RESTful endpoints and optimized state management, boosting application loading metrics.
+  * Maintained high cross-browser compatibility and mobile responsiveness.
+
+---
+
+## 🏆 Competitive Programming Achievements
+* **Total Solved**: 500+ coding problems across major algorithmic platforms.
+* **LeetCode**: 300+ problems solved ([LeetCode Profile](https://leetcode.com/u/amit_rajput111))
+* **GeeksforGeeks**: 200+ problems solved
+* Core foundations in Data Structures and Algorithms (DSA), Object-Oriented Programming (OOPs), and Database Management Systems (DBMS).
+
+---
+
+## 📦 Getting Started & Local Installation
 
 ### 1. Clone the repository
 ```bash
@@ -41,23 +118,23 @@ cd My-Portfolio
 npm install
 ```
 
-### 3. Run the development server
+### 3. Start the local development server
 ```bash
 npm run dev
 ```
-Open [http://localhost:5188](http://localhost:5188) in your browser to see the live site.
+Access the application locally via the address printed in the terminal console, or view the live production deployment at [amit-portfolio-jet.vercel.app](https://amit-portfolio-jet.vercel.app).
 
 ### 4. Build for production
 ```bash
 npm run build
 ```
-The optimized production bundle will be generated in the `dist/` directory.
+This builds the optimized production assets inside the `/dist` folder, ready for deployment to host providers like Vercel or Netlify.
 
 ---
 
 ## 👤 Author
-* **Amit Rajput**
+* **Amit Rajput** — AI Engineer & Full-Stack Developer
 * **Location**: Indore, Madhya Pradesh, India
 * **Email**: [amitrajput98267313@gmail.com](mailto:amitrajput98267313@gmail.com)
 * **LinkedIn**: [linkedin.com/in/amitrajput111](https://linkedin.com/in/amitrajput111)
-* **LeetCode**: [leetcode.com/u/amit_rajput111](https://leetcode.com/u/amit_rajput111)
+* **GitHub**: [github.com/Amitrajput111](https://github.com/Amitrajput111)
