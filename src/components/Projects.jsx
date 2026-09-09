@@ -1,78 +1,71 @@
-import React from "react";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
-
-import project1 from "../assets/project1.jpg";
-import project2 from "../assets/project2.jpg";
-import project3 from "../assets/project3.jpg";
-
-const projects = [
-  {
-    name: "Myntra Clone",
-    desc: "E-commerce web app using React.js, Node.js, MongoDB.",
-    img: project1,
-    github: "#",
-    live: "#"
-  },
-  {
-    name: "Apni Krishi",
-    desc: "Agri-tech platform helping farmers.",
-    img: project2,
-    github: "#",
-    live: "#"
-  },
-  {
-    name: "Instagram Clone",
-    desc: "Social media app with login, comment, and image upload features.",
-    img: project3,
-    github: "#",
-    live: "#"
-  }
-];
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Section from "./layout/Section";
+import SectionHeading from "./layout/SectionHeading";
+import ProjectCard from "./ui/ProjectCard";
+import ProjectMarquee from "./ui/ProjectMarquee";
+import ProjectShowcaseSlider from "./ui/ProjectShowcaseSlider";
+import { projects, projectCategories } from "../data/portfolioData";
 
 export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const filteredProjects =
+    activeCategory === "All"
+      ? projects
+      : projects.filter((p) => p.category === activeCategory);
+
   return (
-    <section id="projects" className="py-5 bg-dark text-light">
-      <Container>
-        <h2 className="text-center mb-4">Projects</h2>
-        <Row>
-          {projects.map((p, i) => (
-            <Col md={4} key={i} className="mb-4">
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-              >
-                <Card className="h-100 shadow-lg border-0"
-                  style={{ transition: "transform 0.3s, box-shadow 0.3s" }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.transform = "translateY(-10px)";
-                    e.currentTarget.style.boxShadow = "0 15px 30px rgba(0,0,0,0.4)";
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.2)";
-                  }}
-                >
-                  <Card.Img variant="top" src={p.img} />
-                  <Card.Body>
-                    <Card.Title>{p.name}</Card.Title>
-                    <Card.Text>{p.desc}</Card.Text>
-                    <Button href={p.github} variant="dark" className="me-2">
-                      <FaGithub /> GitHub
-                    </Button>
-                    <Button href={p.live} variant="primary">
-                      <FaExternalLinkAlt /> Live
-                    </Button>
-                  </Card.Body>
-                </Card>
-              </motion.div>
-            </Col>
+    <Section id="projects" className="relative">
+      <SectionHeading
+        label="Featured Work"
+        title="Production Systems & Client Platforms"
+        subtitle="High-impact web applications, automated workflows, and full-stack solutions built for performance and real-world scale"
+      />
+
+      {/* Auto-scrolling continuous Marquee ticker ribbon */}
+      <ProjectMarquee />
+
+      {/* Flagship Auto-Scrolling Project Showcase Slider */}
+      <ProjectShowcaseSlider projects={projects} />
+
+      {/* Category Filter Tabs */}
+      <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-10">
+        {projectCategories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-300 ${
+              activeCategory === cat
+                ? "bg-accent text-primary shadow-glow font-bold scale-105"
+                : "bg-card/70 text-muted hover:text-foreground hover:bg-card border border-white/[0.08]"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Projects Grid */}
+      <motion.div
+        layout
+        className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
+      >
+        <AnimatePresence>
+          {filteredProjects.map((project, index) => (
+            <motion.div
+              layout
+              key={project.id || project.name}
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.4 }}
+            >
+              <ProjectCard project={project} index={index} />
+            </motion.div>
           ))}
-        </Row>
-      </Container>
-    </section>
+        </AnimatePresence>
+      </motion.div>
+    </Section>
   );
 }
