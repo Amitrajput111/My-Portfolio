@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HiCode, HiCloud, HiBriefcase, HiLightningBolt } from "react-icons/hi";
+import { HiCode, HiCloud, HiBriefcase, HiLightningBolt, HiCheckCircle } from "react-icons/hi";
 import Section from "./layout/Section";
 import SectionHeading from "./layout/SectionHeading";
 import MetricCard from "./ui/MetricCard";
 import AnimatedBackground from "./ui/AnimatedBackground";
+import profileImg from "../assets/profile.jpg";
 import { aboutSummary, aboutMetrics } from "../data/portfolioData";
 
 const iconMap = {
@@ -20,36 +21,57 @@ export default function About() {
       <AnimatedBackground variant="section" />
       <div className="relative z-10">
         <SectionHeading
-          label="About"
-          title="Engineering Profile"
-          subtitle="Full-stack builder focused on scalable systems, AI features, and shipping production software"
+          label="About Me"
+          title="Engineering Philosophy & Background"
+          subtitle="Full-stack software developer focused on building scalable, production-grade applications"
         />
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: Amit's Photo & Bio Card */}
           <motion.div
-            initial={{ opacity: 0, x: -32 }}
+            initial={{ opacity: 0, x: -28 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-5 card-premium p-9 md:p-11 relative"
+            className="lg:col-span-5 card-premium p-7 sm:p-9 relative overflow-hidden"
           >
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent-purple to-transparent rounded-t-2xl" />
-            <h3 className="font-display text-2xl font-bold text-foreground mb-5 tracking-tight">
-              Who I am
-            </h3>
-            <p className="text-muted text-base md:text-lg leading-relaxed font-medium">
+            <div className="flex items-center gap-5 mb-6">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-accent/40 shadow-glow shrink-0 bg-secondary">
+                <img
+                  src={profileImg}
+                  alt="Amit Rajput"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div>
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground tracking-tight">
+                  Amit Rajput
+                </h3>
+                <p className="text-accent text-xs sm:text-sm font-semibold mt-0.5">
+                  Full Stack Engineer · Indore, India
+                </p>
+                <div className="flex items-center gap-1.5 mt-2 text-xs text-emerald-400 font-semibold">
+                  <HiCheckCircle size={15} />
+                  <span>AWS Certified Developer</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-muted text-sm sm:text-base leading-relaxed font-medium">
               {aboutSummary}
             </p>
-            <div className="mt-10 pt-8 border-t border-white/[0.08] flex flex-wrap gap-2.5">
-              {["MERN Stack", "REST APIs", "JWT Auth", "AI Apps", "AWS"].map((tag) => (
-                <span key={tag} className="tag-pill">
+
+            <div className="mt-8 pt-6 border-t border-white/[0.08] flex flex-wrap gap-2">
+              {["Next.js", "React.js", "Node.js", "REST APIs", "MongoDB", "AWS", "Tailwind CSS"].map((tag) => (
+                <span key={tag} className="tag-pill text-xs">
                   {tag}
                 </span>
               ))}
             </div>
           </motion.div>
 
-          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-5 md:gap-6">
+          {/* Right Column: 4 Core Metric Cards */}
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4 sm:gap-6">
             {aboutMetrics.map((metric, index) => (
               <MetricCard
                 key={metric.label}

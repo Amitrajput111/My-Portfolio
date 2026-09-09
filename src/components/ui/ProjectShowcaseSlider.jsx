@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaExternalLinkAlt, FaGithub, FaChevronLeft, FaChevronRight, FaPause, FaPlay } from "react-icons/fa";
-import { HiSparkles, HiCheckCircle } from "react-icons/hi";
+import { HiSparkles } from "react-icons/hi";
 import { projectImages } from "../../assets/projects";
 
 export default function ProjectShowcaseSlider({ projects = [] }) {
-  const featuredProjects = projects.filter((p) => p.featured || p.image);
+  const featuredProjects = projects.filter((p) => p.featured);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -13,7 +13,7 @@ export default function ProjectShowcaseSlider({ projects = [] }) {
     if (isPaused || featuredProjects.length === 0) return;
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % featuredProjects.length);
-    }, 5500);
+    }, 6000);
     return () => clearInterval(timer);
   }, [isPaused, featuredProjects.length]);
 
@@ -32,32 +32,32 @@ export default function ProjectShowcaseSlider({ projects = [] }) {
 
   return (
     <div
-      className="relative mb-14 rounded-3xl overflow-hidden card-premium border border-accent/25 shadow-glow"
+      className="relative mb-14 rounded-2xl overflow-hidden card-premium border border-accent/25 shadow-glow"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Top Banner & Controls */}
-      <div className="flex flex-wrap items-center justify-between gap-4 px-6 sm:px-8 py-4 bg-secondary/90 border-b border-white/[0.08]">
-        <div className="flex items-center gap-3">
-          <span className="flex h-3 w-3 relative">
+      {/* Header bar */}
+      <div className="flex flex-wrap items-center justify-between gap-3 px-5 sm:px-7 py-3.5 bg-secondary/95 border-b border-white/[0.08]">
+        <div className="flex items-center gap-2.5">
+          <span className="flex h-2.5 w-2.5 relative">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-accent" />
+            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent" />
           </span>
-          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent flex items-center gap-1.5">
-            <HiSparkles /> Flagship Production Showcase
+          <span className="text-xs font-bold uppercase tracking-widest text-accent flex items-center gap-1.5">
+            <HiSparkles /> Featured Production Showcase
           </span>
         </div>
 
-        {/* Carousel indicators & buttons */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5 mr-2">
+        {/* Carousel controls */}
+        <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 mr-3">
             {featuredProjects.map((p, i) => (
               <button
                 key={p.name}
                 onClick={() => setCurrentIndex(i)}
                 aria-label={`Slide ${i + 1}`}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === currentIndex ? "w-7 bg-accent" : "w-2 bg-white/20 hover:bg-white/40"
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === currentIndex ? "w-6 bg-accent" : "w-2 bg-white/20 hover:bg-white/40"
                 }`}
               />
             ))}
@@ -65,81 +65,61 @@ export default function ProjectShowcaseSlider({ projects = [] }) {
 
           <button
             onClick={() => setIsPaused(!isPaused)}
-            className="p-2 rounded-lg bg-card/80 border border-white/[0.08] text-muted hover:text-accent hover:border-accent/30 transition-colors"
-            title={isPaused ? "Play auto-scroll" : "Pause auto-scroll"}
+            className="p-1.5 rounded-lg bg-card border border-white/[0.08] text-muted hover:text-accent transition-colors"
             aria-label={isPaused ? "Play" : "Pause"}
           >
-            {isPaused ? <FaPlay size={11} /> : <FaPause size={11} />}
+            {isPaused ? <FaPlay size={10} /> : <FaPause size={10} />}
           </button>
           <button
             onClick={handlePrev}
-            className="p-2 rounded-lg bg-card/80 border border-white/[0.08] text-muted hover:text-accent hover:border-accent/30 transition-colors"
+            className="p-1.5 rounded-lg bg-card border border-white/[0.08] text-muted hover:text-accent transition-colors"
             aria-label="Previous Project"
           >
-            <FaChevronLeft size={12} />
+            <FaChevronLeft size={11} />
           </button>
           <button
             onClick={handleNext}
-            className="p-2 rounded-lg bg-card/80 border border-white/[0.08] text-muted hover:text-accent hover:border-accent/30 transition-colors"
+            className="p-1.5 rounded-lg bg-card border border-white/[0.08] text-muted hover:text-accent transition-colors"
             aria-label="Next Project"
           >
-            <FaChevronRight size={12} />
+            <FaChevronRight size={11} />
           </button>
         </div>
       </div>
 
-      {/* Slide Content */}
+      {/* Main Slide Body */}
       <AnimatePresence mode="wait">
         <motion.div
           key={current.id || current.name}
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -16 }}
-          transition={{ duration: 0.45, ease: "easeInOut" }}
-          className="grid lg:grid-cols-12 gap-8 p-6 sm:p-8 lg:p-10 items-center bg-card/40"
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.4 }}
+          className="grid lg:grid-cols-12 gap-8 p-6 sm:p-8 items-center bg-card/60"
         >
-          {/* Left Info Column */}
-          <div className="lg:col-span-6 flex flex-col justify-between">
+          {/* Left Column: Details */}
+          <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="flex flex-wrap items-center gap-2.5 mb-4">
-                <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-accent/15 text-accent border border-accent/30">
-                  {current.badge || "Featured Project"}
-                </span>
-                {current.metrics && (
-                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    {current.metrics}
-                  </span>
-                )}
-              </div>
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-bold bg-accent/10 text-accent border border-accent/25 mb-3">
+                {current.badge || "Client Platform"}
+              </span>
 
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-foreground mb-2 tracking-tight">
+              <h3 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-1.5 tracking-tight">
                 {current.name}
               </h3>
-              <p className="text-accent text-sm sm:text-base font-semibold mb-4">
+              <p className="text-accent text-sm font-semibold mb-3">
                 {current.subtitle}
               </p>
-              <p className="text-muted text-sm sm:text-base leading-relaxed mb-6 font-medium">
+
+              <p className="text-muted text-sm leading-relaxed mb-6 font-medium">
                 {current.description}
               </p>
 
-              {/* Highlights */}
-              {current.highlights && (
-                <div className="grid grid-cols-2 gap-2 mb-6">
-                  {current.highlights.map((hl) => (
-                    <div key={hl} className="flex items-center gap-2 text-xs sm:text-sm text-foreground/90 font-medium">
-                      <HiCheckCircle className="text-accent shrink-0" size={16} />
-                      <span className="truncate">{hl}</span>
-                    </div>
-                  ))}
-                </div>
-              )}
-
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap gap-1.5 mb-6">
                 {current.tech.map((t) => (
                   <span
                     key={t}
-                    className="text-[11px] px-3 py-1.5 rounded-lg font-bold uppercase tracking-wider text-muted bg-secondary/80 border border-white/[0.08]"
+                    className="text-xs px-2.5 py-1 rounded-md font-semibold text-muted bg-secondary border border-white/[0.08]"
                   >
                     {t}
                   </span>
@@ -148,16 +128,16 @@ export default function ProjectShowcaseSlider({ projects = [] }) {
             </div>
 
             {/* Action buttons */}
-            <div className="flex flex-wrap gap-4 pt-4 border-t border-white/[0.08]">
+            <div className="flex flex-wrap gap-3 pt-4 border-t border-white/[0.06]">
               {current.live && (
                 <a
                   href={current.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-primary text-sm py-3 px-6"
+                  className="btn-primary text-xs sm:text-sm py-2.5 px-5"
                 >
-                  <FaExternalLinkAlt size={13} />
-                  Launch Live App
+                  <FaExternalLinkAlt size={12} />
+                  Visit Live Platform
                 </a>
               )}
               {current.github && (
@@ -165,46 +145,40 @@ export default function ProjectShowcaseSlider({ projects = [] }) {
                   href={current.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-outline text-sm py-3 px-6"
+                  className="btn-outline text-xs sm:text-sm py-2.5 px-5"
                 >
-                  <FaGithub size={16} />
-                  Source Code
+                  <FaGithub size={14} />
+                  GitHub Repository
                 </a>
               )}
             </div>
           </div>
 
-          {/* Right Mockup Column */}
-          <div className="lg:col-span-6">
-            <div className="rounded-2xl overflow-hidden bg-secondary border border-white/[0.12] shadow-elevated group">
-              {/* macOS Browser Bar */}
-              <div className="flex items-center justify-between px-4 py-3 bg-secondary/95 border-b border-white/[0.08]">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-rose-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-amber-500/80" />
-                  <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
+          {/* Right Column: Screenshot Window */}
+          <div className="lg:col-span-7">
+            <div className="rounded-xl overflow-hidden bg-secondary border border-white/[0.12] shadow-elevated">
+              {/* Browser Bar */}
+              <div className="flex items-center justify-between px-3.5 py-2 bg-secondary/95 border-b border-white/[0.08]">
+                <div className="flex items-center gap-1.5">
+                  <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
                 </div>
-                <div className="px-4 py-1 rounded-md bg-card/80 border border-white/[0.06] text-[11px] text-muted font-mono max-w-[220px] sm:max-w-[280px] truncate">
-                  {current.live ? current.live.replace("https://", "") : `${current.name.toLowerCase()}.app`}
+                <div className="px-3 py-0.5 rounded bg-card text-[10px] text-muted font-mono max-w-[260px] truncate border border-white/[0.05]">
+                  {current.live ? current.live.replace("https://", "").replace(/\/$/, "") : `${current.name.toLowerCase()}.app`}
                 </div>
-                <div className="w-8" />
+                <div className="w-6" />
               </div>
 
-              {/* Screenshot container */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-card flex items-center justify-center">
-                {imgSrc ? (
+              {/* Screenshot View */}
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-secondary">
+                {imgSrc && (
                   <img
                     src={imgSrc}
-                    alt={`${current.name} live view`}
-                    className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-                    loading="lazy"
+                    alt={`${current.name} showcase preview`}
+                    className="w-full h-full object-cover object-top"
                   />
-                ) : (
-                  <div className={`w-full h-full bg-gradient-to-br ${current.gradient} flex items-center justify-center`}>
-                    <span className="text-6xl font-display font-black text-white/10">{current.name}</span>
-                  </div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </div>
             </div>
           </div>

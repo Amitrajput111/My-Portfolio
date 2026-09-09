@@ -1,7 +1,6 @@
 export const personalInfo = {
   name: "Amit Rajput",
-  headline:
-    "Software Engineer | Full Stack Developer | AI-Powered Application Developer",
+  headline: "Full Stack Software Engineer | MERN & Next.js Specialist",
   location: "Indore, Madhya Pradesh, India",
   email: "amitrajput98267313@gmail.com",
   linkedin: "https://www.linkedin.com/in/amitrajput111",
@@ -11,10 +10,10 @@ export const personalInfo = {
 };
 
 export const heroRoles = [
-  "Software Engineer",
-  "Full Stack Developer (MERN & Next.js)",
-  "AI-Powered Application Developer",
-  "Cloud & System Architecture Enthusiast",
+  "Full Stack Software Engineer",
+  "React & Next.js Developer",
+  "Backend & API Architect (Node / Express)",
+  "AWS Cloud Certified Developer",
 ];
 
 export const navLinks = [
@@ -29,41 +28,41 @@ export const navLinks = [
 ];
 
 export const heroDescription =
-  "Experienced Full Stack Developer crafting production-grade web applications, intelligent automation engines, and high-performance digital platforms using Next.js, React, Node.js, and modern cloud architectures.";
+  "I build high-performance web applications, scalable REST APIs, and automated customer growth platforms. Focused on clean architecture, modern UI engineering, and robust backend systems.";
 
-export const aboutSummary = `I am a Full Stack Software Engineer passionate about building resilient, high-performance web applications and AI-augmented software solutions. With hands-on industry experience across production client systems, recruitment platforms, healthcare portals, and AI booking architectures, I specialize in delivering clean, scalable, and business-critical software from concept to cloud deployment.`;
+export const aboutSummary = `I am a Full Stack Software Engineer specializing in the MERN stack and Next.js ecosystem. Having shipped production applications for client platforms, healthcare systems, and recruitment pipelines, I bridge the gap between clean UI design and reliable backend architecture. With 500+ algorithmic problems solved and an AWS Developer Associate accreditation, I write scalable, well-tested, and maintainable code.`;
 
 export const aboutMetrics = [
-  { value: 360, suffix: "+", label: "DSA Problems Solved", icon: "code" },
+  { value: 500, suffix: "+", label: "DSA Problems Solved", icon: "code" },
   { value: 6, suffix: "+", label: "Production & Client Apps", icon: "rocket" },
-  { value: 2, suffix: "", label: "Internships Completed", icon: "briefcase" },
+  { value: 2, suffix: "", label: "Engineering Internships", icon: "briefcase" },
   { textValue: "AWS", label: "Certified Developer", icon: "cloud" },
 ];
 
 export const skillCategories = [
   {
     title: "Frontend Architecture",
-    skills: ["React.js", "Next.js", "JavaScript (ES6+)", "Tailwind CSS", "Redux Toolkit", "Framer Motion", "HTML5/CSS3"],
+    skills: ["React.js", "Next.js", "JavaScript (ES6+)", "Tailwind CSS", "Redux Toolkit", "Framer Motion", "HTML5 & CSS3"],
   },
   {
     title: "Backend & Systems",
-    skills: ["Node.js", "Express.js", "RESTful APIs", "JWT Auth & RBAC", "Middleware Design", "API Gateway"],
+    skills: ["Node.js", "Express.js", "RESTful API Design", "JWT Auth & RBAC", "Middleware Architecture", "System Design"],
   },
   {
     title: "Databases & Storage",
-    skills: ["MongoDB", "Mongoose", "PostgreSQL / SQL", "Database Optimization", "Data Modeling"],
+    skills: ["MongoDB", "Mongoose ODM", "PostgreSQL", "SQL", "Schema Optimization", "Database Indexing"],
   },
   {
-    title: "AI & Automation",
-    skills: ["WhatsApp Cloud API", "LLM Integration", "Workflow Automation", "AI Recommendations", "Python"],
+    title: "Integrations & Automation",
+    skills: ["WhatsApp Cloud API", "Payment Gateways", "PDF Generation Engines", "REST Webhooks", "Python"],
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS (Associate)", "Vercel", "Git & GitHub", "CI/CD Workflows", "Environment Config"],
+    skills: ["AWS Certified", "Vercel", "Git & GitHub", "CI/CD Deployment", "Environment Management"],
   },
   {
     title: "Engineering Tools",
-    skills: ["Postman", "VS Code", "npm/yarn", "Chrome DevTools", "Agile / Scrum"],
+    skills: ["Postman", "VS Code", "Chrome DevTools", "npm / yarn", "Linux / Bash", "Agile / Scrum"],
   },
 ];
 
@@ -71,182 +70,127 @@ export const experiences = [
   {
     company: "CodSoft",
     role: "Full Stack Developer Intern",
-    project: "HireFlow",
-    period: "Internship",
+    project: "HireFlow Recruitment System",
+    period: "Jan 2026 – Feb 2026",
     description:
-      "Engineered a scalable MERN recruitment platform connecting recruiters and job candidates with secure JWT authentication, role-based dashboards, and resume pipeline management.",
-    highlights: ["HireFlow", "MERN Stack", "REST APIs", "JWT Authentication", "MongoDB", "React.js"],
+      "Engineered an end-to-end recruitment platform featuring candidate Kanban workflows, JWT authentication, role-based dashboards for recruiters, and resume application pipelines.",
+    highlights: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Auth", "REST APIs"],
   },
   {
     company: "KodBud",
     role: "Full Stack Developer Intern",
-    project: "Stayora",
-    period: "AI & Full Stack",
+    project: "Stayora Booking Platform",
+    period: "Mar 2026 – Apr 2026",
     description:
-      "Architected an intelligent accommodation booking platform featuring personalized stay recommendations, responsive UI layouts, and scalable REST API endpoints.",
-    highlights: [
-      "Stayora",
-      "AI Recommendation Logic",
-      "Backend APIs",
-      "Responsive UX",
-      "Database Schema Design",
-    ],
+      "Developed a travel accommodation discovery and booking web application with personalized recommendation filters, responsive UI components, and optimized database queries.",
+    highlights: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Tailwind CSS"],
   },
 ];
 
-export const projectCategories = ["All", "Client & Production", "AI & Automation", "MERN & Full Stack"];
+export const projectCategories = ["All", "Client Platforms", "MERN Stack"];
 
 export const projects = [
   {
     id: "setu",
     name: "SETU",
     title: "SETU — Digital Growth & Intelligent Automation",
-    subtitle: "Digital Growth & Automation Engine",
-    tagline: "Turn Your Digital Presence Into a Customer Growth Engine",
+    subtitle: "High-Performance Growth & Lead Automation Platform",
     description:
-      "High-performance digital growth and intelligent automation platform built with Next.js and Tailwind CSS. Features WhatsApp Cloud API integration, Google Maps Top-3 ranking engine, automated lead capture, instant syllabus & brochure PDF delivery, and AI calendar booking workflows.",
+      "Production agency platform built with Next.js and Tailwind CSS. Features WhatsApp Cloud API integration for instant lead capture, automated brochure & fee PDF delivery, Google Maps Top-3 ranking optimization, and calendar scheduling.",
     live: "https://setu-platform-dkuh7c2q6-amitrajput111s-projects.vercel.app/",
     github: null,
-    tech: ["Next.js", "React.js", "Tailwind CSS", "WhatsApp Cloud API", "Node.js", "Vercel"],
-    category: "Client & Production",
-    highlights: ["Sub-Second Next.js", "WhatsApp Cloud API", "Google Maps Top 3", "AI Calendar Booking"],
-    gradient: "from-blue-600/40 via-cyan-500/20 to-slate-900",
-    image: "/assets/projects/setu.png",
+    tech: ["Next.js", "React", "Tailwind CSS", "WhatsApp Cloud API", "Node.js", "Vercel"],
+    category: "Client Platforms",
+    badge: "Production Client",
     featured: true,
-    badge: "Flagship Production",
-    metrics: "Sub-second Page Speeds · Lead Automation",
   },
   {
     id: "care-clinic",
     name: "CARE CLINIC",
     title: "CARE CLINIC — Trusted Care. Closer to You",
-    subtitle: "NABH Multi-Specialty Healthcare & OPD Portal",
-    tagline: "Trusted care. Closer to you.",
+    subtitle: "NABH Multi-Specialty Healthcare & OPD Booking Portal",
     description:
-      "Production-ready healthcare platform for Bengaluru multi-specialty clinic. Delivers instant OPD appointment booking (< 10 min average wait), senior specialist doctor discovery, digital lab reports within 4–12 hours, transparent consult fees, and Cashless TPA insurance verification.",
+      "Healthcare portal for a multi-specialty Bengaluru clinic. Features instant OPD appointment booking (< 10 min average wait time), specialist doctor profiles across 4 departments, digital lab report tracking, and cashless insurance verification.",
     live: "https://client-wheat-seven-38.vercel.app/",
     github: null,
     tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "REST APIs", "Vercel"],
-    category: "Client & Production",
-    highlights: ["< 10 Min OPD Wait", "Doctor Discovery", "Digital Lab Reports", "Cashless TPA Support"],
-    gradient: "from-emerald-600/40 via-teal-500/20 to-slate-900",
-    image: "/assets/projects/careclinic.png",
+    category: "Client Platforms",
+    badge: "Live Healthcare App",
     featured: true,
-    badge: "Live Client Platform",
-    metrics: "4.9/5.0 Satisfaction · 3.5k+ Patients",
   },
   {
     id: "aura-fitness",
     name: "AURA FITNESS",
     title: "AURA FITNESS | Premium Luxury Gym & Elite Health Club",
-    subtitle: "Luxury Gym & Elite Health Club Platform",
-    tagline: "Forge Your Ultimate Self",
+    subtitle: "Luxury Gym & Membership Platform",
     description:
-      "Modern web application for an elite fitness sanctuary and gym club. Implements interactive membership tiers, 35+ elite coaches roster, interactive facility visualizer, free trial pass booking engine, and seamless WhatsApp enquiry integration.",
+      "Modern web experience built for an elite fitness sanctuary with 10,000+ members. Implements interactive membership tiers, 35+ trainer roster, interactive facility tour, free trial pass engine, and direct WhatsApp enquiry booking.",
     live: "https://gym-web-demo-beta.vercel.app/",
     github: null,
-    tech: ["React.js", "Tailwind CSS", "Framer Motion", "UI/UX Architecture", "Vercel"],
-    category: "Client & Production",
-    highlights: ["10,000+ Active Members Tier", "35+ Elite Coaches", "Free Trial Pass Engine", "WhatsApp Integration"],
-    gradient: "from-amber-600/40 via-yellow-500/20 to-slate-900",
-    image: "/assets/projects/aurafitness.png",
+    tech: ["React.js", "Tailwind CSS", "Framer Motion", "UI Architecture", "Vercel"],
+    category: "Client Platforms",
+    badge: "Client Web App",
     featured: true,
-    badge: "Production Showcase",
-    metrics: "10k+ Member Community · 12+ Yrs Excellence",
   },
   {
     id: "edurise",
     name: "EduRise Institute",
     title: "EduRise Institute — Admissions & Coaching Ecosystem",
-    subtitle: "JEE / NEET Admissions & CBT Assessment Platform",
-    tagline: "Build Your Future With the Right Preparation",
+    subtitle: "JEE & NEET Admissions & CBT Assessment Platform",
     description:
-      "Comprehensive EdTech coaching platform for premier JEE/NEET prep. Features interactive course exploration, AIR 127 top ranker showcase, automated syllabus & fee PDF generator, bi-weekly CBT mock assessments, and 1-on-1 mentorship booking.",
+      "Comprehensive EdTech coaching platform featuring interactive course exploration, AIR 127 top ranker showcase, automated fee and prospectus PDF generation, bi-weekly CBT mock assessments, and 1-on-1 mentorship scheduling.",
     live: "https://edurise-admissions.vercel.app/",
     github: null,
-    tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "Vercel"],
-    category: "Client & Production",
-    highlights: ["AIR 127 Topper Showcase", "Automated Prospectus Delivery", "CBT Mock Assessments", "1:40 Batch Ratio"],
-    gradient: "from-indigo-600/40 via-blue-500/20 to-slate-900",
-    image: "/assets/projects/edurise.png",
-    featured: true,
+    tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "PDF Engine", "Vercel"],
+    category: "Client Platforms",
     badge: "EdTech Platform",
-    metrics: "4.9/5.0 Rating · Master IITian Faculty",
-  },
-  {
-    id: "career-pilot",
-    name: "CareerPilot AI",
-    title: "CareerPilot AI — Your Technical Career Operating System",
-    subtitle: "AI Career Gap Analysis & Learning Roadmap",
-    tagline: "Stop Guessing Your Career. Know Exactly What To Do Next.",
-    description:
-      "AI-driven career diagnostic engine that evaluates developer skill profiles, pinpoints technical competency gaps, generates tailored flight task roadmaps, and tracks telemetry progress towards target engineering roles.",
-    live: null,
-    github: null,
-    tech: ["React.js", "AI / LLM Integration", "Tailwind CSS", "Node.js", "REST APIs"],
-    category: "AI & Automation",
-    highlights: ["Telemetry Terminal", "Career GPS Alignment", "Automated Task Tracker", "Readiness Analytics"],
-    gradient: "from-purple-600/40 via-pink-500/20 to-slate-900",
-    image: "/assets/projects/careerpilot.png",
-    featured: false,
-    badge: "AI Application",
-    metrics: "Skill GPS · Diagnostic Telemetry",
+    featured: true,
   },
   {
     id: "hireflow",
     name: "HireFlow",
-    title: "HireFlow — Recruitment & Job Management Platform",
-    subtitle: "Recruitment & Candidate Workflow Platform",
-    tagline: "Streamlined Job Posting & Candidate Tracking",
+    title: "HireFlow — Candidate & Recruitment Management",
+    subtitle: "MERN Recruitment & Job Application Pipeline",
     description:
-      "Production-ready MERN recruitment platform with JWT authentication, role-based authorization for recruiters and job seekers, job application pipelines, and resume tracking.",
+      "Full stack recruitment management platform with JWT authentication, role-based dashboards for recruiters and applicants, interactive applicant status tracking, and candidate screening pipelines.",
     live: "https://hireflow-alpha.vercel.app/",
     github: "https://github.com/Amitrajput111/job_portal",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Auth"],
-    category: "MERN & Full Stack",
-    highlights: ["Role-Based Access", "Application Pipeline", "Secure JWT", "MongoDB Schemas"],
-    gradient: "from-sky-600/40 via-blue-500/20 to-slate-900",
-    image: null,
-    featured: false,
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Auth", "REST APIs"],
+    category: "MERN Stack",
     badge: "Full Stack MERN",
-    metrics: "Role-Based Workflows · REST APIs",
+    featured: false,
   },
   {
     id: "stayora",
     name: "Stayora",
-    title: "Stayora — AI-Powered Accommodation Booking",
-    subtitle: "Intelligent Accommodation & Stay Discovery",
-    tagline: "Personalized Stay Discovery with Intelligent Matching",
+    title: "Stayora — Travel Accommodation Booking",
+    subtitle: "Accommodation Discovery & Reservation Platform",
     description:
-      "Full stack accommodation booking platform with personalized stay recommendation logic, user auth, responsive filter workflows, and scalable backend services.",
+      "Full stack booking web application with custom accommodation filters, search matching algorithms, user authentication, interactive property views, and scalable MongoDB schemas.",
     live: "https://stayora-ochre.vercel.app/",
     github: "https://github.com/Amitrajput111/stayora",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Python"],
-    category: "MERN & Full Stack",
-    highlights: ["AI Recommendation Engine", "Booking Workflows", "Responsive UI", "REST APIs"],
-    gradient: "from-violet-600/40 via-purple-500/20 to-slate-900",
-    image: null,
+    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Tailwind CSS"],
+    category: "MERN Stack",
+    badge: "Full Stack MERN",
     featured: false,
-    badge: "Full Stack & AI",
-    metrics: "AI Filtering · End-to-End Booking",
   },
 ];
 
 export const marqueeItems = [
-  { text: "SETU: Next.js + WhatsApp Cloud API", category: "Production Client" },
-  { text: "CARE CLINIC: Multi-Specialty OPD Healthcare", category: "Healthcare Platform" },
-  { text: "AURA FITNESS: Luxury Gym Portal", category: "High Performance Web" },
-  { text: "EduRise Institute: JEE / NEET EdTech Ecosystem", category: "EdTech Platform" },
-  { text: "CareerPilot AI: Career Telemetry Engine", category: "AI & ML" },
-  { text: "HireFlow: MERN Recruitment Architecture", category: "Full Stack MERN" },
+  { text: "SETU: Next.js + WhatsApp Cloud API", category: "Client Platform" },
+  { text: "CARE CLINIC: Multi-Specialty Healthcare Portal", category: "Healthcare" },
+  { text: "AURA FITNESS: Luxury Gym Platform", category: "Fitness Web App" },
+  { text: "EduRise: JEE / NEET EdTech Ecosystem", category: "EdTech" },
+  { text: "HireFlow: MERN Recruitment Pipeline", category: "Full Stack MERN" },
+  { text: "Stayora: Accommodation Booking Platform", category: "Full Stack MERN" },
   { text: "AWS Certified Developer – Associate", category: "Cloud Credential" },
-  { text: "360+ Data Structures & Algorithms Solved", category: "Problem Solving" },
+  { text: "500+ Data Structures & Algorithms Solved", category: "Problem Solving" },
 ];
 
 export const achievements = [
-  { value: 200, suffix: "+", label: "LeetCode Problems Solved" },
-  { value: 160, suffix: "+", label: "GeeksforGeeks Problems Solved" },
-  { value: 6, suffix: "+", label: "Production & Live Deployments" },
+  { value: 300, suffix: "+", label: "LeetCode Problems Solved" },
+  { value: 200, suffix: "+", label: "GeeksforGeeks Problems Solved" },
+  { value: 6, suffix: "+", label: "Production & Live Apps Deployed" },
   { textValue: "Team Lead", label: "Hackathon — SKITM Innothon" },
 ];
 
@@ -255,7 +199,7 @@ export const certifications = [
     title: "AWS Certified Developer – Associate",
     issuer: "Amazon Web Services",
     description:
-      "Validates industry expertise in developing, deploying, debugging, and architecting cloud-based applications using AWS services.",
+      "Validates industry expertise in developing, deploying, debugging, and architecting cloud-based applications using core AWS services.",
     badge: "AWS",
     color: "from-amber-500/20 to-orange-600/10",
   },
@@ -263,7 +207,7 @@ export const certifications = [
     title: "Advanced MERN Stack Development",
     issuer: "Infosys Springboard",
     description:
-      "Comprehensive mastery in MongoDB, Express.js, React.js, and Node.js for production-grade full stack web application engineering.",
+      "Mastery in MongoDB, Express.js, React.js, and Node.js for production-grade full stack web application engineering.",
     badge: "MERN",
     color: "from-accent/20 to-sky-600/10",
   },
@@ -271,9 +215,8 @@ export const certifications = [
     title: "Premier AI & Machine Learning",
     issuer: "Infosys Springboard",
     description:
-      "Advanced certification covering AI fundamentals, LLM integration, ML pipelines, and intelligent software engineering.",
+      "Certification covering AI principles, ML algorithms, neural networks, and modern intelligent application design.",
     badge: "AI/ML",
     color: "from-accent-purple/20 to-violet-600/10",
   },
 ];
-

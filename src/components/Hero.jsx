@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTerminal, FaUserCheck } from "react-icons/fa";
 import { LeetCodeIcon } from "./ui/Icons";
-import { HiLocationMarker, HiDownload, HiArrowRight } from "react-icons/hi";
+import { HiLocationMarker, HiDownload, HiArrowRight, HiBadgeCheck } from "react-icons/hi";
 import AnimatedBackground from "./ui/AnimatedBackground";
 import CodeTerminal from "./ui/CodeTerminal";
+import profileImg from "../assets/profile.jpg";
 import { personalInfo, heroDescription, heroRoles } from "../data/portfolioData";
 
 const socialLinks = [
@@ -15,6 +16,8 @@ const socialLinks = [
 ];
 
 export default function Hero() {
+  const [activeTab, setActiveTab] = useState("profile"); // "profile" or "terminal"
+
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -22,42 +25,30 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center pt-32 pb-24 overflow-hidden bg-primary"
+      className="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-primary"
     >
       <AnimatedBackground variant="hero" />
 
-      {/* Floating decorative elements */}
-      <motion.div
-        animate={{ y: [0, -24, 0], rotate: [0, 5, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-[20%] right-[8%] hidden lg:block w-20 h-20 rounded-2xl glass border border-accent/20 shadow-glow opacity-60"
-      />
-      <motion.div
-        animate={{ y: [0, 18, 0], rotate: [0, -8, 0] }}
-        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-[25%] left-[6%] hidden lg:block w-16 h-16 rounded-full bg-gradient-to-br from-accent/20 to-accent-purple/20 border border-accent-purple/25 blur-[1px]"
-      />
-      <motion.div
-        animate={{ scale: [1, 1.15, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 6, repeat: Infinity }}
-        className="absolute top-[40%] left-[15%] w-2 h-2 rounded-full bg-accent shadow-[0_0_20px_#38bdf8]"
-      />
+      {/* Decorative Orbs */}
+      <div className="absolute top-[18%] right-[10%] w-72 h-72 rounded-full bg-accent/5 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[8%] w-80 h-80 rounded-full bg-accent-purple/5 blur-3xl pointer-events-none" />
 
       <div className="section-container relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div>
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
+          {/* Left Hero Text Column */}
+          <div className="lg:col-span-7">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2.5 mb-8 px-4 py-2 rounded-full glass border border-success/25 shadow-[0_0_24px_-6px_rgba(16,185,129,0.4)]"
+              className="inline-flex items-center gap-2.5 mb-6 px-4 py-2 rounded-full glass border border-success/30 shadow-[0_0_20px_-5px_rgba(16,185,129,0.3)]"
             >
               <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success shadow-[0_0_10px_#10b981]" />
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-success shadow-[0_0_8px_#10b981]" />
               </span>
-              <span className="text-sm text-foreground/90 font-semibold tracking-wide">
-                Available for software engineering opportunities
+              <span className="text-xs sm:text-sm text-foreground/90 font-semibold tracking-wide">
+                Available for Software Engineering Roles
               </span>
             </motion.div>
 
@@ -65,16 +56,16 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.1 }}
-              className="section-label mb-6"
+              className="section-label mb-4"
             >
-              Software Engineer Portfolio
+              Full Stack Engineer
             </motion.p>
 
             <motion.h1
-              initial={{ opacity: 0, y: 32 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="heading-display text-5xl sm:text-6xl lg:text-7xl xl:text-[5.5rem] leading-[0.92] mb-8"
+              transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+              className="heading-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[0.95] mb-6"
             >
               <span className="block text-foreground glow-text">AMIT</span>
               <span className="block gradient-text-shine mt-1">RAJPUT</span>
@@ -83,67 +74,67 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.35 }}
-              className="text-xl sm:text-2xl font-display font-semibold mb-6 h-11 flex items-center"
+              transition={{ delay: 0.3 }}
+              className="text-xl sm:text-2xl font-display font-semibold mb-5 h-9 flex items-center"
             >
               <ReactTyped
                 strings={heroRoles}
-                typeSpeed={45}
-                backSpeed={28}
-                backDelay={1800}
+                typeSpeed={40}
+                backSpeed={25}
+                backDelay={2000}
                 loop
-                className="text-accent drop-shadow-[0_0_20px_rgba(56,189,248,0.45)]"
+                className="text-accent drop-shadow-[0_0_15px_rgba(56,189,248,0.4)]"
               />
             </motion.div>
 
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.45 }}
-              className="text-muted text-base sm:text-lg max-w-xl leading-relaxed mb-7 font-medium"
+              transition={{ delay: 0.4 }}
+              className="text-muted text-base sm:text-lg max-w-xl leading-relaxed mb-6 font-medium"
             >
               {heroDescription}
             </motion.p>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="flex items-center gap-2.5 text-muted text-sm mb-10 font-medium"
+              transition={{ delay: 0.45 }}
+              className="flex items-center gap-2 text-muted text-sm mb-8 font-medium"
             >
-              <span className="p-2 rounded-lg bg-card border border-white/[0.08]">
-                <HiLocationMarker className="text-accent shrink-0" size={16} />
-              </span>
-              {personalInfo.location}
-            </motion.p>
+              <HiLocationMarker className="text-accent shrink-0" size={18} />
+              <span>{personalInfo.location}</span>
+            </motion.div>
 
+            {/* CTA Buttons */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.55 }}
-              className="flex flex-wrap gap-4 mb-12"
+              transition={{ delay: 0.5 }}
+              className="flex flex-wrap gap-3.5 mb-10"
             >
               <button type="button" onClick={() => scrollTo("projects")} className="btn-primary group">
                 View Projects
                 <HiArrowRight className="group-hover:translate-x-1 transition-transform duration-300" />
               </button>
               <a href={personalInfo.resumePath} download className="btn-outline">
-                <HiDownload size={18} />
-                Download Resume
+                <HiDownload size={17} />
+                Resume PDF
               </a>
               <button type="button" onClick={() => scrollTo("contact")} className="btn-outline">
                 Contact Me
               </button>
             </motion.div>
 
+            {/* Social Profile Pills */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.65 }}
-              className="flex items-center gap-4"
+              transition={{ delay: 0.6 }}
+              className="flex items-center gap-3"
             >
-              <span className="text-[10px] text-muted uppercase tracking-[0.25em] font-bold mr-2">
-                Connect
+              <span className="text-[11px] text-muted uppercase tracking-wider font-bold mr-1">
+                Connect:
               </span>
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <a
@@ -152,26 +143,109 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-3.5 card-premium rounded-xl text-muted hover:text-accent hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
+                  className="p-3 card-premium rounded-xl text-muted hover:text-accent hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5"
                 >
-                  <Icon size={20} />
+                  <Icon size={18} />
                 </a>
               ))}
             </motion.div>
           </div>
 
+          {/* Right Column: Interactive Profile Card / Terminal */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden sm:block"
+            transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-5"
           >
-            <CodeTerminal />
+            {/* View Switcher Tabs */}
+            <div className="flex items-center justify-between p-1.5 rounded-2xl bg-secondary/80 border border-white/[0.08] mb-4">
+              <button
+                onClick={() => setActiveTab("profile")}
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex-1 justify-center ${
+                  activeTab === "profile"
+                    ? "bg-accent text-primary font-bold shadow-glow"
+                    : "text-muted hover:text-foreground"
+                }`}
+              >
+                <FaUserCheck size={14} /> Developer Profile
+              </button>
+              <button
+                onClick={() => setActiveTab("terminal")}
+                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 flex-1 justify-center ${
+                  activeTab === "terminal"
+                    ? "bg-accent text-primary font-bold shadow-glow"
+                    : "text-muted hover:text-foreground"
+                }`}
+              >
+                <FaTerminal size={13} /> Interactive Shell
+              </button>
+            </div>
+
+            {/* Tab 1: Amit's Developer Photo & Verified Profile Card */}
+            {activeTab === "profile" ? (
+              <div className="card-premium border border-accent/25 p-6 sm:p-7 shadow-glow rounded-3xl relative overflow-hidden group">
+                <div className="flex flex-col sm:flex-row items-center gap-6">
+                  {/* Amit's Photo */}
+                  <div className="relative shrink-0">
+                    <div className="w-28 h-28 sm:w-32 sm:sm:h-32 rounded-2xl overflow-hidden border-2 border-accent/40 shadow-glow bg-secondary">
+                      <img
+                        src={profileImg}
+                        alt="Amit Rajput"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="absolute -bottom-2 -right-2 p-1.5 rounded-full bg-primary border border-success/40 text-success shadow-md" title="Verified Engineer">
+                      <HiBadgeCheck size={20} />
+                    </div>
+                  </div>
+
+                  {/* Profile Quick Summary */}
+                  <div>
+                    <h3 className="text-xl font-display font-bold text-foreground tracking-tight">
+                      Amit Rajput
+                    </h3>
+                    <p className="text-accent text-xs font-semibold mt-0.5">
+                      Full Stack Software Engineer
+                    </p>
+                    <p className="text-muted text-xs leading-relaxed mt-2.5 font-medium">
+                      Passionate about production architecture, Next.js, MERN stack, and shipping robust systems.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Core Metric Highlights */}
+                <div className="grid grid-cols-3 gap-2.5 mt-6 pt-5 border-t border-white/[0.08] text-center">
+                  <div className="p-2.5 rounded-xl bg-secondary/80 border border-white/[0.06]">
+                    <p className="text-lg font-display font-extrabold gradient-text">500+</p>
+                    <p className="text-[10px] text-muted font-semibold uppercase tracking-wider">DSA Solved</p>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-secondary/80 border border-white/[0.06]">
+                    <p className="text-lg font-display font-extrabold gradient-text">6+</p>
+                    <p className="text-[10px] text-muted font-semibold uppercase tracking-wider">Live Apps</p>
+                  </div>
+                  <div className="p-2.5 rounded-xl bg-secondary/80 border border-white/[0.06]">
+                    <p className="text-lg font-display font-extrabold gradient-text">AWS</p>
+                    <p className="text-[10px] text-muted font-semibold uppercase tracking-wider">Associate</p>
+                  </div>
+                </div>
+
+                {/* Quick Stack Badges */}
+                <div className="flex flex-wrap gap-1.5 mt-4">
+                  {["React", "Next.js", "Node.js", "Express", "MongoDB", "Tailwind"].map((t) => (
+                    <span key={t} className="text-[10px] px-2 py-0.5 rounded font-mono font-semibold text-muted bg-secondary border border-white/[0.06]">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              /* Tab 2: Code Terminal Shell */
+              <CodeTerminal />
+            )}
           </motion.div>
         </div>
       </div>
-
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-primary to-transparent pointer-events-none" />
     </section>
   );
 }
