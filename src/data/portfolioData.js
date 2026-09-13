@@ -173,7 +173,7 @@ export const projects = [
     title: "EduRise Institute Ecosystem",
     subtitle: "JEE & NEET Admissions Platform",
     description: "EdTech platform featuring interactive course exploration, automated PDF prospectus generation, and 1-on-1 mentorship scheduling.",
-    live: "https://edurise-admissions.vercel.app/",
+    live: "https://edurise-chi.vercel.app",
     github: null,
     tech: [
       { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },

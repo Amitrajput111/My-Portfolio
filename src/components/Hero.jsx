@@ -104,39 +104,39 @@ export default function Hero() {
             <motion.div 
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -right-6 top-12 card-premium px-4 py-3 rounded-2xl flex items-center gap-3 bg-surface/90"
+              className="absolute -right-8 lg:-right-12 top-16 px-4 py-3 rounded-2xl flex items-center gap-3 bg-background border border-border shadow-2xl z-30"
             >
-              <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 font-bold">
-                <HiCode size={16} />
+              <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 font-bold">
+                <HiCode size={20} />
               </div>
-              <div className="text-sm font-semibold text-foreground leading-tight">
-                MERN Stack<br/><span className="text-muted text-xs">Developer</span>
+              <div className="text-sm font-bold text-foreground leading-tight">
+                MERN Stack<br/><span className="text-muted text-xs font-semibold">Developer</span>
               </div>
             </motion.div>
 
             <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-              className="absolute -left-8 bottom-32 card-premium px-4 py-3 rounded-2xl flex items-center gap-3 bg-surface/90"
+              className="absolute -left-8 lg:-left-12 bottom-32 px-4 py-3 rounded-2xl flex items-center gap-3 bg-background border border-border shadow-2xl z-30"
             >
-              <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500 font-bold">
+              <div className="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 font-bold text-xl">
                 💼
               </div>
-              <div className="text-sm font-semibold text-foreground leading-tight">
-                4 Months<br/><span className="text-muted text-xs">Internship</span>
+              <div className="text-sm font-bold text-foreground leading-tight">
+                4 Months<br/><span className="text-muted text-xs font-semibold">Internship</span>
               </div>
             </motion.div>
 
             <motion.div 
               animate={{ y: [0, -8, 0] }}
               transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }}
-              className="absolute right-4 -bottom-6 card-premium px-4 py-3 rounded-2xl flex items-center gap-3 bg-surface/90 z-20"
+              className="absolute right-0 -bottom-8 px-4 py-3 rounded-2xl flex items-center gap-3 bg-background border border-border shadow-2xl z-30"
             >
-              <div className="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500 font-bold text-xs">
+              <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 font-bold text-sm">
                 LC
               </div>
-              <div className="text-sm font-semibold text-foreground leading-tight">
-                500+<br/><span className="text-muted text-xs">LeetCode</span>
+              <div className="text-sm font-bold text-foreground leading-tight">
+                500+<br/><span className="text-muted text-xs font-semibold">LeetCode</span>
               </div>
             </motion.div>
 
