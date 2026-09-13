@@ -35,7 +35,7 @@ export const aboutSummary = `I am a Full Stack Software Engineer specializing in
 export const aboutMetrics = [
   { value: 500, suffix: "+", label: "DSA Problems Solved", icon: "code" },
   { value: 6, suffix: "+", label: "Production & Client Apps", icon: "rocket" },
-  { value: 2, suffix: "", label: "Engineering Internships", icon: "briefcase" },
+  { textValue: "2 Mo", label: "MERN Stack Internship", icon: "briefcase" },
   { textValue: "Infosys", label: "Advanced MERN Stack", icon: "cloud" },
 ];
 

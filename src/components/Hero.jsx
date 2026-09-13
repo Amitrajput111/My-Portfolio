@@ -79,7 +79,7 @@ export default function Hero() {
               <img 
                 src={profileImg} 
                 alt="Amit Rajput" 
-                className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-110 cursor-pointer"
+                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105 cursor-pointer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent pointer-events-none" />
               
@@ -94,19 +94,43 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Removed the Experience Badge */}
-
+            {/* Floating Badges */}
+            <motion.div 
+              animate={{ y: [0, -10, 0] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="absolute -right-6 top-12 card-premium px-4 py-3 rounded-2xl flex items-center gap-3 bg-surface/90"
+            >
+              <div className="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-500 font-bold">
+                <HiCode size={16} />
+              </div>
+              <div className="text-sm font-semibold text-foreground leading-tight">
+                MERN Stack<br/><span className="text-muted text-xs">Developer</span>
+              </div>
+            </motion.div>
 
             <motion.div 
               animate={{ y: [0, 10, 0] }}
               transition={{ repeat: Infinity, duration: 5, ease: "easeInOut", delay: 1 }}
-              className="absolute -left-8 bottom-24 card-premium px-4 py-3 rounded-2xl flex items-center gap-3 bg-surface/90"
+              className="absolute -left-8 bottom-32 card-premium px-4 py-3 rounded-2xl flex items-center gap-3 bg-surface/90"
             >
-              <div className="w-8 h-8 rounded-full bg-accent-secondary/20 flex items-center justify-center text-accent-secondary font-bold">
-                ✓
+              <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500 font-bold">
+                💼
               </div>
               <div className="text-sm font-semibold text-foreground leading-tight">
-                AWS<br/><span className="text-muted text-xs">Certified</span>
+                2 Months<br/><span className="text-muted text-xs">Internship</span>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              animate={{ y: [0, -8, 0] }}
+              transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut", delay: 0.5 }}
+              className="absolute right-4 -bottom-6 card-premium px-4 py-3 rounded-2xl flex items-center gap-3 bg-surface/90 z-20"
+            >
+              <div className="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500 font-bold text-xs">
+                LC
+              </div>
+              <div className="text-sm font-semibold text-foreground leading-tight">
+                500+<br/><span className="text-muted text-xs">LeetCode</span>
               </div>
             </motion.div>
 

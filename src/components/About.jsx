@@ -46,7 +46,7 @@ export default function About() {
                   <img
                     src={profileImg}
                     alt="Amit Rajput"
-                    className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-300"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-all duration-300"
                   />
                 </div>
               </div>
