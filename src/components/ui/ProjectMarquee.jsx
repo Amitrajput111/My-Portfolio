@@ -1,42 +1,38 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { marqueeItems } from "../../data/portfolioData";
-import { HiLightningBolt } from "react-icons/hi";
 
 export default function ProjectMarquee() {
-  const items = [...marqueeItems, ...marqueeItems];
+  // Duplicate the items for seamless loop
+  const doubled = [...marqueeItems, ...marqueeItems];
 
   return (
-    <div className="relative w-full overflow-hidden py-4 my-8 rounded-2xl bg-secondary/70 border border-white/[0.08] backdrop-blur-md shadow-card">
-      {/* Side gradient fades */}
-      <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-secondary via-secondary/90 to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-secondary via-secondary/90 to-transparent z-10 pointer-events-none" />
+    <div
+      className="relative overflow-hidden mb-12 py-1"
+      aria-hidden="true"
+    >
+      {/* Left fade */}
+      <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+        style={{ background: "linear-gradient(90deg, #0B1120, transparent)" }} />
+      {/* Right fade */}
+      <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
+        style={{ background: "linear-gradient(270deg, #0B1120, transparent)" }} />
 
-      <motion.div
-        className="flex gap-4 items-center whitespace-nowrap will-change-transform"
-        animate={{ x: ["0%", "-50%"] }}
-        transition={{
-          repeat: Infinity,
-          ease: "linear",
-          duration: 30,
-        }}
-        whileHover={{ transition: { duration: 60 } }}
-      >
-        {items.map((item, idx) => (
+      <div className="marquee-track">
+        {doubled.map((item, i) => (
           <div
-            key={idx}
-            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-xl bg-card/80 border border-white/[0.08] hover:border-accent/40 text-xs sm:text-sm font-semibold text-foreground/90 transition-all shadow-sm"
+            key={i}
+            className="inline-flex items-center gap-2 mx-3 px-4 py-2 rounded-full border border-white/[0.07] bg-card/50 shrink-0 select-none"
           >
-            <span className="p-1 rounded-md bg-accent/15 text-accent">
-              <HiLightningBolt size={14} />
+            <span className="w-1.5 h-1.5 rounded-full bg-accent/70 shrink-0" />
+            <span className="text-xs font-semibold text-muted whitespace-nowrap">
+              {item.text}
             </span>
-            <span>{item.text}</span>
-            <span className="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-full bg-accent/10 text-accent font-bold border border-accent/20">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-accent/60 px-2 py-0.5 rounded bg-accent/8 border border-accent/15 whitespace-nowrap">
               {item.category}
             </span>
           </div>
         ))}
-      </motion.div>
+      </div>
     </div>
   );
 }

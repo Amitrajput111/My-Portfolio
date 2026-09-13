@@ -6,7 +6,6 @@ import { LeetCodeIcon } from "./ui/Icons";
 import { HiPaperAirplane } from "react-icons/hi";
 import Section from "./layout/Section";
 import SectionHeading from "./layout/SectionHeading";
-import AnimatedBackground from "./ui/AnimatedBackground";
 import { personalInfo } from "../data/portfolioData";
 
 const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
@@ -58,7 +57,6 @@ export default function Contact() {
 
   return (
     <Section id="contact" className="overflow-hidden">
-      <AnimatedBackground variant="section" />
       <div className="relative z-10">
         <SectionHeading
           label="Contact"

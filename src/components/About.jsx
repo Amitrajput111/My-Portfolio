@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HiCode, HiCloud, HiBriefcase, HiLightningBolt, HiCheckCircle } from "react-icons/hi";
+import { HiCode, HiCloud, HiBriefcase, HiLightningBolt, HiCheckCircle, HiExternalLink } from "react-icons/hi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Section from "./layout/Section";
 import SectionHeading from "./layout/SectionHeading";
 import MetricCard from "./ui/MetricCard";
-import AnimatedBackground from "./ui/AnimatedBackground";
 import profileImg from "../assets/profile.jpg";
-import { aboutSummary, aboutMetrics } from "../data/portfolioData";
+import { aboutSummary, aboutMetrics, personalInfo } from "../data/portfolioData";
 
 const iconMap = {
   code: HiCode,
@@ -18,61 +18,97 @@ const iconMap = {
 export default function About() {
   return (
     <Section id="about" alt className="overflow-hidden">
-      <AnimatedBackground variant="section" />
       <div className="relative z-10">
         <SectionHeading
           label="About Me"
-          title="Engineering Philosophy & Background"
-          subtitle="Full-stack software developer focused on building scalable, production-grade applications"
+          title="Building With Purpose"
+          subtitle="Full-stack software engineer passionate about clean architecture and production-grade applications"
         />
 
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Left Column: Amit's Photo & Bio Card */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          {/* Left: Photo + Bio */}
           <motion.div
-            initial={{ opacity: 0, x: -28 }}
+            initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-5 card-premium p-7 sm:p-9 relative overflow-hidden"
+            className="lg:col-span-5 card-premium p-7 sm:p-8 relative overflow-hidden"
           >
+            {/* Accent top strip */}
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-accent via-accent-purple to-transparent" />
+
+            {/* Profile row */}
             <div className="flex items-center gap-5 mb-6">
-              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-accent/40 shadow-glow shrink-0 bg-secondary">
-                <img
-                  src={profileImg}
-                  alt="Amit Rajput"
-                  className="w-full h-full object-cover object-top"
-                />
+              <div className="relative shrink-0">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden border-2 border-accent/30 bg-secondary">
+                  <img
+                    src={profileImg}
+                    alt="Amit Rajput"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
               </div>
               <div>
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground tracking-tight">
+                <h3 className="font-display text-xl font-bold text-foreground tracking-tight">
                   Amit Rajput
                 </h3>
-                <p className="text-accent text-xs sm:text-sm font-semibold mt-0.5">
+                <p className="text-accent text-xs font-semibold mt-0.5">
                   Full Stack Engineer · Indore, India
                 </p>
-                <div className="flex items-center gap-1.5 mt-2 text-xs text-emerald-400 font-semibold">
-                  <HiCheckCircle size={15} />
+                <div className="flex items-center gap-1.5 mt-2.5 text-xs text-emerald-400 font-semibold">
+                  <HiCheckCircle size={14} />
                   <span>AWS Certified Developer</span>
                 </div>
               </div>
             </div>
 
-            <p className="text-muted text-sm sm:text-base leading-relaxed font-medium">
+            {/* Bio */}
+            <p className="text-muted text-sm sm:text-base leading-relaxed mb-6">
               {aboutSummary}
             </p>
 
-            <div className="mt-8 pt-6 border-t border-white/[0.08] flex flex-wrap gap-2">
-              {["Next.js", "React.js", "Node.js", "REST APIs", "MongoDB", "AWS", "Tailwind CSS"].map((tag) => (
-                <span key={tag} className="tag-pill text-xs">
-                  {tag}
-                </span>
-              ))}
+            {/* Tags */}
+            <div className="flex flex-wrap gap-1.5 mb-6">
+              {["Next.js", "React.js", "Node.js", "REST APIs", "MongoDB", "AWS", "Tailwind CSS"].map(
+                (tag) => (
+                  <span key={tag} className="tag-pill text-xs">
+                    {tag}
+                  </span>
+                )
+              )}
+            </div>
+
+            {/* Social links */}
+            <div className="flex flex-wrap gap-2.5 pt-5 border-t border-white/[0.07]">
+              <a
+                href={personalInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline text-xs py-2 px-4 gap-2"
+              >
+                <FaGithub size={13} /> GitHub
+              </a>
+              <a
+                href={personalInfo.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline text-xs py-2 px-4 gap-2"
+              >
+                <FaLinkedin size={13} /> LinkedIn
+              </a>
+              <a
+                href={personalInfo.resumePath}
+                download
+                className="btn-primary text-xs py-2 px-4 gap-2"
+              >
+                <HiExternalLink size={13} /> Resume
+              </a>
             </div>
           </motion.div>
 
-          {/* Right Column: 4 Core Metric Cards */}
-          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4 sm:gap-6">
-            {aboutMetrics.map((metric, index) => (
+          {/* Right: Metric cards */}
+          <div className="lg:col-span-7 grid sm:grid-cols-2 gap-4 sm:gap-5">
+            {aboutMetrics.map((metric, i) => (
               <MetricCard
                 key={metric.label}
                 value={metric.value}
@@ -80,7 +116,7 @@ export default function About() {
                 textValue={metric.textValue}
                 label={metric.label}
                 icon={iconMap[metric.icon]}
-                delay={index * 0.1}
+                delay={i * 0.1}
               />
             ))}
           </div>

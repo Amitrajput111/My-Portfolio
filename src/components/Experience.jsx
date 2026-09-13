@@ -3,13 +3,11 @@ import { motion } from "framer-motion";
 import { HiBriefcase } from "react-icons/hi";
 import Section from "./layout/Section";
 import SectionHeading from "./layout/SectionHeading";
-import AnimatedBackground from "./ui/AnimatedBackground";
 import { experiences } from "../data/portfolioData";
 
 export default function Experience() {
   return (
     <Section id="experience" className="overflow-hidden">
-      <AnimatedBackground variant="section" />
       <div className="relative z-10">
         <SectionHeading
           label="Experience"
