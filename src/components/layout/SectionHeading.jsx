@@ -21,7 +21,7 @@ export default function SectionHeading({ label, title, subtitle, align = "center
       )}
 
       <h2
-        className={`text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-foreground mb-4`}
+        className={`text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight mb-4 gradient-text pb-1`}
       >
         {title}
       </h2>

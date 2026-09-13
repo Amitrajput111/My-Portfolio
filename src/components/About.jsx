@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { HiCode, HiCloud, HiBriefcase, HiLightningBolt, HiCheckCircle } from "react-icons/hi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Section from "./layout/Section";
 import SectionHeading from "./layout/SectionHeading";
 import MetricCard from "./ui/MetricCard";
@@ -77,7 +76,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-surface border border-border text-foreground text-xs font-semibold hover:bg-background transition-colors"
               >
-                <FaGithub size={14} /> GitHub
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub" className="w-4 h-4 bg-white rounded-full" /> GitHub
               </a>
               <a
                 href={personalInfo.linkedin}
@@ -85,7 +84,7 @@ export default function About() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-surface border border-border text-foreground text-xs font-semibold hover:bg-background transition-colors"
               >
-                <FaLinkedin size={14} /> LinkedIn
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" className="w-4 h-4 rounded" /> LinkedIn
               </a>
               <a
                 href={personalInfo.resumePath}

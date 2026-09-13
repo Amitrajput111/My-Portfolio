@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import { HiArrowRight, HiDownload, HiCode } from "react-icons/hi";
 import { personalInfo, heroDescription } from "../data/portfolioData";
 import profileImg from "../assets/profile.jpg";
-import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
-import { TbBrandNextjs, TbBrandMongodb } from "react-icons/tb";
 
 export default function Hero() {
   return (
@@ -55,11 +53,11 @@ export default function Hero() {
           <div className="mt-12 flex items-center gap-5 text-muted border-t border-border pt-6 w-full max-w-md">
             <span className="text-sm font-semibold uppercase tracking-widest">Tech Stack</span>
             <div className="flex items-center gap-4">
-              <FaReact size={24} className="hover:text-accent transition-colors" />
-              <FaNodeJs size={24} className="hover:text-green-500 transition-colors" />
-              <TbBrandNextjs size={24} className="hover:text-white transition-colors" />
-              <FaAws size={24} className="hover:text-orange-500 transition-colors" />
-              <TbBrandMongodb size={24} className="hover:text-green-400 transition-colors" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="w-6 h-6 hover:scale-110 transition-transform cursor-pointer" title="React" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-6 h-6 hover:scale-110 transition-transform cursor-pointer" title="Node.js" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="Next.js" className="w-6 h-6 hover:scale-110 transition-transform cursor-pointer bg-white rounded-full p-0.5" title="Next.js" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" className="w-6 h-6 hover:scale-110 transition-transform cursor-pointer bg-white rounded p-0.5" title="AWS" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-6 h-6 hover:scale-110 transition-transform cursor-pointer" title="MongoDB" />
             </div>
           </div>
         </motion.div>

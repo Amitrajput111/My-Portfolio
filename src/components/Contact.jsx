@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-import { LeetCodeIcon } from "./ui/Icons";
 import { HiPaperAirplane } from "react-icons/hi";
 import Section from "./layout/Section";
 import SectionHeading from "./layout/SectionHeading";
@@ -14,10 +12,10 @@ const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 const emailJsConfigured = SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY;
 
 const contactLinks = [
-  { icon: FaEnvelope, href: `mailto:${personalInfo.email}`, label: personalInfo.email, sub: "Email me directly" },
-  { icon: FaLinkedin, href: personalInfo.linkedin, label: "LinkedIn", sub: "Professional network" },
-  { icon: FaGithub, href: personalInfo.github, label: "GitHub", sub: "Code & projects" },
-  { icon: LeetCodeIcon, href: personalInfo.leetcode, label: "LeetCode", sub: "DSA profile" },
+  { imgUrl: "https://upload.wikimedia.org/wikipedia/commons/4/4e/Mail_%28iOS%29.svg", href: `mailto:${personalInfo.email}`, label: personalInfo.email, sub: "Email me directly" },
+  { imgUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg", href: personalInfo.linkedin, label: "LinkedIn", sub: "Professional network" },
+  { imgUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", href: personalInfo.github, label: "GitHub", sub: "Code & projects" },
+  { imgUrl: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png", href: personalInfo.leetcode, label: "LeetCode", sub: "DSA profile" },
 ];
 
 export default function Contact() {
@@ -83,7 +81,7 @@ export default function Contact() {
             </div>
 
             <div className="space-y-3">
-              {contactLinks.map(({ icon: Icon, href, label, sub }) => (
+              {contactLinks.map(({ imgUrl, href, label, sub }) => (
                 <a
                   key={label}
                   href={href}
@@ -92,7 +90,7 @@ export default function Contact() {
                   className="flex items-center gap-4 p-5 bg-surface border border-border hover:border-emerald-500/50 transition-colors rounded-xl group"
                 >
                   <span className="p-3.5 rounded-xl bg-gradient-to-br from-emerald-500/10 to-transparent text-foreground border border-emerald-500/20 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-shadow duration-300">
-                    <Icon size={20} />
+                    <img src={imgUrl} alt={label} className="w-5 h-5 object-contain bg-white rounded-sm" />
                   </span>
                   <div>
                     <p className="text-foreground font-semibold text-sm">{label}</p>
