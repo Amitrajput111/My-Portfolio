@@ -94,19 +94,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating Badges */}
-            <motion.div 
-              animate={{ y: [0, -10, 0] }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute -right-6 top-12 card-premium px-4 py-3 rounded-2xl flex items-center gap-3 bg-surface/90"
-            >
-              <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center text-accent font-bold">
-                2+
-              </div>
-              <div className="text-sm font-semibold text-foreground leading-tight">
-                Years<br/><span className="text-muted text-xs">Experience</span>
-              </div>
-            </motion.div>
+            {/* Removed the Experience Badge */}
+
 
             <motion.div 
               animate={{ y: [0, 10, 0] }}

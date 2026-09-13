@@ -70,11 +70,11 @@
 
   /* Buttons */
   .btn-primary {
-    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-background bg-accent overflow-hidden transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)];
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-bold text-sm text-background bg-accent transition-all duration-300;
   }
 
   .btn-primary:hover {
-    @apply scale-[1.02] shadow-[0_0_30px_rgba(34,211,238,0.6)];
+    @apply scale-[1.02] bg-gray-200;
   }
 
   .btn-outline {

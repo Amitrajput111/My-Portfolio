@@ -234,6 +234,7 @@ export const certifications = [
       "Validates industry expertise in developing, deploying, debugging, and architecting cloud-based applications using core AWS services.",
     badge: "AWS",
     color: "from-amber-500/20 to-orange-600/10",
+    pdf: "/infosys-aws-developer.pdf",
   },
   {
     title: "Advanced MERN Stack Development",
@@ -242,6 +243,7 @@ export const certifications = [
       "Mastery in MongoDB, Express.js, React.js, and Node.js for production-grade full stack web application engineering.",
     badge: "MERN",
     color: "from-accent/20 to-sky-600/10",
+    pdf: "/infosys-advanced-mern.pdf",
   },
   {
     title: "Premier AI & Machine Learning",
@@ -249,6 +251,7 @@ export const certifications = [
     description:
       "Certification covering AI principles, ML algorithms, neural networks, and modern intelligent application design.",
     badge: "AI/ML",
-    color: "from-accent-purple/20 to-violet-600/10",
+    color: "from-accent-secondary/20 to-emerald-600/10",
+    pdf: "/google-gen-ai-leader-1.pdf",
   },
 ];

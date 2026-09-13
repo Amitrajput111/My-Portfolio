@@ -10,8 +10,8 @@ module.exports = {
         border: "#334155",
         foreground: "#F8FAFC",
         muted: "#94A3B8",
-        accent: "#22D3EE",
-        "accent-secondary": "#818CF8",
+        accent: "#FFFFFF",
+        "accent-secondary": "#10B981",
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
