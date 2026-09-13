@@ -91,7 +91,7 @@ export default function Contact() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-5 card-premium-hover rounded-2xl group"
                 >
-                  <span className="p-3.5 rounded-xl bg-gradient-to-br from-accent/20 to-accent-purple/10 text-accent border border-accent/20 group-hover:shadow-glow transition-shadow duration-300">
+                  <span className="p-3.5 rounded-xl bg-gradient-to-br from-accent/20 to-accent-purple/10 text-foreground border border-accent/20 group-hover:shadow-card-hover transition-shadow duration-300">
                     <Icon size={20} />
                   </span>
                   <div>

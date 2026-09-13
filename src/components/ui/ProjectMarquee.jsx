@@ -21,13 +21,13 @@ export default function ProjectMarquee() {
         {doubled.map((item, i) => (
           <div
             key={i}
-            className="inline-flex items-center gap-2 mx-3 px-4 py-2 rounded-full border border-white/[0.07] bg-card/50 shrink-0 select-none"
+            className="inline-flex items-center gap-2 mx-3 px-4 py-2 rounded-full border border-white/[0.07] bg-surface/50 shrink-0 select-none"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-accent/70 shrink-0" />
+            <span className="w-1.5 h-1.5 rounded-full bg-foreground/70 shrink-0" />
             <span className="text-xs font-semibold text-muted whitespace-nowrap">
               {item.text}
             </span>
-            <span className="text-[10px] font-bold uppercase tracking-wider text-accent/60 px-2 py-0.5 rounded bg-accent/8 border border-accent/15 whitespace-nowrap">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-foreground/60 px-2 py-0.5 rounded bg-foreground/8 border border-accent/15 whitespace-nowrap">
               {item.category}
             </span>
           </div>

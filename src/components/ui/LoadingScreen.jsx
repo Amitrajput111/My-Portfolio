@@ -31,7 +31,7 @@ export default function LoadingScreen({ onComplete }) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.02 }}
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-primary overflow-hidden"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-background overflow-hidden"
         >
           {/* Background grid */}
           <div
@@ -51,12 +51,12 @@ export default function LoadingScreen({ onComplete }) {
           <motion.div
             animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.15, 1] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-accent/8 blur-3xl pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-foreground/8 blur-3xl pointer-events-none"
           />
           <motion.div
             animate={{ opacity: [0.2, 0.4, 0.2], x: [0, 40, 0] }}
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute top-1/4 -left-24 w-80 h-80 rounded-full bg-accent-purple/10 blur-3xl pointer-events-none"
+            className="absolute top-1/4 -left-24 w-80 h-80 rounded-full bg-foreground-purple/10 blur-3xl pointer-events-none"
           />
 
           {/* Main content */}
@@ -75,7 +75,7 @@ export default function LoadingScreen({ onComplete }) {
                   className="w-8 h-8 rounded-lg border-2 border-accent/60 border-t-accent flex items-center justify-center"
                   style={{ borderTopColor: "#38bdf8" }}
                 />
-                <span className="font-mono text-xs text-accent/70 uppercase tracking-widest font-bold">
+                <span className="font-mono text-xs text-foreground/70 uppercase tracking-widest font-bold">
                   initializing
                 </span>
               </div>
@@ -104,7 +104,7 @@ export default function LoadingScreen({ onComplete }) {
                 <span className="font-mono text-[10px] text-muted/60 uppercase tracking-widest">
                   Loading portfolio
                 </span>
-                <span className="font-mono text-xs font-bold text-accent tabular-nums">
+                <span className="font-mono text-xs font-bold text-foreground tabular-nums">
                   {progress}%
                 </span>
               </div>
@@ -142,7 +142,7 @@ export default function LoadingScreen({ onComplete }) {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.3 }}
-                      className="px-2.5 py-1 text-[10px] font-mono font-bold rounded-md bg-accent/10 text-accent border border-accent/20"
+                      className="px-2.5 py-1 text-[10px] font-mono font-bold rounded-md bg-foreground/10 text-foreground border border-accent/20"
                     >
                       {label}
                     </motion.span>

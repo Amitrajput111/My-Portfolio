@@ -38,8 +38,8 @@ export default function Projects() {
             onClick={() => setActiveCategory(cat)}
             className={`px-4 py-2 rounded-xl text-xs font-bold tracking-wide transition-all duration-300 ${
               activeCategory === cat
-                ? "bg-accent text-primary shadow-glow scale-105"
-                : "bg-card/70 text-muted hover:text-foreground hover:bg-card border border-white/[0.07]"
+                ? "bg-foreground text-background shadow-card-hover scale-105"
+                : "bg-surface/70 text-muted hover:text-foreground hover:bg-surface border border-white/[0.07]"
             }`}
           >
             {cat}

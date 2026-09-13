@@ -37,15 +37,15 @@ export default function Certifications() {
                 {cert.badge}
               </span>
             </div>
-            <HiAcademicCap className="text-accent mb-3" size={24} />
+            <HiAcademicCap className="text-foreground mb-3" size={24} />
             <h3 className="font-display text-foreground font-bold mb-2 leading-snug text-lg tracking-tight">
               {cert.title}
             </h3>
-            <p className="text-accent text-sm font-bold mb-3">{cert.issuer}</p>
+            <p className="text-foreground text-sm font-bold mb-3">{cert.issuer}</p>
             <p className="text-muted text-sm line-clamp-2 font-medium leading-relaxed">
               {cert.description}
             </p>
-            <span className="inline-flex items-center gap-1.5 mt-6 text-xs font-bold text-accent uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <span className="inline-flex items-center gap-1.5 mt-6 text-xs font-bold text-foreground uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               Preview certificate <HiExternalLink size={12} />
             </span>
           </motion.button>
@@ -58,7 +58,7 @@ export default function Certifications() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-primary/90 backdrop-blur-xl"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-background/90 backdrop-blur-xl"
             onClick={() => setSelected(null)}
             role="dialog"
             aria-modal="true"
@@ -68,12 +68,12 @@ export default function Certifications() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 24 }}
               onClick={(e) => e.stopPropagation()}
-              className="card-premium max-w-lg w-full p-9 relative shadow-glow"
+              className="card-premium max-w-lg w-full p-9 relative shadow-card-hover"
             >
               <button
                 type="button"
                 onClick={() => setSelected(null)}
-                className="absolute top-5 right-5 p-2.5 rounded-xl glass text-muted hover:text-foreground hover:border-accent/30 transition-colors"
+                className="absolute top-5 right-5 p-2.5 rounded-xl bg-surface border border-border text-muted hover:text-foreground hover:border-accent/30 transition-colors"
                 aria-label="Close"
               >
                 <HiX size={22} />
@@ -92,7 +92,7 @@ export default function Certifications() {
               <h3 className="font-display text-2xl font-bold text-foreground mb-2 tracking-tight">
                 {selected.title}
               </h3>
-              <p className="text-accent font-bold mb-4">{selected.issuer}</p>
+              <p className="text-foreground font-bold mb-4">{selected.issuer}</p>
               <p className="text-muted leading-relaxed font-medium">{selected.description}</p>
             </motion.div>
           </motion.div>

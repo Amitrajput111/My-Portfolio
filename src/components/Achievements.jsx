@@ -23,8 +23,8 @@ function StatCard({ item, index }) {
       <div className="absolute inset-0 bg-gradient-to-b from-accent-purple/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
 
-      <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/25 flex items-center justify-center mx-auto mb-5 group-hover:shadow-glow transition-shadow">
-        <HiTrendingUp className="text-accent relative" size={28} />
+      <div className="w-14 h-14 rounded-2xl bg-foreground/10 border border-accent/25 flex items-center justify-center mx-auto mb-5 group-hover:shadow-card-hover transition-shadow">
+        <HiTrendingUp className="text-foreground relative" size={28} />
       </div>
       <p className="text-4xl md:text-5xl font-display font-extrabold gradient-text mb-3 relative glow-text">
         {item.textValue ?? (

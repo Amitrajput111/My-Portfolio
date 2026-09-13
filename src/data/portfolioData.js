@@ -42,27 +42,59 @@ export const aboutMetrics = [
 export const skillCategories = [
   {
     title: "Frontend Architecture",
-    skills: ["React.js", "Next.js", "JavaScript (ES6+)", "Tailwind CSS", "Redux Toolkit", "Framer Motion", "HTML5 & CSS3"],
+    skills: [
+      { name: "React.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+      { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Redux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" },
+      { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+    ],
   },
   {
     title: "Backend & Systems",
-    skills: ["Node.js", "Express.js", "RESTful API Design", "JWT Auth & RBAC", "Middleware Architecture", "System Design"],
+    skills: [
+      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+      { name: "Express.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
+      { name: "REST APIs", logo: null },
+      { name: "JWT Auth", logo: null },
+      { name: "System Design", logo: null },
+    ],
   },
   {
     title: "Databases & Storage",
-    skills: ["MongoDB", "Mongoose ODM", "PostgreSQL", "SQL", "Schema Optimization", "Database Indexing"],
+    skills: [
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+      { name: "Mongoose", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongoose/mongoose-original.svg" },
+      { name: "PostgreSQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+      { name: "SQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" },
+    ],
   },
   {
     title: "Integrations & Automation",
-    skills: ["WhatsApp Cloud API", "Payment Gateways", "PDF Generation Engines", "REST Webhooks", "Python"],
+    skills: [
+      { name: "Python", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+      { name: "Webhooks", logo: null },
+      { name: "Payment Gateways", logo: null },
+    ],
   },
   {
     title: "Cloud & DevOps",
-    skills: ["AWS Certified", "Vercel", "Git & GitHub", "CI/CD Deployment", "Environment Management"],
+    skills: [
+      { name: "AWS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+      { name: "Vercel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
+      { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+      { name: "GitHub", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+    ],
   },
   {
     title: "Engineering Tools",
-    skills: ["Postman", "VS Code", "Chrome DevTools", "npm / yarn", "Linux / Bash", "Agile / Scrum"],
+    skills: [
+      { name: "Postman", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" },
+      { name: "VS Code", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" },
+      { name: "Linux", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
+      { name: "npm", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/npm/npm-original-wordmark.svg" },
+    ],
   },
 ];
 

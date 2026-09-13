@@ -22,7 +22,7 @@ export default function CodeTerminal() {
       <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/30 to-accent-purple/30 blur-xl" />
 
       <div className="relative card-premium rounded-2xl overflow-hidden shadow-elevated glow-accent">
-        <div className="flex items-center gap-2 px-5 py-3.5 border-b border-white/[0.08] bg-secondary/90">
+        <div className="flex items-center gap-2 px-5 py-3.5 border-b border-white/[0.08] bg-surface/90">
           <span className="w-3 h-3 rounded-full bg-red-500/90 shadow-[0_0_8px_rgba(239,68,68,0.5)]" />
           <span className="w-3 h-3 rounded-full bg-amber-400/90 shadow-[0_0_8px_rgba(251,191,36,0.4)]" />
           <span className="w-3 h-3 rounded-full bg-success shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
@@ -30,7 +30,7 @@ export default function CodeTerminal() {
             portfolio.tsx
           </span>
         </div>
-        <pre className="p-6 text-sm font-mono leading-relaxed overflow-x-auto bg-card/95">
+        <pre className="p-6 text-sm font-mono leading-relaxed overflow-x-auto bg-surface/95">
           {lines.map((line, i) => (
             <motion.div
               key={line.text}
@@ -41,7 +41,7 @@ export default function CodeTerminal() {
               <span
                 className={
                   i === 0 || i === lines.length - 1
-                    ? "text-accent-purple font-semibold"
+                    ? "text-foreground-purple font-semibold"
                     : "text-muted"
                 }
               >
@@ -52,7 +52,7 @@ export default function CodeTerminal() {
           <motion.span
             animate={{ opacity: [1, 0] }}
             transition={{ duration: 0.7, repeat: Infinity }}
-            className="inline-block w-2 h-4 bg-accent ml-1 align-middle rounded-sm shadow-glow"
+            className="inline-block w-2 h-4 bg-foreground ml-1 align-middle rounded-sm shadow-card-hover"
           />
         </pre>
       </div>
@@ -60,14 +60,14 @@ export default function CodeTerminal() {
       <motion.div
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 4, repeat: Infinity }}
-        className="absolute -top-5 -right-3 px-4 py-2 rounded-xl glass text-xs font-mono font-semibold text-accent border border-accent/30 shadow-glow"
+        className="absolute -top-5 -right-3 px-4 py-2 rounded-xl bg-surface border border-border text-xs font-mono font-semibold text-foreground border border-accent/30 shadow-card-hover"
       >
         npm run deploy ✓
       </motion.div>
       <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
-        className="absolute -bottom-4 -left-3 px-4 py-2 rounded-xl glass text-xs font-mono font-semibold text-success border border-success/30"
+        className="absolute -bottom-4 -left-3 px-4 py-2 rounded-xl bg-surface border border-border text-xs font-mono font-semibold text-success border border-success/30"
       >
         3 apps live
       </motion.div>

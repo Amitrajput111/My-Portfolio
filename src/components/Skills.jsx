@@ -47,15 +47,15 @@ export default function Skills() {
                 <h3 className="font-display text-base font-bold text-foreground tracking-tight">
                   {category.title}
                 </h3>
-                <span className="text-[9px] font-bold font-mono text-accent uppercase tracking-widest px-2 py-0.5 rounded bg-accent/10 border border-accent/15">
+                <span className="text-[9px] font-bold font-mono text-foreground uppercase tracking-widest px-2 py-0.5 rounded bg-foreground/10 border border-accent/15">
                   {category.skills.length}
                 </span>
               </div>
 
               {/* Skills */}
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2.5 mt-4">
                 {category.skills.map((skill, j) => (
-                  <TechBadge key={skill} name={skill} index={j} />
+                  <TechBadge key={skill.name} skill={skill} index={j} />
                 ))}
               </div>
             </div>

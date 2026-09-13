@@ -6,29 +6,25 @@ export default function SectionHeading({ label, title, subtitle, align = "center
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 15 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className={`mb-14 md:mb-20 ${isCenter ? "text-center" : "text-left"}`}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={`mb-16 md:mb-20 ${isCenter ? "text-center" : "text-left"}`}
     >
       {label && (
         <span
-          className={`section-label mb-5 inline-flex ${isCenter ? "mx-auto" : ""}`}
+          className={`inline-block mb-4 text-xs font-mono font-bold tracking-widest text-muted uppercase`}
         >
           {label}
         </span>
       )}
 
       <h2
-        className={`heading-display text-3xl sm:text-4xl md:text-5xl mb-4 ${
-          isCenter ? "mx-auto" : ""
-        }`}
+        className={`text-3xl sm:text-4xl md:text-5xl font-display font-bold tracking-tight text-foreground mb-4`}
       >
         {title}
       </h2>
-
-      <div className={`divider-glow mb-5 ${isCenter ? "mx-auto" : ""}`} />
 
       {subtitle && (
         <p

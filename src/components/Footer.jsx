@@ -15,9 +15,9 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-white/[0.06] bg-secondary pt-20 pb-10 overflow-hidden">
+    <footer className="relative border-t border-white/[0.06] bg-surface pt-20 pb-10 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-24 bg-accent/5 blur-3xl pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-24 bg-foreground/5 blur-3xl pointer-events-none" />
 
       <div className="section-container relative z-10">
         <div className="grid md:grid-cols-3 gap-14 mb-16">
@@ -40,7 +40,7 @@ export default function Footer() {
                   <button
                     type="button"
                     onClick={() => scrollTo(link.id)}
-                    className="text-muted text-sm font-semibold hover:text-accent transition-colors duration-200 text-left"
+                    className="text-muted text-sm font-semibold hover:text-foreground transition-colors duration-200 text-left"
                   >
                     {link.label}
                   </button>
@@ -61,7 +61,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-3.5 card-premium rounded-xl text-muted hover:text-accent hover:shadow-glow transition-all duration-300 hover:-translate-y-1"
+                  className="p-3.5 card-premium rounded-xl text-muted hover:text-foreground hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
                 >
                   <Icon size={20} />
                 </a>

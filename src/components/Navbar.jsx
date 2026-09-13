@@ -32,7 +32,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "py-3 bg-primary/80 backdrop-blur-2xl border-b border-white/[0.06] shadow-elevated"
+          ? "py-3 bg-background/80 backdrop-blur-2xl border-b border-white/[0.06] shadow-elevated"
           : "py-6 bg-transparent"
       }`}
     >
@@ -53,7 +53,7 @@ export default function Navbar() {
           <span className="gradient-text">Rajput</span>
         </a>
 
-        <ul className="hidden xl:flex items-center gap-1 p-1.5 rounded-2xl glass border border-white/[0.06] shadow-card">
+        <ul className="hidden xl:flex items-center gap-1 p-1.5 rounded-2xl bg-surface border border-border border border-white/[0.06] shadow-card">
           {navLinks.map((link) => (
             <li key={link.id}>
               <button
@@ -81,7 +81,7 @@ export default function Navbar() {
           </button>
           <button
             type="button"
-            className="xl:hidden p-3 rounded-xl glass border border-white/[0.08] text-foreground hover:border-accent/30 transition-colors"
+            className="xl:hidden p-3 rounded-xl bg-surface border border-border border border-white/[0.08] text-foreground hover:border-accent/30 transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
@@ -97,7 +97,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="xl:hidden border-t border-white/[0.06] bg-primary/95 backdrop-blur-2xl overflow-hidden shadow-elevated"
+            className="xl:hidden border-t border-white/[0.06] bg-background/95 backdrop-blur-2xl overflow-hidden shadow-elevated"
           >
             <ul className="section-container py-6 flex flex-col gap-1.5">
               {navLinks.map((link) => (
@@ -108,7 +108,7 @@ export default function Navbar() {
                     className={`w-full text-left px-5 py-4 rounded-xl text-sm font-semibold transition-all duration-200 ${
                       activeSection === link.id
                         ? "nav-pill-active"
-                        : "text-muted hover:text-foreground hover:bg-card/80"
+                        : "text-muted hover:text-foreground hover:bg-surface/80"
                     }`}
                   >
                     {link.label}

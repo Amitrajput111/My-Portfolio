@@ -6,7 +6,7 @@ export default function AnimatedBackground({ variant = "hero" }) {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-      <div className="absolute inset-0 bg-primary" />
+      <div className="absolute inset-0 bg-background" />
       {isHero && <div className="absolute inset-0 bg-mesh-hero" />}
 
       <div
@@ -26,14 +26,14 @@ export default function AnimatedBackground({ variant = "hero" }) {
       <motion.div
         animate={{ opacity: [0.35, 0.65, 0.35], x: [0, 30, 0], y: [0, -20, 0] }}
         transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-        className={`orb bg-accent/25 ${
+        className={`orb bg-foreground/25 ${
           isHero ? "top-[5%] -left-[15%] w-[600px] h-[600px]" : "top-0 left-0 w-[400px] h-[400px]"
         }`}
       />
       <motion.div
         animate={{ opacity: [0.25, 0.5, 0.25], x: [0, -25, 0], y: [0, 25, 0] }}
         transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className={`orb bg-accent-purple/20 ${
+        className={`orb bg-foreground-purple/20 ${
           isHero ? "bottom-[0%] -right-[10%] w-[650px] h-[650px]" : "bottom-0 right-0 w-[350px] h-[350px]"
         }`}
       />
