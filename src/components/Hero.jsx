@@ -123,7 +123,7 @@ export default function Hero() {
                 💼
               </div>
               <div className="text-sm font-semibold text-foreground leading-tight">
-                2 Months<br/><span className="text-muted text-xs">Internship</span>
+                4 Months<br/><span className="text-muted text-xs">Internship</span>
               </div>
             </motion.div>
 

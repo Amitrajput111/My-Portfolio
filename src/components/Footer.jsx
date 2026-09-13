@@ -36,7 +36,7 @@ export default function Footer() {
               Amit <span className="text-foreground">Rajput</span>
             </p>
             <p className="text-muted text-sm leading-relaxed max-w-xs font-medium">
-              {personalInfo.headline}
+              Full Stack Software Engineer specializing in React.js, Next.js, and scalable web architectures.
             </p>
           </div>
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { HiMenu, HiX } from "react-icons/hi";
-import { navLinks } from "../data/portfolioData";
+import { navLinks, personalInfo } from "../data/portfolioData";
 import useActiveSection from "../hooks/useActiveSection";
 
 export default function Navbar() {
@@ -72,6 +72,14 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
+          <a
+            href={personalInfo.resumePath}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex btn-outline text-sm py-2.5 px-5"
+          >
+            Resume
+          </a>
           <button
             type="button"
             onClick={() => handleNavClick("contact")}
@@ -115,7 +123,15 @@ export default function Navbar() {
                   </button>
                 </li>
               ))}
-              <li className="pt-3">
+              <li className="pt-3 flex flex-col sm:flex-row gap-3">
+                <a
+                  href={personalInfo.resumePath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline w-full text-center"
+                >
+                  View Resume
+                </a>
                 <button type="button" onClick={() => handleNavClick("contact")} className="btn-primary w-full">
                   Hire Me
                 </button>
