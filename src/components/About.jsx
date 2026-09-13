@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HiCode, HiCloud, HiBriefcase, HiLightningBolt, HiCheckCircle } from "react-icons/hi";
+import { HiCode, HiCloud, HiBriefcase, HiLightningBolt, HiCheckCircle, HiEye } from "react-icons/hi";
 import Section from "./layout/Section";
 import SectionHeading from "./layout/SectionHeading";
 import MetricCard from "./ui/MetricCard";
@@ -88,10 +88,11 @@ export default function About() {
               </a>
               <a
                 href={personalInfo.resumePath}
-                download
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-foreground text-background text-xs font-semibold hover:scale-[0.98] transition-transform"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-emerald-500/10 text-emerald-500 text-xs font-semibold hover:bg-emerald-500 hover:text-white transition-colors border border-emerald-500/20"
               >
-                Download Resume
+                <HiEye size={16} /> View Resume
               </a>
             </div>
           </motion.div>

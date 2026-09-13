@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HiArrowRight, HiDownload, HiCode } from "react-icons/hi";
+import { HiArrowRight, HiDownload, HiCode, HiEye } from "react-icons/hi";
 import { personalInfo, heroDescription } from "../data/portfolioData";
 import profileImg from "../assets/profile.jpg";
 
@@ -38,14 +38,22 @@ export default function Hero() {
             {heroDescription}
           </p>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <a href="#projects" className="btn-primary group">
-              View Work
+          <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
+            <button
+              onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
+              className="btn-primary group"
+            >
+              Explore Work
               <HiArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a href={personalInfo.resumePath} download className="btn-outline group">
-              Resume
-              <HiDownload className="group-hover:-translate-y-1 transition-transform" />
+            </button>
+            <a
+              href={personalInfo.resumePath}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline flex items-center gap-2"
+            >
+              <HiEye size={18} />
+              View Resume
             </a>
           </div>
 
