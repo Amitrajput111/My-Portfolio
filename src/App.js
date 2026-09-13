@@ -2,6 +2,7 @@ import React, { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import BackToTop from "./components/ui/BackToTop";
+import GlobalBackground from "./components/ui/GlobalBackground";
 
 const About = lazy(() => import("./components/About"));
 const Skills = lazy(() => import("./components/Skills"));
@@ -15,6 +16,7 @@ const Footer = lazy(() => import("./components/Footer"));
 export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground antialiased overflow-x-hidden">
+      <GlobalBackground />
       <Navbar />
       <main>
         <Hero />

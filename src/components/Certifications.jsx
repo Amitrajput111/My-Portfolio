@@ -9,45 +9,51 @@ export default function Certifications() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <Section id="certifications">
+    <Section id="certifications" alt>
       <SectionHeading
-        label="Certifications"
-        title="Credentials"
-        subtitle="Industry-recognized certifications and specialized training"
+        label="Credentials"
+        title="Professional Certifications"
+        subtitle="Industry-recognized qualifications validating technical expertise"
       />
 
-      <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+      <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
         {certifications.map((cert, index) => (
           <motion.button
             key={cert.title}
             type="button"
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ delay: index * 0.1, duration: 0.55 }}
-            whileHover={{ y: -10 }}
+            transition={{ delay: index * 0.1, duration: 0.6 }}
             onClick={() => setSelected(cert)}
-            className="bg-surface border border-border hover:border-muted transition-colors rounded-xl p-8 text-left w-full group"
+            className="card-premium-hover p-1 group text-left w-full focus:outline-none"
           >
-            <div
-              className={`h-36 rounded-xl bg-gradient-to-br ${cert.color} border border-white/[0.08] flex items-center justify-center mb-7 group-hover:scale-[1.02] transition-transform duration-500 shadow-card relative overflow-hidden`}
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent" />
-              <span className="relative text-4xl font-display font-black text-foreground">
-                {cert.badge}
-              </span>
+            <div className="bg-surface rounded-xl p-6 h-full flex flex-col relative overflow-hidden z-10">
+              {/* Background Glow */}
+              <div className={`absolute -top-20 -right-20 w-48 h-48 bg-gradient-to-br ${cert.color} blur-[60px] opacity-40 group-hover:opacity-70 transition-opacity duration-500`} />
+              
+              <div className="w-12 h-12 rounded-lg bg-background border border-border flex items-center justify-center mb-6 shadow-card relative z-10 text-foreground group-hover:text-accent transition-colors">
+                <HiAcademicCap size={24} />
+              </div>
+              
+              <h3 className="font-display font-bold text-foreground text-lg tracking-tight mb-2 relative z-10">
+                {cert.title}
+              </h3>
+              <p className="text-accent text-sm font-semibold mb-4 relative z-10">{cert.issuer}</p>
+              
+              <p className="text-muted text-sm font-medium leading-relaxed line-clamp-3 mb-6 relative z-10">
+                {cert.description}
+              </p>
+              
+              <div className="mt-auto pt-4 border-t border-border/50 flex items-center justify-between relative z-10">
+                <span className="text-[10px] uppercase tracking-widest font-bold text-muted">
+                  {cert.badge}
+                </span>
+                <span className="flex items-center gap-1.5 text-xs font-semibold text-accent opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                  View Detail <HiExternalLink />
+                </span>
+              </div>
             </div>
-            <HiAcademicCap className="text-foreground mb-3" size={24} />
-            <h3 className="font-display text-foreground font-bold mb-2 leading-snug text-lg tracking-tight">
-              {cert.title}
-            </h3>
-            <p className="text-foreground text-sm font-bold mb-3">{cert.issuer}</p>
-            <p className="text-muted text-sm line-clamp-2 font-medium leading-relaxed">
-              {cert.description}
-            </p>
-            <span className="inline-flex items-center gap-1.5 mt-6 text-xs font-bold text-foreground uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Preview certificate <HiExternalLink size={12} />
-            </span>
           </motion.button>
         ))}
       </div>
@@ -60,40 +66,41 @@ export default function Certifications() {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6 bg-background/90 backdrop-blur-xl"
             onClick={() => setSelected(null)}
-            role="dialog"
-            aria-modal="true"
           >
             <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 24 }}
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 24 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-surface border border-border rounded-xl max-w-lg w-full p-9 relative shadow-card-hover"
+              className="card-premium max-w-lg w-full p-1 shadow-[0_0_50px_rgba(0,0,0,0.5)]"
             >
-              <button
-                type="button"
-                onClick={() => setSelected(null)}
-                className="absolute top-5 right-5 p-2.5 rounded-xl bg-surface border border-border text-muted hover:text-foreground hover:border-accent/30 transition-colors"
-                aria-label="Close"
-              >
-                <HiX size={22} />
-              </button>
+              <div className="bg-surface rounded-xl p-8 relative overflow-hidden">
+                <div className={`absolute inset-0 bg-gradient-to-br ${selected.color} opacity-10 pointer-events-none`} />
+                
+                <button
+                  type="button"
+                  onClick={() => setSelected(null)}
+                  className="absolute top-4 right-4 p-2 rounded-lg bg-background border border-border text-muted hover:text-foreground transition-colors z-20"
+                >
+                  <HiX size={20} />
+                </button>
 
-              <div
-                className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${selected.color} border border-white/[0.08] flex flex-col items-center justify-center mb-8 shadow-card`}
-              >
-                <span className="text-7xl font-display font-black text-foreground mb-2">
-                  {selected.badge}
-                </span>
-                <p className="text-muted text-sm font-semibold uppercase tracking-widest">
-                  Certificate Preview
+                <div className="w-16 h-16 rounded-xl bg-background border border-border flex items-center justify-center mb-6 shadow-card text-accent">
+                  <HiAcademicCap size={32} />
+                </div>
+                
+                <h3 className="font-display text-2xl font-bold text-foreground tracking-tight mb-2">
+                  {selected.title}
+                </h3>
+                <p className="text-accent font-semibold mb-6">{selected.issuer}</p>
+                <p className="text-muted leading-relaxed font-medium mb-8">
+                  {selected.description}
                 </p>
+                
+                <div className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-background border border-border text-sm font-bold text-foreground tracking-widest uppercase">
+                  {selected.badge} Validated
+                </div>
               </div>
-              <h3 className="font-display text-2xl font-bold text-foreground mb-2 tracking-tight">
-                {selected.title}
-              </h3>
-              <p className="text-foreground font-bold mb-4">{selected.issuer}</p>
-              <p className="text-muted leading-relaxed font-medium">{selected.description}</p>
             </motion.div>
           </motion.div>
         )}

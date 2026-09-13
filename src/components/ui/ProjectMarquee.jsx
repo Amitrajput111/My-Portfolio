@@ -11,17 +11,15 @@ export default function ProjectMarquee() {
       aria-hidden="true"
     >
       {/* Left fade */}
-      <div className="absolute left-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(90deg, #0B1120, transparent)" }} />
+      <div className="absolute left-0 top-0 bottom-0 w-24 z-10 pointer-events-none bg-gradient-to-r from-background to-transparent" />
       {/* Right fade */}
-      <div className="absolute right-0 top-0 bottom-0 w-20 z-10 pointer-events-none"
-        style={{ background: "linear-gradient(270deg, #0B1120, transparent)" }} />
+      <div className="absolute right-0 top-0 bottom-0 w-24 z-10 pointer-events-none bg-gradient-to-l from-background to-transparent" />
 
       <div className="marquee-track">
         {doubled.map((item, i) => (
           <div
             key={i}
-            className="inline-flex items-center gap-2 mx-3 px-4 py-2 rounded-full border border-white/[0.07] bg-surface/50 shrink-0 select-none"
+            className="inline-flex items-center gap-2 mx-3 px-4 py-2 rounded-full border border-border bg-surface shrink-0 select-none"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-foreground/70 shrink-0" />
             <span className="text-xs font-semibold text-muted whitespace-nowrap">

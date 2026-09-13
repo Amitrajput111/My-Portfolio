@@ -1,9 +1,9 @@
-import setuImg from "./setu.png";
-import careClinicImg from "./careclinic.png";
-import auraFitnessImg from "./aurafitness.png";
-import eduriseImg from "./edurise.png";
-import hireflowImg from "./hireflow.png";
-import stayoraImg from "./stayora.png";
+import setuImg from "./setu_mockup.jpg";
+import careClinicImg from "./careclinic_mockup.jpg";
+import auraFitnessImg from "./aurafitness_mockup.jpg";
+import eduriseImg from "./edurise_mockup.jpg";
+import hireflowImg from "./hireflow_mockup.jpg";
+import stayoraImg from "./stayora_mockup.jpg";
 
 export const projectImages = {
   setu: setuImg,

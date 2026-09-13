@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -13,7 +13,7 @@
 
   html {
     scroll-behavior: smooth;
-    background-color: #0a0a0a;
+    background-color: #0B1121;
   }
 
   body {
@@ -23,67 +23,66 @@
   }
 
   ::selection {
-    @apply bg-foreground text-background;
+    @apply bg-accent text-background;
   }
 }
 
 @layer components {
-  /* Layout */
   .section-container {
-    @apply max-w-6xl mx-auto px-6 sm:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-8;
   }
 
   .section-padding {
     @apply py-24 md:py-32;
   }
 
-  /* Cards */
+  /* Premium Card Styles */
   .card-premium {
-    @apply bg-surface border border-border rounded-xl overflow-hidden transition-all duration-300;
+    @apply bg-surface/80 backdrop-blur-xl border border-border rounded-2xl overflow-hidden transition-all duration-500 shadow-card relative;
   }
 
   .card-premium-hover {
-    @apply card-premium hover:border-muted hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)];
+    @apply card-premium hover:-translate-y-2 hover:border-accent/40 hover:shadow-card-hover;
+  }
+  
+  /* Glowing border pseudo-element for cards */
+  .card-premium-hover::before {
+    content: "";
+    @apply absolute inset-0 opacity-0 transition-opacity duration-500 pointer-events-none rounded-2xl z-0;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(34, 211, 238, 0.06), transparent 40%);
+  }
+  .card-premium-hover:hover::before {
+    @apply opacity-100;
   }
 
   /* Typography */
   .heading-display {
-    @apply font-display font-extrabold tracking-tight text-foreground;
+    @apply font-display font-bold tracking-tight text-foreground;
   }
   
   .text-muted-custom {
-    @apply text-muted leading-relaxed text-sm md:text-base;
+    @apply text-muted leading-relaxed text-sm md:text-base font-medium;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-accent-secondary;
   }
 
   /* Buttons */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium text-sm text-background bg-foreground transition-all duration-200;
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-background bg-accent overflow-hidden transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.4)];
   }
 
   .btn-primary:hover {
-    @apply opacity-90 scale-[0.98];
+    @apply scale-[1.02] shadow-[0_0_30px_rgba(34,211,238,0.6)];
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg font-medium text-sm text-foreground bg-transparent border border-border transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-foreground bg-surface/50 border border-border transition-all duration-300;
   }
 
   .btn-outline:hover {
-    @apply bg-surface border-muted;
-  }
-
-  /* Tags */
-  .tag-pill {
-    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium text-muted bg-surface border border-border;
-  }
-
-  /* Form */
-  .input-field {
-    @apply w-full px-4 py-3 rounded-lg text-foreground text-sm bg-surface border border-border transition-colors duration-200;
-  }
-
-  .input-field:focus {
-    @apply outline-none border-muted;
+    @apply bg-surface border-accent/50 text-accent;
   }
 
   /* Marquee */
@@ -99,16 +98,16 @@
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
   }
   ::-webkit-scrollbar-track {
-    background: #0a0a0a;
+    background: #0B1121;
   }
   ::-webkit-scrollbar-thumb {
-    background: #27272a;
-    border-radius: 4px;
+    background: #334155;
+    border-radius: 5px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #3f3f46;
+    background: #475569;
   }
 }
