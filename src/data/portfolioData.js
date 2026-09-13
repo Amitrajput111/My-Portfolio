@@ -36,7 +36,7 @@ export const aboutMetrics = [
   { value: 500, suffix: "+", label: "DSA Problems Solved", icon: "code" },
   { value: 6, suffix: "+", label: "Production & Client Apps", icon: "rocket" },
   { value: 2, suffix: "", label: "Engineering Internships", icon: "briefcase" },
-  { textValue: "AWS", label: "Certified Developer", icon: "cloud" },
+  { textValue: "Infosys", label: "Advanced MERN Stack", icon: "cloud" },
 ];
 
 export const skillCategories = [
@@ -125,13 +125,16 @@ export const projects = [
   {
     id: "setu",
     name: "SETU",
-    title: "SETU — Digital Growth & Intelligent Automation",
-    subtitle: "High-Performance Growth & Lead Automation Platform",
-    description:
-      "Production agency platform built with Next.js and Tailwind CSS. Features WhatsApp Cloud API integration for instant lead capture, automated brochure & fee PDF delivery, Google Maps Top-3 ranking optimization, and calendar scheduling.",
+    title: "SETU — Digital Growth Platform",
+    subtitle: "High-Performance Lead Automation",
+    description: "Production agency platform. Features WhatsApp Cloud API for instant lead capture and automated PDF brochure delivery. Built for high conversion.",
     live: "https://setu-platform-dkuh7c2q6-amitrajput111s-projects.vercel.app/",
     github: null,
-    tech: ["Next.js", "React", "Tailwind CSS", "WhatsApp Cloud API", "Node.js", "Vercel"],
+    tech: [
+      { name: "Next.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+    ],
     category: "Client Platforms",
     badge: "Production Client",
     featured: true,
@@ -139,13 +142,16 @@ export const projects = [
   {
     id: "care-clinic",
     name: "CARE CLINIC",
-    title: "CARE CLINIC — Trusted Care. Closer to You",
-    subtitle: "NABH Multi-Specialty Healthcare & OPD Booking Portal",
-    description:
-      "Healthcare portal for a multi-specialty Bengaluru clinic. Features instant OPD appointment booking (< 10 min average wait time), specialist doctor profiles across 4 departments, digital lab report tracking, and cashless insurance verification.",
+    title: "CARE CLINIC — Healthcare Portal",
+    subtitle: "NABH Multi-Specialty OPD Booking",
+    description: "Healthcare portal featuring instant OPD appointment booking, specialist doctor profiles, and digital lab report tracking.",
     live: "https://client-wheat-seven-38.vercel.app/",
     github: null,
-    tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "REST APIs", "Vercel"],
+    tech: [
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
+      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+    ],
     category: "Client Platforms",
     badge: "Live Healthcare App",
     featured: true,
@@ -153,13 +159,16 @@ export const projects = [
   {
     id: "aura-fitness",
     name: "AURA FITNESS",
-    title: "AURA FITNESS | Premium Luxury Gym & Elite Health Club",
+    title: "AURA FITNESS | Luxury Gym",
     subtitle: "Luxury Gym & Membership Platform",
-    description:
-      "Modern web experience built for an elite fitness sanctuary with 10,000+ members. Implements interactive membership tiers, 35+ trainer roster, interactive facility tour, free trial pass engine, and direct WhatsApp enquiry booking.",
+    description: "Modern web experience for an elite fitness sanctuary. Features interactive membership tiers, 35+ trainer roster, and WhatsApp enquiry booking.",
     live: "https://gym-web-demo-beta.vercel.app/",
     github: null,
-    tech: ["React.js", "Tailwind CSS", "Framer Motion", "UI Architecture", "Vercel"],
+    tech: [
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { name: "Vercel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" },
+    ],
     category: "Client Platforms",
     badge: "Client Web App",
     featured: true,
@@ -167,13 +176,16 @@ export const projects = [
   {
     id: "edurise",
     name: "EduRise Institute",
-    title: "EduRise Institute — Admissions & Coaching Ecosystem",
-    subtitle: "JEE & NEET Admissions & CBT Assessment Platform",
-    description:
-      "Comprehensive EdTech coaching platform featuring interactive course exploration, AIR 127 top ranker showcase, automated fee and prospectus PDF generation, bi-weekly CBT mock assessments, and 1-on-1 mentorship scheduling.",
+    title: "EduRise Institute Ecosystem",
+    subtitle: "JEE & NEET Admissions Platform",
+    description: "EdTech platform featuring interactive course exploration, automated PDF prospectus generation, and 1-on-1 mentorship scheduling.",
     live: "https://edurise-admissions.vercel.app/",
     github: null,
-    tech: ["React.js", "Tailwind CSS", "Node.js", "Express.js", "PDF Engine", "Vercel"],
+    tech: [
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+      { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
+    ],
     category: "Client Platforms",
     badge: "EdTech Platform",
     featured: true,
@@ -181,13 +193,16 @@ export const projects = [
   {
     id: "hireflow",
     name: "HireFlow",
-    title: "HireFlow — Candidate & Recruitment Management",
-    subtitle: "MERN Recruitment & Job Application Pipeline",
-    description:
-      "Full stack recruitment management platform with JWT authentication, role-based dashboards for recruiters and applicants, interactive applicant status tracking, and candidate screening pipelines.",
+    title: "HireFlow — Recruitment Pipeline",
+    subtitle: "MERN Candidate Management",
+    description: "Recruitment platform with JWT authentication, role-based dashboards, interactive kanban status tracking, and candidate screening.",
     live: "https://hireflow-alpha.vercel.app/",
     github: "https://github.com/Amitrajput111/job_portal",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT Auth", "REST APIs"],
+    tech: [
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+    ],
     category: "MERN Stack",
     badge: "Full Stack MERN",
     featured: false,
@@ -195,13 +210,16 @@ export const projects = [
   {
     id: "stayora",
     name: "Stayora",
-    title: "Stayora — Travel Accommodation Booking",
-    subtitle: "Accommodation Discovery & Reservation Platform",
-    description:
-      "Full stack booking web application with custom accommodation filters, search matching algorithms, user authentication, interactive property views, and scalable MongoDB schemas.",
+    title: "Stayora — Travel Booking",
+    subtitle: "Accommodation Discovery Platform",
+    description: "Booking web application with custom accommodation filters, search matching algorithms, and scalable MongoDB schemas.",
     live: "https://stayora-ochre.vercel.app/",
     github: "https://github.com/Amitrajput111/stayora",
-    tech: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Tailwind CSS"],
+    tech: [
+      { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "Express", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
+      { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+    ],
     category: "MERN Stack",
     badge: "Full Stack MERN",
     featured: false,
@@ -220,10 +238,10 @@ export const marqueeItems = [
 ];
 
 export const achievements = [
-  { value: 300, suffix: "+", label: "LeetCode Problems Solved" },
-  { value: 200, suffix: "+", label: "GeeksforGeeks Problems Solved" },
-  { value: 6, suffix: "+", label: "Production & Live Apps Deployed" },
-  { textValue: "Team Lead", label: "Hackathon — SKITM Innothon" },
+  { value: 300, suffix: "+", label: "LeetCode Solved", iconUrl: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" },
+  { value: 200, suffix: "+", label: "GeeksforGeeks Solved", iconUrl: "https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" },
+  { value: 6, suffix: "+", label: "Live Apps Deployed", iconUrl: null },
+  { value: 500, suffix: "+", label: "GitHub Contributions", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
 ];
 
 export const certifications = [

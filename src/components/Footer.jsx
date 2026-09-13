@@ -1,12 +1,22 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { LeetCodeIcon } from "./ui/Icons";
 import { personalInfo, navLinks } from "../data/portfolioData";
 
 const socialLinks = [
-  { icon: FaGithub, href: personalInfo.github, label: "GitHub" },
-  { icon: FaLinkedin, href: personalInfo.linkedin, label: "LinkedIn" },
-  { icon: LeetCodeIcon, href: personalInfo.leetcode, label: "LeetCode" },
+  { 
+    href: personalInfo.github, 
+    label: "GitHub",
+    imgUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+  },
+  { 
+    href: personalInfo.linkedin, 
+    label: "LinkedIn",
+    imgUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+  },
+  { 
+    href: personalInfo.leetcode, 
+    label: "LeetCode",
+    imgUrl: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+  },
 ];
 
 export default function Footer() {
@@ -15,8 +25,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-white/[0.06] bg-surface pt-20 pb-10 overflow-hidden">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
+    <footer className="relative border-t border-border bg-surface pt-20 pb-10 overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-24 bg-foreground/5 blur-3xl pointer-events-none" />
 
       <div className="section-container relative z-10">
@@ -54,28 +64,25 @@ export default function Footer() {
               Connect
             </h4>
             <div className="flex gap-3">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
+              {socialLinks.map(({ href, label, imgUrl }) => (
                 <a
                   key={label}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-3.5 bg-surface border border-border rounded-xl rounded-xl text-muted hover:text-foreground hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
+                  className="p-3.5 bg-background border border-border rounded-xl hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] hover:border-emerald-500/50 transition-all duration-300 hover:-translate-y-1"
                 >
-                  <Icon size={20} />
+                  <img src={imgUrl} alt={label} className="w-6 h-6 object-contain" />
                 </a>
               ))}
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/[0.06] pt-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="border-t border-border pt-10 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-muted text-sm font-medium">
-            &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
-          </p>
-          <p className="text-muted/50 text-xs font-medium">
-            Built with React, Tailwind CSS, Framer Motion, and passion for technology.
+            &copy; 2025 Amit Rajput. All Rights Reserved.
           </p>
         </div>
       </div>

@@ -20,7 +20,11 @@ function StatCard({ item, index }) {
       className="p-8 md:p-10 text-center bg-surface border border-border rounded-xl transition-colors hover:border-muted"
     >
       <div className="w-12 h-12 rounded-lg bg-background border border-border flex items-center justify-center mx-auto mb-5 text-foreground">
-        <HiTrendingUp size={24} />
+        {item.iconUrl ? (
+          <img src={item.iconUrl} alt={item.label} className="w-6 h-6 object-contain" />
+        ) : (
+          <HiTrendingUp size={24} />
+        )}
       </div>
       <p className="text-4xl md:text-5xl font-display font-bold text-foreground mb-2">
         {item.textValue ?? (

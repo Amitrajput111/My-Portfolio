@@ -89,9 +89,9 @@ export default function Contact() {
                   href={href}
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-5 bg-surface border border-border hover:border-muted transition-colors rounded-xl rounded-2xl group"
+                  className="flex items-center gap-4 p-5 bg-surface border border-border hover:border-emerald-500/50 transition-colors rounded-xl group"
                 >
-                  <span className="p-3.5 rounded-xl bg-gradient-to-br from-accent/20 to-accent-purple/10 text-foreground border border-accent/20 group-hover:shadow-card-hover transition-shadow duration-300">
+                  <span className="p-3.5 rounded-xl bg-gradient-to-br from-emerald-500/10 to-transparent text-foreground border border-emerald-500/20 group-hover:shadow-[0_0_15px_rgba(16,185,129,0.3)] transition-shadow duration-300">
                     <Icon size={20} />
                   </span>
                   <div>
@@ -112,7 +112,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3 bg-surface border border-border rounded-xl p-8 md:p-10 space-y-6 relative"
           >
-            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent-purple to-transparent rounded-t-2xl" />
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-500 via-white to-transparent rounded-t-xl" />
 
             <div className="grid sm:grid-cols-2 gap-5">
               <div>

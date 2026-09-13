@@ -75,22 +75,22 @@ export default function Hero() {
           <div className="absolute inset-0 bg-gradient-to-tr from-accent to-accent-secondary blur-3xl opacity-20 rounded-[3rem]" />
           
           <div className="relative card-premium p-6 rounded-[2.5rem] bg-surface/40 backdrop-blur-2xl">
-            <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-border/50">
+            <div className="group relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-border/50">
               <img 
                 src={profileImg} 
                 alt="Amit Rajput" 
-                className="w-full h-full object-cover filter contrast-125 saturate-110"
+                className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-700 group-hover:scale-110 cursor-pointer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent pointer-events-none" />
               
-              <div className="absolute bottom-6 left-6 right-6">
+              <div className="absolute bottom-6 left-6 right-6 pointer-events-none">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-2xl font-display font-bold text-foreground">Amit Rajput</h3>
                   <div className="w-10 h-10 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center border border-border text-accent">
                     <HiCode size={20} />
                   </div>
                 </div>
-                <p className="text-accent font-mono text-sm">Senior Full Stack Engineer</p>
+                <p className="text-accent font-mono text-sm">Full Stack Engineer</p>
               </div>
             </div>
 

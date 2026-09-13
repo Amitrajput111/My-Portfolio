@@ -17,7 +17,12 @@ const iconMap = {
 
 export default function About() {
   return (
-    <Section id="about" alt>
+    <Section id="about" className="relative overflow-hidden">
+      {/* Colorful Abstract Background */}
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-emerald-500/10 rounded-full blur-[100px]" />
+        <div className="absolute top-40 -right-40 w-96 h-96 bg-violet-500/10 rounded-full blur-[100px]" />
+      </div>
       <div className="relative z-10">
         <SectionHeading
           label="About Me"
@@ -53,8 +58,8 @@ export default function About() {
                   Full Stack Engineer · Indore, India
                 </p>
                 <div className="flex items-center gap-1.5 mt-2 text-xs text-foreground font-semibold">
-                  <HiCheckCircle size={14} className="text-green-500" />
-                  <span>AWS Certified Developer</span>
+                  <HiCheckCircle size={14} className="text-emerald-500" />
+                  <span>Advanced MERN Stack Certified</span>
                 </div>
               </div>
             </div>

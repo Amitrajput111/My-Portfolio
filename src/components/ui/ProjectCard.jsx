@@ -64,13 +64,14 @@ export default function ProjectCard({ project, index }) {
         </p>
 
         {/* Tech pills */}
-        <div className="flex flex-wrap gap-1.5 mb-5">
-          {project.tech.slice(0, 4).map((tech) => (
+        <div className="flex flex-wrap gap-2 mb-5">
+          {project.tech.slice(0, 4).map((t) => (
             <span
-              key={tech}
-              className="text-[10px] px-2 py-1 rounded bg-background text-muted border border-border font-medium"
+              key={t.name}
+              className="inline-flex items-center gap-1.5 text-[10px] px-2 py-1 rounded bg-background text-muted border border-border font-medium hover:text-foreground hover:border-muted transition-colors cursor-default"
             >
-              {tech}
+              {t.logo && <img src={t.logo} alt={t.name} className="w-3 h-3 object-contain" />}
+              {t.name}
             </span>
           ))}
           {project.tech.length > 4 && (

@@ -96,13 +96,14 @@ export default function ProjectShowcaseSlider({ projects = [] }) {
               </p>
 
               {/* Tech stack */}
-              <div className="flex flex-wrap gap-2 mb-8">
+              <div className="flex flex-wrap items-center gap-2 mb-8">
                 {cur.tech.map((t) => (
                   <span
-                    key={t}
-                    className="text-[11px] px-2.5 py-1 rounded bg-background text-muted border border-border font-medium"
+                    key={t.name}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full bg-surface/50 border border-border text-foreground backdrop-blur-sm"
                   >
-                    {t}
+                    {t.logo && <img src={t.logo} alt={t.name} className="w-4 h-4 object-contain" />}
+                    {t.name}
                   </span>
                 ))}
               </div>
