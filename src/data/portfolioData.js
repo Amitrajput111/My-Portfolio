@@ -6,7 +6,7 @@ export const personalInfo = {
   linkedin: "https://www.linkedin.com/in/amitrajput111",
   github: "https://github.com/Amitrajput111",
   leetcode: "https://leetcode.com/u/amit_rajput111/",
-  resumePath: "/resume.pdf",
+  resumePath: "/Amit_Rajput_Resume.pdf",
 };
 
 export const heroRoles = [
