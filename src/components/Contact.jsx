@@ -66,7 +66,7 @@ export default function Contact() {
 
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 max-w-6xl mx-auto">
           <div className="lg:col-span-2 space-y-6">
-            <div className="card-premium p-7 border border-success/20 shadow-[0_0_40px_-10px_rgba(16,185,129,0.35)]">
+            <div className="bg-surface border border-border rounded-xl p-7 border border-success/20 shadow-[0_0_40px_-10px_rgba(16,185,129,0.35)]">
               <div className="flex items-center gap-2.5 mb-4">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75" />
@@ -89,7 +89,7 @@ export default function Contact() {
                   href={href}
                   target={href.startsWith("mailto") ? undefined : "_blank"}
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-5 card-premium-hover rounded-2xl group"
+                  className="flex items-center gap-4 p-5 bg-surface border border-border hover:border-muted transition-colors rounded-xl rounded-2xl group"
                 >
                   <span className="p-3.5 rounded-xl bg-gradient-to-br from-accent/20 to-accent-purple/10 text-foreground border border-accent/20 group-hover:shadow-card-hover transition-shadow duration-300">
                     <Icon size={20} />
@@ -110,7 +110,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-3 card-premium p-8 md:p-10 space-y-6 relative"
+            className="lg:col-span-3 bg-surface border border-border rounded-xl p-8 md:p-10 space-y-6 relative"
           >
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent via-accent-purple to-transparent rounded-t-2xl" />
 

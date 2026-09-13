@@ -32,7 +32,7 @@ export default function Skills() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.07, duration: 0.5 }}
-            className="card-premium-hover p-6 md:p-7 relative overflow-hidden"
+            className="bg-surface border border-border hover:border-muted transition-colors rounded-xl p-6 md:p-7 relative overflow-hidden"
           >
             {/* Subtle top gradient accent */}
             <div

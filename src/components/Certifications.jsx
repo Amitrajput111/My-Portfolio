@@ -27,13 +27,13 @@ export default function Certifications() {
             transition={{ delay: index * 0.1, duration: 0.55 }}
             whileHover={{ y: -10 }}
             onClick={() => setSelected(cert)}
-            className="card-premium-hover p-8 text-left w-full group"
+            className="bg-surface border border-border hover:border-muted transition-colors rounded-xl p-8 text-left w-full group"
           >
             <div
               className={`h-36 rounded-xl bg-gradient-to-br ${cert.color} border border-white/[0.08] flex items-center justify-center mb-7 group-hover:scale-[1.02] transition-transform duration-500 shadow-card relative overflow-hidden`}
             >
-              <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
-              <span className="relative text-4xl font-display font-black gradient-text">
+              <div className="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent" />
+              <span className="relative text-4xl font-display font-black text-foreground">
                 {cert.badge}
               </span>
             </div>
@@ -68,7 +68,7 @@ export default function Certifications() {
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 24 }}
               onClick={(e) => e.stopPropagation()}
-              className="card-premium max-w-lg w-full p-9 relative shadow-card-hover"
+              className="bg-surface border border-border rounded-xl max-w-lg w-full p-9 relative shadow-card-hover"
             >
               <button
                 type="button"
@@ -82,7 +82,7 @@ export default function Certifications() {
               <div
                 className={`aspect-[4/3] rounded-2xl bg-gradient-to-br ${selected.color} border border-white/[0.08] flex flex-col items-center justify-center mb-8 shadow-card`}
               >
-                <span className="text-7xl font-display font-black gradient-text mb-2">
+                <span className="text-7xl font-display font-black text-foreground mb-2">
                   {selected.badge}
                 </span>
                 <p className="text-muted text-sm font-semibold uppercase tracking-widest">

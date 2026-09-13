@@ -33,7 +33,7 @@ export default function Experience() {
                 )}
               </div>
 
-              <div className="card-premium-hover p-8 md:p-10 md:col-start-2">
+              <div className="bg-surface border border-border hover:border-muted transition-colors rounded-xl p-8 md:p-10 md:col-start-2">
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-6">
                   <div className="flex items-start gap-4">
                     <div className="p-3.5 rounded-xl bg-gradient-to-br from-accent/20 to-accent-purple/10 border border-accent/25 shadow-card-hover">

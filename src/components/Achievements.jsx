@@ -13,20 +13,16 @@ function StatCard({ item, index }) {
   return (
     <motion.div
       ref={numeric ? ref : undefined}
-      initial={{ opacity: 0, scale: 0.9, y: 24 }}
-      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ delay: index * 0.1, duration: 0.55 }}
-      whileHover={{ y: -10, transition: { duration: 0.25 } }}
-      className="card-premium-hover p-9 md:p-10 text-center relative overflow-hidden group"
+      transition={{ delay: index * 0.1, duration: 0.4 }}
+      className="p-8 md:p-10 text-center bg-surface border border-border rounded-xl transition-colors hover:border-muted"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-accent-purple/10 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-accent to-transparent" />
-
-      <div className="w-14 h-14 rounded-2xl bg-foreground/10 border border-accent/25 flex items-center justify-center mx-auto mb-5 group-hover:shadow-card-hover transition-shadow">
-        <HiTrendingUp className="text-foreground relative" size={28} />
+      <div className="w-12 h-12 rounded-lg bg-background border border-border flex items-center justify-center mx-auto mb-5 text-foreground">
+        <HiTrendingUp size={24} />
       </div>
-      <p className="text-4xl md:text-5xl font-display font-extrabold gradient-text mb-3 relative glow-text">
+      <p className="text-4xl md:text-5xl font-display font-bold text-foreground mb-2">
         {item.textValue ?? (
           <>
             {value}
@@ -34,7 +30,7 @@ function StatCard({ item, index }) {
           </>
         )}
       </p>
-      <p className="text-muted text-sm md:text-base font-semibold relative leading-snug">
+      <p className="text-muted text-sm font-medium">
         {item.label}
       </p>
     </motion.div>

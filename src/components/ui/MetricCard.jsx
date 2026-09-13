@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import useCountUp from "../hooks/useCountUp";
+import useCountUp from "../../hooks/useCountUp";
 
 export default function MetricCard({ value, suffix = "", textValue, label, icon: Icon, delay }) {
   const numeric = typeof value === "number";

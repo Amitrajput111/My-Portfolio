@@ -21,7 +21,7 @@ export default function CodeTerminal() {
       <div className="absolute -inset-[2px] rounded-2xl bg-gradient-to-r from-accent via-accent-purple to-accent opacity-70 blur-md" />
       <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-accent/30 to-accent-purple/30 blur-xl" />
 
-      <div className="relative card-premium rounded-2xl overflow-hidden shadow-elevated glow-accent">
+      <div className="relative bg-surface border border-border rounded-xl rounded-2xl overflow-hidden shadow-elevated glow-accent">
         <div className="flex items-center gap-2 px-5 py-3.5 border-b border-white/[0.08] bg-surface/90">
           <span className="w-3 h-3 rounded-full bg-red-500/90 shadow-[0_0_8px_rgba(239,68,68,0.5)]" />
           <span className="w-3 h-3 rounded-full bg-amber-400/90 shadow-[0_0_8px_rgba(251,191,36,0.4)]" />

@@ -50,7 +50,7 @@ export default function Navbar() {
           className="font-display text-xl font-bold tracking-tight hover:opacity-90 transition-opacity"
         >
           <span className="text-foreground">Amit</span>{" "}
-          <span className="gradient-text">Rajput</span>
+          <span className="text-foreground">Rajput</span>
         </a>
 
         <ul className="hidden xl:flex items-center gap-1 p-1.5 rounded-2xl bg-surface border border-border border border-white/[0.06] shadow-card">

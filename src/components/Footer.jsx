@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-3 gap-14 mb-16">
           <div>
             <p className="font-display text-2xl font-bold text-foreground mb-3 tracking-tight">
-              Amit <span className="gradient-text">Rajput</span>
+              Amit <span className="text-foreground">Rajput</span>
             </p>
             <p className="text-muted text-sm leading-relaxed max-w-xs font-medium">
               {personalInfo.headline}
@@ -61,7 +61,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-3.5 card-premium rounded-xl text-muted hover:text-foreground hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
+                  className="p-3.5 bg-surface border border-border rounded-xl rounded-xl text-muted hover:text-foreground hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
                 >
                   <Icon size={20} />
                 </a>
