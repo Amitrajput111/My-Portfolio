@@ -11,6 +11,7 @@ const Projects = lazy(() => import("./components/Projects"));
 const Achievements = lazy(() => import("./components/Achievements"));
 const Certifications = lazy(() => import("./components/Certifications"));
 const GithubContributions = lazy(() => import("./components/GithubContributions"));
+const ResumeViewer = lazy(() => import("./components/ResumeViewer"));
 const Contact = lazy(() => import("./components/Contact"));
 const Footer = lazy(() => import("./components/Footer"));
 
@@ -29,6 +30,7 @@ export default function App() {
           <Certifications />
           <About />
           <GithubContributions />
+          <ResumeViewer />
           <Contact />
           <Footer />
         </Suspense>
