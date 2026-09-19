@@ -235,6 +235,7 @@ export const achievements = [
   { value: 300, suffix: "+", label: "LeetCode Solved", iconUrl: "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" },
   { value: 200, suffix: "+", label: "GeeksforGeeks Solved", iconUrl: "https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg" },
   { value: 6, suffix: "+", label: "Live Apps Deployed", iconUrl: null },
+  { value: 15, suffix: "+", label: "Technologies Mastered", iconUrl: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
 ];
 
 export const certifications = [
